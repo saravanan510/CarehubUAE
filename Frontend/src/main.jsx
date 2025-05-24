@@ -34,8 +34,6 @@ import { BookingProvider } from "./context/Context";
 import Login from "./admin/page/Login";
 import CCPaymentPage from "./pages/CCPaymentPage";
 import Dashboard from "./admin/page/Dashboard";
-import dotenv from "dotenv";
-dotenv.config();
 
 const router = createBrowserRouter([
   {
