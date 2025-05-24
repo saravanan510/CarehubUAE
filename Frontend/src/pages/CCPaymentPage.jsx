@@ -15,7 +15,7 @@ const PaymentPage = ({ response }) => {
     <form
       id="ccavenueForm"
       method="POST"
-      action="https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction"
+      action="https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction"
       // action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction"
     >
       <input
