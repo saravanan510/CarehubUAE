@@ -55,7 +55,7 @@ const Services = () => {
   }, []);
   return (
     <div className="service-container">
-      {/* <div className="service-metrics">
+      <div className="service-metrics">
         {metrics.map((item, index) => {
           return <Metrics key={index} label={item.label} count={item.count} />;
         })}
@@ -71,8 +71,8 @@ const Services = () => {
         <div>
           <Table data={data} filterData={filterData} />
         </div>
-      </div> */}
-      <ServiceDeatils />
+      </div>
+      {/* <ServiceDeatils /> */}
     </div>
   );
 };
