@@ -1,0 +1,13 @@
+.metrics-container {
+  background-color: #f2faf6;
+  padding: 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+.metrics-container h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.metrics-container p {
+  margin: 0px;
+}

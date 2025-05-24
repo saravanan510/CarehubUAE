@@ -1,0 +1,23 @@
+.bloodTest-container {
+  padding: 24px;
+}
+.bloodTest-metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.bloodTest-table {
+  margin-top: 20px;
+}
+.bloodTest-tableTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bloodTest-tableTop input {
+  border: 1px solid rgb(218, 218, 218);
+}
+.bloodTest-tableInputContainer {
+  display: flex;
+  gap: 16px;
+}

@@ -1,0 +1,20 @@
+.tableContainer {
+  width: 100%;
+  margin-top: 12px;
+}
+.tableHeader {
+  background-color: #e1f5ea;
+}
+.tableHeader th {
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.tableContainer td {
+  padding: 6px 12px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.no-data {
+  width: 100%;
+  display: flex;
+}

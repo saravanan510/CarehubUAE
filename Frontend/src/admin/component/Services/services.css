@@ -1,0 +1,39 @@
+.service-container {
+  padding: 24px;
+}
+.service-metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.service-table {
+  margin-top: 20px;
+}
+.service-tableTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-tableTop input {
+  border: 1px solid rgb(218, 218, 218);
+}
+.service-tableInputContainer {
+  display: flex;
+  gap: 16px;
+}
+.serviceDetails h6 {
+  font-size: 16px;
+}
+.file {
+  padding: 12px;
+  background-color: rgb(247, 247, 247);
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.file p {
+  margin: 0px;
+}
