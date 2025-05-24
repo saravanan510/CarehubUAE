@@ -1,6 +1,6 @@
 import axios from "axios";
 const Axios = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: process.env.BACKEND_URL,
   // baseURL: "https://carehub-backend-l7gv.onrender.com/",
 });
 
