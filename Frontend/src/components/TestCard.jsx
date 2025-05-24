@@ -40,7 +40,7 @@ const TestCard = ({ test, handleAddTest, handleRemoveTest }) => {
                       >
                         AED {test.price}
                       </span>
-                      <span className="border-start border-end px-2 mx-2">
+                      {/* <span className="border-start border-end px-2 mx-2">
                         {test.biomakersList.length}
                       </span>
                       <span>
@@ -52,7 +52,7 @@ const TestCard = ({ test, handleAddTest, handleRemoveTest }) => {
                             <RiArrowDropDownLine className="fs-4" />
                           )}
                         </button>
-                      </span>
+                      </span> */}
                     </p>
                   </div>
                 </div>
