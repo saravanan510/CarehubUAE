@@ -1,9 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  // baseURL: "http://carehubuae.com/api",
-  // baseURL: "http://localhost:5000",
-  baseURL: "http://147.93.110.142:5000",
+  baseURL: "https://api.carehubuae.com", // Use HTTPS in production
 });
 
 export default Axios;
