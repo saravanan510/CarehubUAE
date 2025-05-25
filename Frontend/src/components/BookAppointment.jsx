@@ -48,7 +48,7 @@ const BookAppointment = ({ currentService }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data submitted:", form);
+
     setLoader(true);
 
     try {

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 const PaymentPage = ({ response }) => {
-  console.log("response", response);
   useEffect(() => {
     if (response?.encRequest && response?.accessCode) {
       const form = document.getElementById("ccavenueForm");

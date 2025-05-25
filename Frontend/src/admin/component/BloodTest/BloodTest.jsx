@@ -13,7 +13,6 @@ const BloodTest = () => {
   });
 
   const handleFilterChange = (name, value) => {
-    console.log("handleFilter", name, value);
     setFilterData((prev) => {
       return {
         ...prev,

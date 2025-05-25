@@ -25,7 +25,6 @@ paymentCtrl.initiatePayment = (req, res) => {
     language: "EN",
     billing_email: billing_email,
   };
-  console.log("billingInfo", billingInfo);
   const encryptedData = encrypt(
     require("qs").stringify(billingInfo),
     process.env.CCA_WORKING_KEY

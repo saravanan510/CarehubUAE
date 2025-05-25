@@ -16,6 +16,10 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "carehub/build")));
 
+app.get("/api/", (req, res) => {
+  res.send("Backend is running");
+});
+
 app.use("/api/payment", paymentRoutes);
 app.use("/api/send-email/", mailRoutes);
 app.use("/api/services", servicesRoutes);

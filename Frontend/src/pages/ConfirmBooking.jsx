@@ -18,8 +18,6 @@ const ConfirmBooking = () => {
 
   const navigate = useNavigate();
 
-  console.log("bookingDetails", bookingDetails);
-
   const notifySuccess = () =>
     toast.success("Appointment booked and confirmation sent!");
   const notifyError = () => toast.error("Error in Booking");

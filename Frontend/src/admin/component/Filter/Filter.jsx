@@ -3,7 +3,6 @@ import "./filter.css";
 
 const Filter = ({ filterData, handleFilterChange }) => {
   const [date, setDate] = useState(new Date());
-  console.log("date", date.toISOString().split("T")[0]);
 
   return (
     <div className="filter-container">
