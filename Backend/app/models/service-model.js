@@ -3,6 +3,7 @@ const { Schema, model } = mongoose;
 
 const serviceSchema = new Schema(
   {
+    OrderId: String,
     fullName: String,
     email: String,
     phoneNumber: Number,

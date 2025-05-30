@@ -2,3 +2,10 @@
   display: flex;
   gap: 12px;
 }
+.filter-container input {
+  height: 32px;
+  font-size: 14px;
+}
+.filter-container select {
+  font-size: 14px;
+}

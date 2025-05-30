@@ -827,26 +827,28 @@ ul.breadcrumb li a:hover {
 }
 .price_card {
   background-color: rgb(249, 249, 249);
+  color: #003f4e;
   border-radius: 4px;
   padding: 24px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: space-between;
 }
-.popular {
+
+.price_card p {
+  color: #003f4e;
+  font-size: 14px;
+}
+.price_card_button {
   background-color: #003f4e;
-  color: #f5faf7;
-}
-.popular p {
-  color: #f5faf7;
-}
-.popular_button {
-  background-color: yellow;
   padding: 0.5rem 0.8rem;
   border-radius: 0.2rem;
   font-size: 1rem;
   font-weight: 500;
-  color: black;
+  color: white;
+  width: 100%;
+  margin-top: 24px;
 }
 .selectTest {
   background-color: rgb(249, 249, 249);

@@ -42,6 +42,7 @@ import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollTop";
 import "animate.css/animate.css";
+import PaymentStatus from "./pages/PaymentStatus";
 
 let router = createBrowserRouter([
   {
@@ -119,6 +120,10 @@ let router = createBrowserRouter([
       {
         path: "/refund-policy",
         element: <RefundPolicy />,
+      },
+      {
+        path: "/payment-status",
+        element: <PaymentStatus />,
       },
     ],
   },

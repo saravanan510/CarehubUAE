@@ -38,9 +38,7 @@ const Cart = ({ selectedTest }) => {
       <div className="cart_bottom" style={{ padding: "12px" }}>
         <div>
           <p>
-            <span style={{ fontWeight: "bold" }}>Add AED {totalPrice}</span>({" "}
-            {totalTest}
-            Tests )
+            <span style={{ fontWeight: "bold" }}>Add AED {totalPrice}</span>
           </p>
           <p style={{ fontSize: "15px" }}>Get report in 3 days</p>
         </div>

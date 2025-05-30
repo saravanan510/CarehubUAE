@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import { useForm } from "react-hook-form";
 import { useBookingDetails } from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import ScrollToTop from "../components/ScrollTop";
 const PatientDetails = () => {
   const {
     register,
@@ -14,7 +15,6 @@ const PatientDetails = () => {
   } = useForm();
   const { bookingDetails, handleDetails } = useBookingDetails();
   const navigate = useNavigate();
-  console.log("bookingDetails", bookingDetails);
 
   const onSubmit = (data) => {
     const details = { ...bookingDetails };
@@ -24,6 +24,7 @@ const PatientDetails = () => {
 
   return (
     <>
+      <ScrollToTop />
       <section>
         <Container>
           <Row>

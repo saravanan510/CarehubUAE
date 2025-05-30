@@ -1,0 +1,19 @@
+.page-container {
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+  margin-top: 16px;
+}
+.page {
+  width: 32px;
+  height: 32px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.current {
+  background-color: #07bc0c;
+  color: white;
+}

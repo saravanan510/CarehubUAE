@@ -5,17 +5,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Assistance from "../assets/faq.png";
 import { Link } from "react-router-dom";
+import { RiContrastDrop2Line } from "react-icons/ri";
 import { FaRegFile } from "react-icons/fa";
 import { FiTruck } from "react-icons/fi";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import SelectTest from "../components/SelectTest";
 import Cart from "../components/Cart";
 import testData from "../utils/testData";
+import packageTests from "../utils/packageData";
 import { useBookingDetails } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 const BookBloodTest = () => {
   const [selectedTest, setSelectedTest] = useState([]);
   const { bookingDetails, handleDetails } = useBookingDetails();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let selectedTestData = [];
@@ -26,7 +30,6 @@ const BookBloodTest = () => {
         })
       );
     });
-
     handleDetails({ ...bookingDetails, tests: selectedTestData });
   }, [selectedTest]);
 
@@ -34,57 +37,16 @@ const BookBloodTest = () => {
     setSelectedTest((prevSelectedTest) => [...prevSelectedTest, id]);
   };
 
+  const handleAddPackageTest = (testPackage) => {
+    let newBookingDetails = { ...bookingDetails };
+    newBookingDetails.tests.push(testPackage);
+    handleDetails(newBookingDetails);
+    navigate("/selectdate&time");
+  };
   const handleRemoveTest = (id) => {
     const updatedId = selectedTest.filter((testid) => testid !== id);
     setSelectedTest(updatedId);
   };
-
-  const pricesObj = [
-    {
-      current_price: 140,
-      excisting_price: 140,
-      benefits: [
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-      ],
-    },
-    {
-      current_price: 140,
-      excisting_price: 140,
-      benefits: [
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-      ],
-    },
-    {
-      current_price: 140,
-      excisting_price: 140,
-      benefits: [
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-      ],
-    },
-    {
-      current_price: 140,
-      excisting_price: 140,
-      benefits: [
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-        "Complete Blood Count(CBC)",
-      ],
-    },
-  ];
 
   return (
     <>
@@ -155,43 +117,50 @@ const BookBloodTest = () => {
             </Col>
           </Row>
 
-          <Row className="g-2 d-flex align-items-end">
-            {pricesObj.map((price, i) => {
+          <Row className="g-2 d-flex align-items-stretch">
+            {packageTests.map((testPackage, i) => {
               return (
-                <Col xs={12} md={6} lg={3}>
-                  <div className={i == 2 ? "popular price_card" : "price_card"}>
-                    {i == 2 && (
-                      <div className="text-end">
-                        <h6>Popular</h6>
-                      </div>
-                    )}
-                    <div className="border-bottom mb-4">
-                      <h5 className="fw-semibold mb-1">140 AED</h5>
-                      <p className="fw-semibold text-decoration-line-through">
-                        140 AED
-                      </p>
-                    </div>
+                <Col xs={12} md={6} lg={3} className="d-flex" key={i}>
+                  <div className={"price_card"}>
                     <div>
-                      {price.benefits.map((benefit) => {
-                        return (
-                          <div className="d-flex align-items-center my-2">
-                            <FaRegCircleCheck className="me-2" />
-                            <p className="m-0">{benefit}</p>
-                          </div>
-                        );
-                      })}
+                      <div className="border-bottom mb-3">
+                        <h6 className="">{testPackage.name}</h6>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "baseline",
+                            gap: "6px",
+                          }}
+                        >
+                          <h5 className="fw-semibold mb-1">
+                            {testPackage.price} AED
+                          </h5>
+                          <p className=" text-decoration-line-through">
+                            {testPackage.excisting_price} AED
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        {testPackage.benefits.map((benefit, i) => {
+                          return (
+                            <div
+                              className="d-flex align-items-center my-2"
+                              key={i}
+                            >
+                              <RiContrastDrop2Line className="me-2" />
+                              <p className="m-0">{benefit}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                    <div className="mt-5">
-                      <button
-                        className={
-                          i == 2
-                            ? "popular_button w-100"
-                            : "custom-button w-100"
-                        }
-                      >
-                        Book a Test
-                      </button>
-                    </div>
+
+                    <button
+                      className={"price_card_button"}
+                      onClick={() => handleAddPackageTest(testPackage)}
+                    >
+                      Book a Test
+                    </button>
                   </div>
                 </Col>
               );

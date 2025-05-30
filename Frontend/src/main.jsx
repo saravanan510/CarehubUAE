@@ -29,11 +29,13 @@ import ConfirmBooking from "./pages/ConfirmBooking";
 import RefundPolicy from "./pages/RefundPolicy";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentCancel from "./pages/PaymentCancel";
+import PaymentStatus from "./pages/PaymentStatus";
 import { HelmetProvider } from "react-helmet-async";
-import { BookingProvider } from "./context/Context";
+import { AuthProvider, BookingProvider } from "./context/Context";
 import Login from "./admin/page/Login";
 import CCPaymentPage from "./pages/CCPaymentPage";
 import Dashboard from "./admin/page/Dashboard";
+import ProtectedRoute from "./admin/component/ProtectedRoute/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -137,12 +139,8 @@ const router = createBrowserRouter([
         element: <CCPaymentPage />,
       },
       {
-        path: "/paymentSuccess",
-        element: <PaymentSuccess />,
-      },
-      {
-        path: "/paymentCancel",
-        element: <PaymentCancel />,
+        path: "/paymentStatus",
+        element: <PaymentStatus />,
       },
     ],
   },
@@ -152,18 +150,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BookingProvider>
-      <HelmetProvider>
-        <RouterProvider router={router}>
-          <Layout />
-        </RouterProvider>
-      </HelmetProvider>
-    </BookingProvider>
+    <AuthProvider>
+      <BookingProvider>
+        <HelmetProvider>
+          <RouterProvider router={router}>
+            <Layout />
+          </RouterProvider>
+        </HelmetProvider>
+      </BookingProvider>
+    </AuthProvider>
   </React.StrictMode>
 );

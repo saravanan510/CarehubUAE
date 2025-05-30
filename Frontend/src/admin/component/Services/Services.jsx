@@ -5,9 +5,11 @@ import Table from "../Table/Table";
 import axios from "../../../utils/axios";
 import Filter from "../Filter/Filter";
 import ServiceDeatils from "./ServiceDeatils";
+import Pagination from "../Pagination/Pagination";
 
 const Services = () => {
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [filterData, setFilterData] = useState({
     search: "",
     date: null,
@@ -23,6 +25,9 @@ const Services = () => {
     });
   };
 
+  const handlePage = (page) => {
+    setCurrentPage(page);
+  };
   const metrics = [
     {
       label: "Total Appointments",
@@ -70,6 +75,7 @@ const Services = () => {
         </div>
         <div>
           <Table data={data} filterData={filterData} />
+          <Pagination currentPage={currentPage} handlePage={handlePage} />
         </div>
       </div>
       {/* <ServiceDeatils /> */}

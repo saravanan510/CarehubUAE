@@ -96,9 +96,9 @@ export default function NavBar() {
               id="basic-nav-dropdown"
               className="dropdown"
             >
-              {services.map((item) => {
+              {services.map((item, i) => {
                 return (
-                  <NavDropdown.Item className="nav_service_link">
+                  <NavDropdown.Item className="nav_service_link" key={i}>
                     <Link to={item.link}>{item.name}</Link>
                   </NavDropdown.Item>
                 );

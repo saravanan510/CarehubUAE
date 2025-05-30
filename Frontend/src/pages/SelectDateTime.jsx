@@ -7,6 +7,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useBookingDetails } from "../context/Context";
 import { MdDateRange } from "react-icons/md";
+import ScrollToTop from "../components/ScrollTop";
 const SelectDateTime = () => {
   const [date, setDate] = useState(new Date());
   const currentDate = new Date().toISOString().split("T")[0];
@@ -27,6 +28,7 @@ const SelectDateTime = () => {
 
   return (
     <>
+      <ScrollToTop />
       <section>
         <Container>
           <Row>
@@ -58,6 +60,7 @@ const SelectDateTime = () => {
                   {timings.morning.map((el, index) => {
                     return (
                       <button
+                        key={index}
                         className={`${
                           time === el
                             ? "custom-timepicker-selected"
