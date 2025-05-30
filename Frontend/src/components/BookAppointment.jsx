@@ -48,13 +48,13 @@ const BookAppointment = ({ currentService }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoader(true);
+    const formData = { ...form, orderId: `ORD-${Date.now()}` };
 
     try {
       const sendMailResponse = await axios.post(
         "api/send-email", // Ensure this URL is correct
-        form,
+        formData,
         {
           headers: {
             "Content-Type": "application/json", // Ensure the content type is application/json

@@ -20,8 +20,18 @@ export const BookingProvider = ({ children }) => {
   const handleDetails = (data) => {
     setBookingDetails(data);
   };
+  const handleRest = () => {
+    setBookingDetails({
+      tests: [],
+      userInfo: {},
+      date: "",
+      time: "",
+    });
+  };
   return (
-    <BookingContext.Provider value={{ bookingDetails, handleDetails }}>
+    <BookingContext.Provider
+      value={{ bookingDetails, handleDetails, handleRest }}
+    >
       {children}
     </BookingContext.Provider>
   );

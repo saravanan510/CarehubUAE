@@ -9,8 +9,8 @@ import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const ConfirmBooking = () => {
-  const { bookingDetails } = useBookingDetails();
-  console.log("bookingDetails", bookingDetails);
+  const { bookingDetails, handleRest } = useBookingDetails();
+
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
@@ -45,6 +45,10 @@ const ConfirmBooking = () => {
       username: `${bookingDetails.userInfo.firstName} ${bookingDetails.userInfo.lastName}`,
       email: bookingDetails.userInfo.email,
       phoneNumber: bookingDetails.userInfo.phone,
+      doorNo: bookingDetails.userInfo.doorNo,
+      building: bookingDetails.userInfo.buildingName,
+      landmark: bookingDetails.userInfo.landMark,
+      city: bookingDetails.userInfo.city,
       date: new Date(bookingDetails.date).toISOString().split("T")[0],
       time: bookingDetails.time,
       tests: bookingDetails.tests,
@@ -59,6 +63,7 @@ const ConfirmBooking = () => {
         }
       );
       if (paymentInitiateResponse?.data?.success) {
+        handleRest();
         const { ccaUrl, merchantId, accessCode, encRequest } =
           paymentInitiateResponse?.data;
 
@@ -131,9 +136,9 @@ const ConfirmBooking = () => {
               </span>
             </Col>
             <Col>
-              <p style={{ fontSize: "14px", fontWeight: 500 }}>Comments</p>
+              <p style={{ fontSize: "14px", fontWeight: 500 }}>City</p>
               <span style={{ fontSize: "16px", fontWeight: 600 }}>
-                {bookingDetails?.userInfo?.comment || "N/A"}
+                {bookingDetails?.userInfo?.city || "N/A"}
               </span>
             </Col>
           </Row>

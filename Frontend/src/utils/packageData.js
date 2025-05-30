@@ -2,8 +2,8 @@ const packageTests = [
   {
     id: 1,
     name: "Basic Health Package I",
-    price: 140,
-    excisting_price: 140,
+    price: 370,
+    excisting_price: 470,
     benefits: [
       "CBC (Complete Blood Count)",
       "Fasting Blood Sugar (FBS)",
@@ -19,8 +19,8 @@ const packageTests = [
   {
     id: 2,
     name: "Basic Health Package II",
-    price: 140,
-    excisting_price: 140,
+    price: 690,
+    excisting_price: 800,
     benefits: [
       "CCBC",
       "CRP",
@@ -41,8 +41,8 @@ const packageTests = [
   {
     id: 3,
     name: "Comprehensive Health Package",
-    price: 140,
-    excisting_price: 140,
+    price: 750,
+    excisting_price: 900,
     benefits: [
       "CBC",
       "CRP",
@@ -65,8 +65,8 @@ const packageTests = [
   {
     id: 4,
     name: "Diabetes & Nephro Package",
-    price: 140,
-    excisting_price: 140,
+    price: 560,
+    excisting_price: 780,
     benefits: [
       "Fasting & PPBS",
       "HbA1c",
@@ -85,8 +85,8 @@ const packageTests = [
   {
     id: 5,
     name: "Cardiac Package",
-    price: 140,
-    excisting_price: 140,
+    price: 766,
+    excisting_price: 876,
     benefits: [
       "CBC",
       "KFT",
@@ -104,8 +104,8 @@ const packageTests = [
   {
     id: 6,
     name: "Female Wellness Package",
-    price: 140,
-    excisting_price: 140,
+    price: 900,
+    excisting_price: 1123,
     benefits: [
       "CBC",
       "Thyroid Profile",
@@ -127,8 +127,8 @@ const packageTests = [
   {
     id: 7,
     name: "Male Wellness Package",
-    price: 140,
-    excisting_price: 140,
+    price: 760,
+    excisting_price: 870,
     benefits: [
       "CBC",
       "Fasting Blood Sugar & HbA1c",
@@ -147,8 +147,8 @@ const packageTests = [
   {
     id: 8,
     name: "Pregnancy Routine/Screening Package",
-    price: 140,
-    excisting_price: 140,
+    price: 1900,
+    excisting_price: 2200,
     benefits: [
       "Complete Blood Count (CBC)",
       "CRP",
@@ -172,8 +172,8 @@ const packageTests = [
   {
     id: 9,
     name: "Pediatric Package (1–12 years)",
-    price: 140,
-    excisting_price: 140,
+    price: 550,
+    excisting_price: 670,
     benefits: [
       "CBC",
       "CRP",
@@ -192,8 +192,8 @@ const packageTests = [
   {
     id: 10,
     name: "STD Screening",
-    price: 140,
-    excisting_price: 140,
+    price: 1800,
+    excisting_price: 2200,
     benefits: [
       "HIV I & II",
       "Hepatitis B Surface Antigen (HBsAg)",

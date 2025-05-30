@@ -27,7 +27,6 @@ let testsData = {}; // Avoid using global mutable state like this if possible
 // Initiate Payment
 paymentCtrl.initiatePayment = async (req, res) => {
   testsData = req.body;
-
   try {
     const redirectUrl = `${process.env.YOUR_SERVER_URL}/api/payment/success`;
     const cancelUrl = `${process.env.YOUR_SERVER_URL}/api/payment/cancel`;
@@ -95,6 +94,8 @@ paymentCtrl.paymentResponse = async (req, res) => {
     .map((test) => `- ${test.name} (ID: ${test.id}): AED ${test.price}`)
     .join("\n");
 
+  const fullAddress = `${testsData.doorNo}, ${testsData.building}, ${testsData.landmark}, ${testsData.city}`;
+
   const adminMailOptions = {
     from: testsData.email,
     to: "Insurance@carehubuae.com",
@@ -103,9 +104,11 @@ paymentCtrl.paymentResponse = async (req, res) => {
     ).toLocaleDateString()}`,
     text:
       `A new booking has been made by ${testsData.username} (${testsData.email}, ${testsData.phoneNumber}).\n\n` +
+      `Address: ${fullAddress}\n\n` +
       `Booking Details:\n${formattedTests}\n\n` +
       `Date: ${new Date(testsData.date).toLocaleString()}\n` +
-      `Total Amount Paid: AED ${amount}\n\nPlease review the booking and take the necessary action.\n\n` +
+      `Total Amount Paid: AED ${amount}\n\n` +
+      `Please review the booking and take the necessary action.\n\n` +
       `Best regards,\nYour Booking System`,
   };
 

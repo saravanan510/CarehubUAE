@@ -2,7 +2,7 @@ const testData = [
   {
     name: "Vitamin D, 25-hydroxy (25-OH Cholecalciferol) Total - 82306",
     id: 1,
-    price: 1,
+    price: 140,
   },
   {
     name: "17-Hydroxy Progesterone level",

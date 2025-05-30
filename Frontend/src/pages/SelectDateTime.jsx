@@ -8,11 +8,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useBookingDetails } from "../context/Context";
 import { MdDateRange } from "react-icons/md";
 import ScrollToTop from "../components/ScrollTop";
+import { useNavigate } from "react-router-dom";
 const SelectDateTime = () => {
   const [date, setDate] = useState(new Date());
   const currentDate = new Date().toISOString().split("T")[0];
   const [time, setTime] = useState("");
   const { bookingDetails, handleDetails } = useBookingDetails();
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const timings = {
     morning: ["10:00 Am", "10:30 Am", "11:00 Am", "11:30 Am"],
@@ -24,6 +27,12 @@ const SelectDateTime = () => {
     const update = { ...bookingDetails };
     (update.time = time), (update.date = date);
     handleDetails(update);
+    if (date && time) {
+      setError(false);
+      navigate("/patientdetails");
+    } else {
+      setError(true);
+    }
   };
 
   return (
@@ -78,6 +87,7 @@ const SelectDateTime = () => {
                   {timings.afternoon.map((el, index) => {
                     return (
                       <button
+                        key={index}
                         className={`${
                           time === el
                             ? "custom-timepicker-selected"
@@ -115,12 +125,16 @@ const SelectDateTime = () => {
                 className="custom-button me-2"
                 onClick={handleBookAppointment}
               >
-                <Link to={"/patientdetails"}>Book Appointment</Link>
+                Book Appointment
+                {/* <Link to={"/patientdetails"}>Book Appointment</Link> */}
               </button>
               <button className="custom-button-secondary">
                 <Link to={"/bookbloodtest"}>Cancel</Link>
               </button>
             </div>
+            {error && (
+              <p style={{ color: "red" }}>Choose Appointment Date and Time</p>
+            )}
           </Row>
         </Container>
       </section>

@@ -32,7 +32,7 @@ const SelectTest = ({ tests, handleAddTest, handleRemoveTest }) => {
           <Row>
             {tests
               .filter((test) => {
-                return test.name.toLowerCase().includes(search);
+                return test.name.toLowerCase().includes(search.toLowerCase());
               })
               .map((test) => {
                 return (
