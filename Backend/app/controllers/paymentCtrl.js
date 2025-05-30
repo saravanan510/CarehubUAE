@@ -29,11 +29,8 @@ paymentCtrl.initiatePayment = async (req, res) => {
   testsData = req.body;
 
   try {
-    const protocol = req.protocol || "https";
-    const host = req.get("host");
-
-    const redirectUrl = `${protocol}://${host}/api/payment/success`;
-    const cancelUrl = `${protocol}://${host}/api/payment/cancel`;
+    const redirectUrl = `${process.env.YOUR_SERVER_URL}/api/payment/success`;
+    const cancelUrl = `${process.env.YOUR_SERVER_URL}/api/payment/cancel`;
 
     const paymentPayload = {
       ...req.body,
