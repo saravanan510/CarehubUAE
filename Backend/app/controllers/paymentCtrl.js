@@ -29,7 +29,7 @@ paymentCtrl.initiatePayment = async (req, res) => {
   testsData = req.body;
 
   try {
-    const protocol = req.protocol || "http";
+    const protocol = req.protocol || "https";
     const host = req.get("host");
 
     const redirectUrl = `${protocol}://${host}/api/payment/success`;
