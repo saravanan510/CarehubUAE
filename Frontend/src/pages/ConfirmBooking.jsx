@@ -101,6 +101,7 @@ const ConfirmBooking = () => {
 
           document.body.appendChild(form);
           form.submit();
+          handleRest();
         }
       } catch (error) {
         setLoader(false);
