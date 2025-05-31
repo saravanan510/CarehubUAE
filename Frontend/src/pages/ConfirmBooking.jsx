@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,9 +10,15 @@ import { useNavigate } from "react-router-dom";
 
 const ConfirmBooking = () => {
   const { bookingDetails, handleRest } = useBookingDetails();
-
+  const [error, setError] = useState("");
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (bookingDetails.date === "") {
+      navigate("/bookbloodtest");
+    }
+  }, [bookingDetails]);
 
   const orderId = `ORD-${Date.now()}`;
 
@@ -26,8 +32,6 @@ const ConfirmBooking = () => {
     tests.reduce((total, test) => total + test.price, 0).toFixed(2);
 
   const handleBloodTestBooking = async () => {
-    setLoader(true);
-
     const reqBody = {
       order_id: orderId,
       currency: "AED",
@@ -54,51 +58,59 @@ const ConfirmBooking = () => {
       tests: bookingDetails.tests,
     };
 
-    try {
-      const paymentInitiateResponse = await axios.post(
-        "/api/payment/initiate",
-        reqBody,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      if (paymentInitiateResponse?.data?.success) {
-        handleRest();
-        const { ccaUrl, merchantId, accessCode, encRequest } =
-          paymentInitiateResponse?.data;
-
-        if (!ccaUrl || !merchantId || !accessCode || !encRequest) {
-          throw new Error(
-            "Backend did not provide all required CCAvenue parameters."
-          );
-        }
-
-        const form = document.createElement("form");
-        form.method = "POST";
-        form.action = ccaUrl;
-
-        const params = {
-          merchant_id: merchantId,
-          access_code: accessCode,
-          encRequest: encRequest,
-        };
-
-        for (const key in params) {
-          if (params.hasOwnProperty(key)) {
-            const input = document.createElement("input");
-            input.type = "hidden";
-            input.name = key;
-            input.value = params[key];
-            form.appendChild(input);
+    if (parseFloat(totalPrice(bookingDetails.tests)) > 300) {
+      setError("");
+      setLoader(true);
+      try {
+        const paymentInitiateResponse = await axios.post(
+          "/api/payment/initiate",
+          reqBody,
+          {
+            headers: { "Content-Type": "application/json" },
           }
-        }
+        );
+        if (paymentInitiateResponse?.data?.success) {
+          const { ccaUrl, merchantId, accessCode, encRequest } =
+            paymentInitiateResponse?.data;
 
-        document.body.appendChild(form);
-        form.submit();
+          if (!ccaUrl || !merchantId || !accessCode || !encRequest) {
+            throw new Error(
+              "Backend did not provide all required CCAvenue parameters."
+            );
+          }
+
+          const form = document.createElement("form");
+          form.method = "POST";
+          form.action = ccaUrl;
+
+          const params = {
+            merchant_id: merchantId,
+            access_code: accessCode,
+            encRequest: encRequest,
+          };
+
+          for (const key in params) {
+            if (params.hasOwnProperty(key)) {
+              const input = document.createElement("input");
+              input.type = "hidden";
+              input.name = key;
+              input.value = params[key];
+              form.appendChild(input);
+            }
+          }
+
+          document.body.appendChild(form);
+          form.submit();
+        }
+      } catch (error) {
+        setLoader(false);
+        notifyError("Payment service unavailable. Please try again later.");
       }
-    } catch (error) {
+    } else {
+      setError(
+        "Minimum booking amount is 300. Please add more items to proceed."
+      );
       setLoader(false);
-      notifyError("Payment service unavailable. Please try again later.");
     }
   };
 
@@ -182,18 +194,38 @@ const ConfirmBooking = () => {
               </span>
             </Col>
           </Row>
+          {error && (
+            <div
+              style={{
+                padding: "8px",
+                background: "#f8d7da",
+                marginTop: "16px",
+                borderRadius: "4px",
+              }}
+            >
+              <p style={{ margin: "0px", fontWeight: "500" }}>{error}</p>
+            </div>
+          )}
 
           <div style={{ marginTop: "16px" }}>
-            <button
-              className="custom-button me-2"
-              onClick={handleBloodTestBooking}
-              disabled={loader}
-            >
-              {loader ? "Processing..." : "Confirm Booking"}
-            </button>
-            <button className="custom-button-secondary">
-              <Link to="/bookbloodtest">Cancel</Link>
-            </button>
+            {error ? (
+              <button className="custom-button-secondary">
+                <Link to="/bookbloodtest">Back</Link>
+              </button>
+            ) : (
+              <div>
+                <button
+                  className="custom-button me-2"
+                  onClick={handleBloodTestBooking}
+                  disabled={loader}
+                >
+                  {loader ? "Processing..." : "Confirm Booking"}
+                </button>
+                <button className="custom-button-secondary">
+                  <Link to="/bookbloodtest">Back</Link>
+                </button>
+              </div>
+            )}
           </div>
 
           <ToastContainer position="bottom-left" />

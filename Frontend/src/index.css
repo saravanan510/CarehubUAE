@@ -934,7 +934,7 @@ ul.breadcrumb li a:hover {
   border-radius: 4px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.801);
-  margin-right: 12px;
+  margin: 4px;
 }
 .custom-timepicker:hover {
   background-color: #e2ece6;

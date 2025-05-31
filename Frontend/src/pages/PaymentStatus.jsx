@@ -1,6 +1,7 @@
 // client/src/pages/PaymentStatus.js
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useBookingDetails } from "../context/Context";
 
 const PaymentStatus = () => {
   const location = useLocation(); // Hook to access URL query parameters
@@ -8,6 +9,7 @@ const PaymentStatus = () => {
   const [orderId, setOrderId] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [reason, setReason] = useState("");
+  const { handleRest } = useBookingDetails;
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -15,6 +17,7 @@ const PaymentStatus = () => {
     setOrderId(queryParams.get("orderId"));
     setTransactionId(queryParams.get("trackingId"));
     setReason(queryParams.get("message")); // Reason for failure or error message
+    handleRest();
   }, [location.search]); // Re-run effect if URL query parameters change
 
   return (

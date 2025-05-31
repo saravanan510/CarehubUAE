@@ -35,7 +35,7 @@ const PatientDetails = () => {
                   console.log("errors", errors)
                 )}
               >
-                <div style={{ display: "flex", gap: "48px" }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "48px" }}>
                   <div>
                     <div style={{ width: "300px" }}>
                       <label htmlFor="">First Name *</label>
