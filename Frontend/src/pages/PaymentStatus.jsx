@@ -9,7 +9,7 @@ const PaymentStatus = () => {
   const [orderId, setOrderId] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [reason, setReason] = useState("");
-  const { handleRest } = useBookingDetails;
+  const { handleRest } = useBookingDetails();
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
