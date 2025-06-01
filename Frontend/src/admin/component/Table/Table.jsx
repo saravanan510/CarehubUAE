@@ -1,6 +1,7 @@
 import "./table.css";
 import { useState, useEffect } from "react";
-const Table = ({ data, filterData }) => {
+import { Link } from "react-router-dom";
+const Table = ({ data, filterData, name }) => {
   const [filterTableData, setFilterTableData] = useState([]);
 
   useEffect(() => {
@@ -23,12 +24,14 @@ const Table = ({ data, filterData }) => {
     setFilterTableData(newTableData);
   }, [filterData, data]);
 
+  const hName = name === "services" ? "Service" : "Tests";
+
   const header = [
     { name: "Full Name", width: "10%" },
     { name: "Email", width: "10%" },
     { name: "Phone Number", width: "10%" },
     { name: "Date", width: "10%" },
-    { name: "Services", width: "10%" },
+    { name: hName, width: "10%" },
     { name: "Status", width: "10%" },
     { name: "Action", width: "10%" },
   ];
@@ -53,12 +56,23 @@ const Table = ({ data, filterData }) => {
               <td>{item.email}</td>
               <td>{item.phoneNumber}</td>
               <td>{item.date}</td>
-              <td>{item.service}</td>
+              {hName === "services" ? (
+                <td>{item.service}</td>
+              ) : (
+                <td>{item?.tests?.length}</td>
+              )}
+
               <td>{item.status}</td>
               <td>
-                <button style={{ background: "none", color: "blue" }}>
+                <Link
+                  to={
+                    name == "services"
+                      ? `/admin/services/${item.orderId} `
+                      : `/admin/bloodtests/${item.orderId}`
+                  }
+                >
                   View
-                </button>
+                </Link>
               </td>
             </tr>
           ))

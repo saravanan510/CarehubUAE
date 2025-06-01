@@ -2,39 +2,41 @@ import React, { useState } from "react";
 import "./appBar.css";
 import carehub_logo from "../../../assets/carehub_logo.png";
 import { AiOutlineHome } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const AppBar = ({ selectedMenu, handleSelect }) => {
+const AppBar = () => {
+  const [selected, setSelected] = useState("services");
+  const handleClick = (value) => {
+    setSelected(value);
+  };
   return (
     <>
       <div className="Appbar-container">
         <img src={carehub_logo} height="40px" />
         <ul>
-          <li
-            className={selectedMenu === "Dashboard" && "selected"}
-            onClick={() => {
-              handleSelect("Dashboard");
-            }}
-          >
-            <AiOutlineHome style={{ fontSize: "18px" }} />
-            <span>Dashboard</span>
+          <li>
+            <Link
+              to={"services"}
+              onClick={() => {
+                handleClick("services");
+              }}
+              className={selected == "services" ? "selected" : ""}
+            >
+              <AiOutlineHome style={{ fontSize: "18px" }} />
+              <span>Services</span>
+            </Link>
           </li>
-          <li
-            className={selectedMenu === "Services" && "selected"}
-            onClick={() => {
-              handleSelect("Services");
-            }}
-          >
-            <AiOutlineHome style={{ fontSize: "18px" }} />
-            <span>Services</span>
-          </li>
-          <li
-            className={selectedMenu === "Blood Panel" && "selected"}
-            onClick={() => {
-              handleSelect("Blood Panel");
-            }}
-          >
-            <AiOutlineHome style={{ fontSize: "18px" }} />
-            <span>Blood Panel</span>
+          <li>
+            <Link
+              to={"bloodtests"}
+              onClick={() => {
+                handleClick("bloodtests");
+              }}
+              className={selected == "bloodtests" ? "selected" : ""}
+            >
+              <AiOutlineHome style={{ fontSize: "18px" }} />
+              <span>Blood Tests</span>
+            </Link>
           </li>
         </ul>
       </div>

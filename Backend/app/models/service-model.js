@@ -10,6 +10,7 @@ const serviceSchema = new Schema(
     date: String,
     service: String,
     status: String,
+    files: Array,
   },
   { timestamps: true }
 );

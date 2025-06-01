@@ -39,8 +39,11 @@ export const BookingProvider = ({ children }) => {
 
 export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({ loggedIn: false });
+  const handleLoginContext = (value) => {
+    setAuth(value);
+  };
   return (
-    <AuthContext.Provider value={{ auth, setAuth }}>
+    <AuthContext.Provider value={{ auth, handleLoginContext }}>
       {children}
     </AuthContext.Provider>
   );

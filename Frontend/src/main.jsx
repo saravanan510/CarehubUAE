@@ -34,8 +34,12 @@ import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider, BookingProvider } from "./context/Context";
 import Login from "./admin/page/Login";
 import CCPaymentPage from "./pages/CCPaymentPage";
-import Dashboard from "./admin/page/Dashboard";
+import AdminLayout from "./admin/page/AdminLayout";
 import ProtectedRoute from "./admin/component/ProtectedRoute/ProtectedRoute";
+import Services from "./admin/component/Services/Services";
+import BloodTests from "./admin/component/BloodTest/BloodTest";
+import ServiceDeatils from "./admin/component/Services/ServiceDeatils";
+import BloodTestDetails from "./admin/component/BloodTest/BloodTestDetails";
 
 const router = createBrowserRouter([
   {
@@ -149,12 +153,46 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/dashboard",
+    path: "/admin",
     element: (
       <ProtectedRoute>
-        <Dashboard />
+        <AdminLayout />
       </ProtectedRoute>
     ),
+    children: [
+      {
+        path: "services",
+        element: (
+          <ProtectedRoute>
+            <Services />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "bloodtests",
+        element: (
+          <ProtectedRoute>
+            <BloodTests />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "services/:id",
+        element: (
+          <ProtectedRoute>
+            <ServiceDeatils />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "bloodtests/:id",
+        element: (
+          <ProtectedRoute>
+            <BloodTestDetails />
+          </ProtectedRoute>
+        ),
+      },
+    ],
   },
 ]);
 

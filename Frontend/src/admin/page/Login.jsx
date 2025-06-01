@@ -6,28 +6,41 @@ import { useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import { useAuth } from "../../context/Context";
 const Login = () => {
-  const { setAuth } = useAuth();
+  const { handleLoginContext } = useAuth();
+  const [loader, setLoader] = useState(false);
+  const [error, setError] = useState("");
   const [loginDetails, setLoginDetails] = useState({
     userName: "",
     password: "",
   });
   const navigate = useNavigate();
+
   const handleLogin = async () => {
-    try {
-      const loginResponse = await axios.post("api/user/login", loginDetails, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      console.log("loginResponse", loginResponse);
-      if (loginResponse.status == 200) {
-        setAuth({ loggedIn: true });
-        navigate("/dashboard");
-      } else {
-        setAuth({ loggedIn: false });
+    if (loginDetails.userName && loginDetails.password) {
+      setLoader(true);
+      setError("");
+      try {
+        const loginResponse = await axios.post("api/user/login", loginDetails, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (loginResponse.data.status == 200) {
+          setLoader(false);
+          handleLoginContext({ loggedIn: true });
+          navigate("/admin/services");
+          setError("");
+        } else {
+          handleLoginContext({ loggedIn: false });
+          setError("Incorrect email or password");
+          setLoader(false);
+        }
+      } catch (error) {
+        console.log("login error");
       }
-    } catch (error) {
-      console.log("login error");
+    } else {
+      setError("Email and Password is required");
     }
   };
   const handleRegister = async () => {
@@ -42,7 +55,7 @@ const Login = () => {
         }
       );
       if (registerResponse) {
-        navigate("/dashboard");
+        navigate("/admin/services");
       }
     } catch (error) {
       console.log("registration error");
@@ -71,6 +84,7 @@ const Login = () => {
                 type="text"
                 className="custom-input"
                 name="userName"
+                required
                 value={loginDetails.userName}
                 onChange={handleChange}
               />
@@ -81,12 +95,14 @@ const Login = () => {
                 type="text"
                 className="custom-input"
                 name="password"
+                required
                 value={loginDetails.password}
                 onChange={handleChange}
               />
             </div>
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <button className="custom-button" onClick={handleLogin}>
-              Login
+              {loader ? "Login..." : "Login"}
             </button>
             {/* <button className="custom-button" onClick={handleRegister}>
               Register

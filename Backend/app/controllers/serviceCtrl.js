@@ -71,4 +71,59 @@ serviceCtrl.show = async (req, res) => {
   }
 };
 
+serviceCtrl.find = async (req, res) => {
+  const orderId = req.params.id;
+  try {
+    const service = await Services.findOne({ orderId: orderId });
+    res.json(service);
+  } catch (error) {
+    res.status(500).json({ message: "internal server error" });
+  }
+};
+
+serviceCtrl.update = async (req, res) => {
+  const orderId = req.params.id;
+  const body = req.body;
+  try {
+    const service = await Services.findOneAndUpdate(
+      { orderId: orderId },
+      body,
+      { new: true }
+    );
+    res.json(service);
+  } catch (error) {
+    res.status(500).json({ message: "internal server error" });
+  }
+};
+
+serviceCtrl.uploadFile = async (req, res) => {
+  try {
+    const service = JSON.parse(req.body.service);
+    const file = req.file;
+
+    if (!service.orderId) {
+      return res
+        .status(400)
+        .json({ message: "Missing orderId in service data" });
+    }
+
+    const update = {
+      $push: {
+        files: file.filename, // or store as an object with metadata if needed
+      },
+    };
+
+    const updateService = await Services.findOneAndUpdate(
+      { orderId: service.orderId },
+      update,
+      { new: true }
+    );
+
+    res.status(200).json(updateService);
+  } catch (error) {
+    console.error("Upload error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = serviceCtrl;

@@ -6,6 +6,7 @@ import axios from "../../../utils/axios";
 import Filter from "../Filter/Filter";
 import ServiceDeatils from "./ServiceDeatils";
 import Pagination from "../Pagination/Pagination";
+import Header from "../Header/Header";
 
 const Services = () => {
   const [data, setData] = useState([]);
@@ -57,28 +58,45 @@ const Services = () => {
   };
   useEffect(() => {
     fetchData();
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 10000);
+    return () => clearInterval(intervalId);
   }, []);
+
   return (
     <div className="service-container">
-      <div className="service-metrics">
-        {metrics.map((item, index) => {
-          return <Metrics key={index} label={item.label} count={item.count} />;
-        })}
-      </div>
-      <div className="service-table">
-        <div className="service-tableTop">
-          <h6>Services</h6>
-          <Filter
-            filterData={filterData}
-            handleFilterChange={handleFilterChange}
-          />
+      <Header title={"Services"} />
+      <div className="innercontainer">
+        <div className="service-metrics">
+          {metrics.map((item, index) => {
+            return (
+              <Metrics key={index} label={item.label} count={item.count} />
+            );
+          })}
         </div>
-        <div>
-          <Table data={data} filterData={filterData} />
-          <Pagination currentPage={currentPage} handlePage={handlePage} />
+        <div className="service-table">
+          <div className="service-tableTop">
+            <h6>Services</h6>
+            <Filter
+              filterData={filterData}
+              handleFilterChange={handleFilterChange}
+            />
+          </div>
+          <div
+            style={{
+              height: "400px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <Table data={data} filterData={filterData} name={"services"} />
+            {/* <Pagination currentPage={currentPage} handlePage={handlePage} /> */}
+          </div>
         </div>
+        {/* <ServiceDeatils /> */}
       </div>
-      {/* <ServiceDeatils /> */}
     </div>
   );
 };

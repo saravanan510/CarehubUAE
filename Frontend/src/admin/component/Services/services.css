@@ -1,5 +1,8 @@
 .service-container {
-  padding: 24px;
+  width: 100%;
+}
+.innercontainer {
+  padding: 20px;
 }
 .service-metrics {
   display: flex;
@@ -36,4 +39,15 @@
 }
 .file p {
   margin: 0px;
+}
+.serviceDetails {
+  width: 100%;
+}
+.fileInput {
+  padding: 8px;
+  border: 1px solid rgb(219, 219, 219);
+  width: 400px;
+  height: 50px;
+  margin-bottom: 16px;
+  margin-right: 12px;
 }

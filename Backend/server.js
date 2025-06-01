@@ -19,11 +19,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/files", express.static("public/files"));
+
 app.use("/api/user", userRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/send-email", mailRoutes);
 app.use("/api/services", servicesRoutes);
-app.use("/api/book-bloodTest", bloodTestRoutes);
+app.use("/api/bloodtests", bloodTestRoutes);
 
 app.use(express.static(path.join(__dirname, "carehub/build")));
 

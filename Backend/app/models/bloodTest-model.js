@@ -12,6 +12,7 @@ const bloodTestSchema = new Schema(
     status: String,
     tests: Array,
     amount: String,
+    files: Array,
   },
   { timestamps: true }
 );

@@ -20,7 +20,7 @@ const Filter = ({ filterData, handleFilterChange }) => {
           padding: "12px",
         }}
         type="date"
-        value={filterData.date || date.toISOString().split("T")[0]}
+        value={filterData.date}
         onChange={(e) => handleFilterChange("date", e.target.value)}
       />
       <select

@@ -5,9 +5,9 @@ import "./view.css";
 const View = ({ selectedMenu }) => {
   return (
     <div className="view-container">
-      <Header />
+      <Header selectedMenu={selectedMenu} />
       {selectedMenu === "Services" && <Services />}
-      {selectedMenu === "Blood Panel" && <BloodTest />}
+      {selectedMenu === "Blood Tests" && <BloodTest />}
     </div>
   );
 };

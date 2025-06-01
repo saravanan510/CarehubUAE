@@ -1,5 +1,5 @@
 .bloodTest-container {
-  padding: 24px;
+  width: 100%;
 }
 .bloodTest-metrics {
   display: flex;
@@ -20,4 +20,10 @@
 .bloodTest-tableInputContainer {
   display: flex;
   gap: 16px;
+}
+.bloodTest-innerContainer {
+  padding: 20px;
+}
+.bloodtestdetails {
+  width: 100%;
 }

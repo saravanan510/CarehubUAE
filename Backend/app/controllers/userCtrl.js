@@ -1,12 +1,10 @@
 const User = require("../models/user-model");
 const userCtrl = {};
 userCtrl.login = async (req, res) => {
-  console.log("credentials", req.body);
   try {
     const user = await User.findOne({ userName: req.body.userName });
 
     if (user) {
-      console.log("user", user);
       if (user.password === req.body.password) {
         return res.json({ status: 200, message: "logged in successfully" });
       } else {
