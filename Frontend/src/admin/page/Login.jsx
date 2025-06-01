@@ -104,9 +104,9 @@ const Login = () => {
             <button className="custom-button" onClick={handleLogin}>
               {loader ? "Login..." : "Login"}
             </button>
-            <button className="custom-button" onClick={handleRegister}>
+            {/* <button className="custom-button" onClick={handleRegister}>
               Register
-            </button>
+            </button> */}
           </Row>
         </Container>
       </div>

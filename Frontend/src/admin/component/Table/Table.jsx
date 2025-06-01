@@ -56,7 +56,7 @@ const Table = ({ data, filterData, name }) => {
               <td>{item.email}</td>
               <td>{item.phoneNumber}</td>
               <td>{item.date}</td>
-              {hName === "services" ? (
+              {name === "services" ? (
                 <td>{item.service}</td>
               ) : (
                 <td>{item?.tests?.length}</td>
