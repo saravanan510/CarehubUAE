@@ -27,13 +27,13 @@ const Table = ({ data, filterData, name }) => {
   const hName = name === "services" ? "Service" : "Tests";
 
   const header = [
-    { name: "Full Name", width: "10%" },
-    { name: "Email", width: "10%" },
+    { name: "Full Name", width: "15%" },
+    { name: "Email", width: "15%" },
     { name: "Phone Number", width: "10%" },
     { name: "Date", width: "10%" },
-    { name: hName, width: "10%" },
-    { name: "Status", width: "10%" },
-    { name: "Action", width: "10%" },
+    { name: hName, width: "15%" },
+    { name: "Status", width: "5%" },
+    { name: "Action", width: "5%" },
   ];
 
   return (

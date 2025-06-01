@@ -86,6 +86,8 @@ const Services = () => {
           <div
             style={{
               height: "400px",
+              overflowY: "scroll",
+              overflowX: "hidden",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",

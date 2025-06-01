@@ -77,7 +77,13 @@ const BloodTest = () => {
               handleFilterChange={handleFilterChange}
             />
           </div>
-          <div>
+          <div
+            style={{
+              height: "400px",
+              overflowY: "scroll",
+              overflowX: "hidden",
+            }}
+          >
             <Table data={data} filterData={filterData} name={"bloodtests"} />
           </div>
         </div>
