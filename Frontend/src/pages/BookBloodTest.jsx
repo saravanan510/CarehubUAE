@@ -3,7 +3,7 @@ import ScrollToTop from "../components/ScrollTop";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Assistance from "../assets/faq.png";
+import BloodTestBanner from "../assets/bloodtestbanner.jpg";
 import { Link } from "react-router-dom";
 import { RiContrastDrop2Line } from "react-icons/ri";
 import { FaRegFile } from "react-icons/fa";
@@ -56,44 +56,57 @@ const BookBloodTest = () => {
           <Row className="">
             <Col lg={5}>
               <div className="bookbloodtest_img">
-                <img src={Assistance} className="img-fluid" />
+                <img src={BloodTestBanner} className="img-fluid" />
               </div>
             </Col>
             <Col lg={1}></Col>
             <Col className="align-self-center">
               <div>
-                <h2 className="fs-2 fw-bold" style={{ color: "#012a4a" }}>
-                  Create your own test
+                <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                  Bringing Quality Healthcare.
+                  <br /> Blood Test At Home
                 </h2>
                 <p>
-                  Customize your own blood test package based on your own health
-                  needs and benefit from flexible pricing.
+                  Reliable Results, Delivered with convenience, Home testing, No
+                  more waiting
                 </p>
               </div>
               <div className="bookbloodtest_tag p-3">
                 <div className="d-md-flex justify-content-md-around">
-                  <div className="">
+                  <div>
                     <div className="d-md-flex">
                       <div className="me-3">
                         <FaRegFile />
                       </div>
                       <div className="p-0">
-                        <p className="fw-semibold m-0">100+ Tests</p>
-                        <p className="m-0">with certified labs</p>
+                        <p
+                          className="fw-semibold m-0"
+                          style={{ color: "white" }}
+                        >
+                          100+ Tests
+                        </p>
+                        <p className="m-0" style={{ color: "white" }}>
+                          with certified labs
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div className="border-end border-dark mx-3 mx-lg-4"></div>
+                  <div className="border-end border-white mx-3 mx-lg-4"></div>
                   <div>
                     <div className="d-md-flex">
                       <div className="me-3">
                         <FiTruck />
                       </div>
                       <div className="p-0">
-                        <p className="fw-semibold m-0">
+                        <p
+                          className="fw-semibold m-0"
+                          style={{ color: "white" }}
+                        >
                           Free at-home sample collection
                         </p>
-                        <p className="m-0">Above AED 350</p>
+                        <p className="m-0" style={{ color: "white" }}>
+                          Above AED 300
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -108,7 +121,8 @@ const BookBloodTest = () => {
           <Row>
             <Col className="header">
               <h2 className="fs-2 fw-bold">
-                Select our flexible price plan that save your money
+                Select our flexible lab at home services price plan that saves
+                your money
               </h2>
               <p>
                 Experience a variety of features aimed at improving your blood

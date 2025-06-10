@@ -822,8 +822,9 @@ ul.breadcrumb li a:hover {
 }
 
 .bookbloodtest_tag {
-  background-color: #ffd500;
+  background-color: #009b45;
   border-radius: 4px;
+  color: white;
 }
 .price_card {
   background-color: rgb(249, 249, 249);

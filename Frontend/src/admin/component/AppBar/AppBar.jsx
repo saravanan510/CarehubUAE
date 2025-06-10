@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./appBar.css";
 import carehub_logo from "../../../assets/carehub_logo.png";
 import { AiOutlineHome } from "react-icons/ai";
+import { MdOutlineMedicalServices } from "react-icons/md";
+import { MdOutlineBloodtype } from "react-icons/md";
+
 import { Link } from "react-router-dom";
 
 const AppBar = () => {
@@ -22,7 +25,7 @@ const AppBar = () => {
               }}
               className={selected == "services" ? "selected" : ""}
             >
-              <AiOutlineHome style={{ fontSize: "18px" }} />
+              <MdOutlineMedicalServices style={{ fontSize: "18px" }} />
               <span>Services</span>
             </Link>
           </li>
@@ -34,7 +37,7 @@ const AppBar = () => {
               }}
               className={selected == "bloodtests" ? "selected" : ""}
             >
-              <AiOutlineHome style={{ fontSize: "18px" }} />
+              <MdOutlineBloodtype style={{ fontSize: "18px" }} />
               <span>Blood Tests</span>
             </Link>
           </li>

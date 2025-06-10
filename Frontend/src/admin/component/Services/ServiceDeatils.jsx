@@ -4,12 +4,17 @@ import { AiOutlineFilePdf } from "react-icons/ai";
 import Header from "../Header/Header";
 import { useParams } from "react-router";
 import axios from "../../../utils/axios";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const ServiceDeatils = () => {
   const [service, setService] = useState({});
-
+  const [show, setShow] = useState(false);
   const [file, setFile] = useState();
   const { id } = useParams();
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const fetchService = async () => {
     try {
@@ -47,7 +52,9 @@ const ServiceDeatils = () => {
       console.log("failed to upload file", error);
     }
   };
+
   const handleUpdate = async (value) => {
+    handleClose();
     const updateService = { ...service };
     updateService.status = value;
     try {
@@ -131,7 +138,8 @@ const ServiceDeatils = () => {
                 marginRight: "12px",
               }}
               onClick={() => {
-                handleUpdate("Canceled");
+                // handleUpdate("Canceled");
+                handleShow();
               }}
             >
               Cancel
@@ -169,6 +177,25 @@ const ServiceDeatils = () => {
           })}
         </div>
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Cancel Appointment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to cancel appointment?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button
+            variant="success"
+            onClick={() => {
+              handleUpdate("Canceled");
+            }}
+          >
+            Save
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

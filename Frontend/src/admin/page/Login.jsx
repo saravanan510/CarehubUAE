@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import { useAuth } from "../../context/Context";
+import Logo from "../../assets/carehub_logo.png";
 const Login = () => {
   const { handleLoginContext } = useAuth();
   const [loader, setLoader] = useState(false);
@@ -78,6 +79,14 @@ const Login = () => {
           }}
         >
           <Row style={{ width: "360px" }}>
+            <div
+              style={{
+                textAlign: "center",
+                marginBottom: "36px",
+              }}
+            >
+              <img src={Logo} alt="carehub" height={"48px"} />
+            </div>
             <div style={{ padding: "0px", marginBottom: "12px" }}>
               <label>User Email</label>
               <input
@@ -92,7 +101,7 @@ const Login = () => {
             <div style={{ padding: "0px", marginBottom: "16px" }}>
               <label>Password</label>
               <input
-                type="text"
+                type="password"
                 className="custom-input"
                 name="password"
                 required

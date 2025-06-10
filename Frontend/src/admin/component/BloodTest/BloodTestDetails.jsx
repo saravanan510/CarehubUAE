@@ -3,11 +3,17 @@ import Header from "../Header/Header";
 import { useParams } from "react-router";
 import axios from "../../../utils/axios";
 import { AiOutlineFilePdf } from "react-icons/ai";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const BloodTestDetails = () => {
   const [bloodTest, setBloodTest] = useState({});
+  const [show, setShow] = useState(false);
   const [file, setFile] = useState();
   const { id } = useParams();
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const fetchTest = async () => {
     try {
@@ -47,6 +53,7 @@ const BloodTestDetails = () => {
   };
 
   const handleUpdate = async (value) => {
+    handleClose();
     const updateTest = { ...bloodTest };
     updateTest.status = value;
     try {
@@ -144,7 +151,8 @@ const BloodTestDetails = () => {
                 marginRight: "12px",
               }}
               onClick={() => {
-                handleUpdate("Canceled");
+                // handleUpdate("Canceled");
+                handleShow();
               }}
             >
               Cancel
@@ -182,6 +190,25 @@ const BloodTestDetails = () => {
           })}
         </div>
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Cancel Appointment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to cancel appointment?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button
+            variant="success"
+            onClick={() => {
+              handleUpdate("Canceled");
+            }}
+          >
+            Save
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
