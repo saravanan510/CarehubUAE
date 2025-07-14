@@ -324,11 +324,11 @@ const testData = [
     id: 65,
     price: 120,
   },
-  {
-    name: "HIV I & II",
-    id: 66,
-    price: 120,
-  },
+  // {
+  //   name: "HIV I & II",
+  //   id: 66,
+  //   price: 120,
+  // },
   {
     name: "Homocysteine level",
     id: 67,
