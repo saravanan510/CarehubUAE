@@ -63,12 +63,11 @@ const BookBloodTest = () => {
             <Col className="align-self-center">
               <div>
                 <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Bringing Quality Healthcare.
-                  <br /> Blood Test At Home
+                  Bringing quality healthcare.
+                  <br /> Blood test at home in dubai.
                 </h2>
                 <p>
-                  Reliable Results, Delivered with convenience, Home testing, No
-                  more waiting
+                  Experience reliable results delivered with convenience through our trusted home testing services. With easy-to-use kits and accurate reporting, you can take control of your health from the comfort of your home. No more waiting in long queues or dealing with delays—our home testing ensures fast, secure, and dependable outcomes, giving you the peace of mind you deserve.
                 </p>
               </div>
               <div className="bookbloodtest_tag p-3">
@@ -121,12 +120,10 @@ const BookBloodTest = () => {
           <Row>
             <Col className="header">
               <h2 className="fs-2 fw-bold">
-                Select our flexible lab at home services price plan that saves
-                your money
+               Select our flexible lab at home services price plan that saves your money
               </h2>
               <p>
-                Experience a variety of features aimed at improving your blood
-                testing process, all at a cost that suits your budget.
+                Discover a wide range of advanced features designed to make your blood testing process easier, faster, and more accurate. Our innovative home testing solutions ensure reliable results while saving you time and effort. With user-friendly kits and professional accuracy, you can monitor your health from the comfort of home. We focus on delivering convenience and dependable outcomes you can trust. Best of all, our blood testing services are offered at a price that fits your budget without compromising on quality.
               </p>
             </Col>
           </Row>

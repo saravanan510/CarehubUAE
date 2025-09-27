@@ -9,7 +9,8 @@ const PrivateNursing = () => {
     <>
       <ScrollToTop />
       <Helmet>
-        <title>Home Nursing Services, Home Care Dubai</title>
+        <title>Home Nursing in Dubai, Home Health Care Services in UAE – Carehub
+</title>
         <meta
           name="description"
           content="Choose Carehub Healthcare for premium home care nursing services in Dubai. Our dedicated team offers tailored care, ensuring comfort and recovery at home."
@@ -25,7 +26,7 @@ const PrivateNursing = () => {
       </Helmet>
       <div className="servicepage_banner">
         <Container>
-          <h2 className="fs-2 fw-bold text-white">HOME NURSING SERVICES</h2>
+          <h1 className="fs-2 fw-bold text-white">HOME NURSING SERVICES</h1>
           <ul class="breadcrumb">
             <li>
               <Link to={"/"}>Home</Link>

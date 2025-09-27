@@ -14,7 +14,7 @@ const PrivateNursing_details = () => {
           <Row>
             <Col lg={8}>
               <div className="service_img">
-                <img src={NursingServices} />
+                <img src={NursingServices} alt="Home-Nursing-in-Dubai-UAE" />
               </div>
 
               <div className="text-start pe-5" lg={8}>
