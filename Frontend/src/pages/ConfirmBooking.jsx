@@ -16,7 +16,7 @@ const ConfirmBooking = () => {
 
   useEffect(() => {
     if (bookingDetails.date === "") {
-      navigate("/bookbloodtest");
+      navigate("/book-blood-test");
     }
   }, [bookingDetails]);
 
@@ -211,7 +211,7 @@ const ConfirmBooking = () => {
           <div style={{ marginTop: "16px" }}>
             {error ? (
               <button className="custom-button-secondary">
-                <Link to="/bookbloodtest">Back</Link>
+                <Link to="/book-blood-test">Back</Link>
               </button>
             ) : (
               <div>
@@ -223,7 +223,7 @@ const ConfirmBooking = () => {
                   {loader ? "Processing..." : "Confirm Booking"}
                 </button>
                 <button className="custom-button-secondary">
-                  <Link to="/bookbloodtest">Back</Link>
+                  <Link to="/book-blood-test">Back</Link>
                 </button>
               </div>
             )}

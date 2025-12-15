@@ -29,7 +29,7 @@ const SelectDateTime = () => {
     handleDetails(update);
     if (date && time) {
       setError(false);
-      navigate("/patientdetails");
+      navigate("/patient-details");
     } else {
       setError(true);
     }
@@ -129,7 +129,7 @@ const SelectDateTime = () => {
                 {/* <Link to={"/patientdetails"}>Book Appointment</Link> */}
               </button>
               <button className="custom-button-secondary">
-                <Link to={"/bookbloodtest"}>Cancel</Link>
+                <Link to={"/book-blood-test"}>Cancel</Link>
               </button>
             </div>
             {error && (

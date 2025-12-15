@@ -44,7 +44,7 @@ const Cart = ({ selectedTest }) => {
         </div>
         <div>
           <button type="button" className="cart_button">
-            <Link to={"/selectdate&time"}>Book a Test </Link>
+            <Link to={"/select-date&time"}>Book a Test </Link>
           </button>
         </div>
       </div>

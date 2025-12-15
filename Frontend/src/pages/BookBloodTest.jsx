@@ -15,6 +15,7 @@ import testData from "../utils/testData";
 import packageTests from "../utils/packageData";
 import { useBookingDetails } from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const BookBloodTest = () => {
   const [selectedTest, setSelectedTest] = useState([]);
@@ -41,7 +42,7 @@ const BookBloodTest = () => {
     let newBookingDetails = { ...bookingDetails };
     newBookingDetails.tests.push(testPackage);
     handleDetails(newBookingDetails);
-    navigate("/selectdate&time");
+    navigate("/select-date&time");
   };
   const handleRemoveTest = (id) => {
     const updatedId = selectedTest.filter((testid) => testid !== id);
@@ -51,6 +52,24 @@ const BookBloodTest = () => {
   return (
     <>
       <ScrollToTop />
+      <Helmet>
+        <title>
+          24x7 Diagnostic Blood Test at Home in Dubai, Lab Test at Home Service
+          UAE
+        </title>
+        <meta
+          name="description"
+          content="Carehub offers reliable Blood Test at Home in Dubai and UAE. Experience our Lab Test at Home Service in Dubai, including comprehensive diagnostic blood tests, ensuring convenience and accuracy from the comfort of your home."
+        />
+        <meta
+          name="keywords"
+          content="Blood Test at Home in Dubai, Lab Test at Home Service in Dubai, Diagnostic Blood Test at Home in Dubai, UAE"
+        />
+        <link
+          rel="canonical"
+          href="https://www.carehubuae.com/book-blood-test"
+        />
+      </Helmet>
       <section className="bookbloodtest_banner">
         <Container>
           <Row className="">

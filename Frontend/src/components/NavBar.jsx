@@ -123,7 +123,7 @@ export default function NavBar() {
             </NavDropdown>
             <Nav.Link
               as={Link}
-              to={"/bookbloodtest"}
+              to={"/book-blood-test"}
               onClick={closeNavbar}
               style={{
                 backgroundImage: "linear-gradient(to right, #009b45, #00829B)",
