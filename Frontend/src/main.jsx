@@ -123,15 +123,15 @@ const router = createBrowserRouter([
         element: <RefundPolicy />,
       },
       {
-        path: "/bookbloodtest",
+        path: "/book-blood-test",
         element: <BookBloodTest />,
       },
       {
-        path: "/selectdate&time",
+        path: "/select-date&time",
         element: <SelectDateTime />,
       },
       {
-        path: "/patientdetails",
+        path: "/patient-details",
         element: <PatientDetails />,
       },
       {
