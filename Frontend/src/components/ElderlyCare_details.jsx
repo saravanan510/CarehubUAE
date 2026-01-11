@@ -6,6 +6,80 @@ import FeatureIcon from "../assets/features.svg";
 import ElderlyCare from "../assets/Elderly_Care.webp";
 import BookAppointment from "./BookAppointment";
 import OtherServices from "./OtherServices";
+import Table from "./Table";
+import ServiceFAQ from "./ServiceFAQ";
+
+const TableData = [
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+  {
+    title: "Personalized attention",
+    value1:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    value2:
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+  },
+];
+
+const FAQData = [
+  {
+    key: "0",
+    question: "How quickly can a nurse be deployed?",
+    answer:
+      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+  },
+  {
+    key: "1",
+    question: "How quickly can a nurse be deployed?",
+    answer:
+      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+  },
+  {
+    key: "2",
+    question: "How quickly can a nurse be deployed?",
+    answer:
+      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+  },
+  {
+    key: "3",
+    question: "How quickly can a nurse be deployed?",
+    answer:
+      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+  },
+];
 
 const ElderlyCare_details = () => {
   return (
@@ -285,6 +359,10 @@ const ElderlyCare_details = () => {
             </Row>
           </Col>
         </Row>
+        <div>
+          <Table data={TableData} />
+          <ServiceFAQ data={FAQData} />
+        </div>
       </Container>
     </section>
   );
