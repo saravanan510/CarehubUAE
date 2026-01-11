@@ -18,19 +18,30 @@ const PrivateNursing_details = () => {
               </div>
 
               <div className="text-start pe-5" lg={8}>
-                <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Home Nursing Services in Dubai
-                </h2>
+                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                  Home Nursing Services in Dubai:The Ultimate Guide to
+                  Professional In-Home Care
+                </h1>
+                <h5>
+                  Professional Home Nursing Services in Dubai: Championing Your
+                  Recovery at Home
+                </h5>
+
                 <p>
-                  Carehub Healthcare is a trusted name in Home Nursing Services
-                  Dubai, offering expert at-home care for those needing support
-                  with daily tasks. Our 24/7 Home Nursing in Dubai ensures
-                  individuals can live comfortably and independently in their
-                  own homes, surrounded by familiarity.
+                  In an era where medical technology allows for hospital-grade
+                  care to be delivered in the home, Carehub Healthcare stands as
+                  a beacon of clinical excellence in the UAE. Our DHA-licensed
+                  home nursing services are designed for those who prioritize
+                  comfort without compromising on medical safety. Whether you
+                  are navigating the challenges of post-surgical recovery,
+                  managing a chronic illness, or seeking specialized pediatric
+                  support, our internationally trained nurses provide the
+                  expertise you need to heal in a familiar, stress-free
+                  environment.
                 </p>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Why Choose Our Home Care Nursing in Dubai?
+                  Why Home Nursing is the Superior Choice
                 </h4>
 
                 <p>
@@ -40,50 +51,162 @@ const PrivateNursing_details = () => {
                 </p>
 
                 <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                  Services We Provide
+                  The Carehub Process: How We Start Your Journey
                 </h5>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Personal Care:</span> Help
-                      with bathing, dressing, and grooming.
+                      <span className="fw-semibold">
+                        Clinical Consultation:
+                      </span>{" "}
+                      We begin with a detailed discussion of the patient’s
+                      medical history, current prescriptions, and recovery
+                      goals.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Medication Support:</span>{" "}
-                      Giving medicines on time and managing prescriptions.
+                      <span className="fw-semibold">On-Site Safety Audit:</span>{" "}
+                      A senior nursing supervisor conducts a home visit to
+                      assess the environment for safety and identify any
+                      necessary medical equipment.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Daily Meals:</span>{" "}
-                      Preparing nutritious food and assisting with feeding.
+                      <span className="fw-semibold">Bespoke Care Mapping:</span>{" "}
+                      Our medical director creates a personalized care plan that
+                      aligns with your primary physician's hospital discharge
+                      instructions.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Mobility & Transport:</span>{" "}
-                      Safe movement at home and support for appointments.
+                      <span className="fw-semibold">Nurse Matching:</span> We
+                      assign a nurse whose specific clinical background (e.g.,
+                      ICU, Cardiac, or Pediatric) matches the patient’s
+                      diagnosis.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                  Specialized Clinical Capabilities
+                </h4>
+
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Post-Operative & Wound Care Management Recovery after major
+                  surgery—such as orthopedic, cardiac, or abdominal
+                  procedures—requires vigilant monitoring. Our nurses specialize
+                  in:
+                </h5>
+                <h5 class="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Our nurses specialize in
+                </h5>
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Surgical Site Monitoring:
+                      </span>
+                      Early detection of infection and specialized dressing
+                      changes.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Home Help:</span> Light
-                      cleaning, laundry, and organizing living spaces.
+                      <span className="fw-semibold">Pain Management:</span>{" "}
+                      Administering prescribed analgesics and monitoring for
+                      side effects.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Companionship:</span>{" "}
-                      Friendly interaction and activities to boost happiness.
+                      <span className="fw-semibold">
+                        Suture and Staple Removal:
+                      </span>{" "}
+                      Professional removal once the wound has successfully
+                      closed.
+                    </p>
+                  </li>
+                </ul>
+
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Complex Clinical Support
+                </h5>
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  For patients with high-dependency needs, Carehub provides
+                  hospital-level intervention:
+                </h5>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Tracheostomy & Ventilator Care:
+                      </span>
+                      Managing airway clearance and ensuring equipment
+                      functionality 24/7.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Enteral Feeding (PEG/NG Tube):
+                      </span>{" "}
+                      Expert administration of nutrition and hydration through
+                      feeding tubes.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Infusion Therapy:</span>{" "}
+                      Professional administration of IV fluids, antibiotics, and
+                      IVF injections in the comfort of your bedroom.
+                    </p>
+                  </li>
+                </ul>
+
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  When Should You Consider Home Nursing?
+                </h5>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Chronic Disease Management:
+                      </span>
+                      When managing conditions like Diabetes or Hypertension
+                      requires professional monitoring to avoid complications.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Limited Mobility:</span> For
+                      patients recovering from strokes or spinal injuries who
+                      require assistance with physical therapy and daily living.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Maternity Support:</span>{" "}
+                      New mothers needing help with newborn care, lactation, and
+                      post-delivery wound healing.
                     </p>
                   </li>
                 </ul>

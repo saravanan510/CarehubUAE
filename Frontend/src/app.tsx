@@ -54,7 +54,7 @@ let router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/private-nursing",
+        path: "/private-nursing-dubai",
         element: <PrivateNursing />,
       },
       {

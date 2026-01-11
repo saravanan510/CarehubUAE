@@ -18,19 +18,27 @@ const PostOperativeCare_details = () => {
               </div>
 
               <div className="text-start pe-5" lg={8}>
-                <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Post Operative Care
-                </h2>
+                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                  Post-Operative Care Services in Dubai: The Complete Guide to
+                  Safe Recovery
+                </h1>
+                <h5>
+                  Expert Post-Operative Care in Dubai: Accelerate Your Healing
+                  in the Comfort of Home
+                </h5>
+
                 <p>
-                  Anybody's life can be completely upended by a serious
-                  sickness, accident, or other health incident. So it might be
-                  easy to think of a loved one being released from the hospital
-                  as the point at which everything returns to normal. Sadly,
-                  this is frequently not the case. The month or months following
-                  a hospital release reflect a high-risk period with frequent
-                  hospital visits. Seniors returning from the hospital
-                  frequently need assistance, including non-medical in-home
-                  care.
+                  The hours and days following a surgical procedure are the most
+                  critical for a patient’s long-term health. While modern
+                  surgical techniques have advanced, the success of any
+                  operation depends heavily on the quality of the recovery
+                  period. At Carehub Healthcare, we understand that the
+                  transition from a clinical hospital setting to the home can be
+                  daunting for patients and their families. Our DHA-licensed
+                  post-operative care in Dubai is designed to bridge this gap,
+                  providing hospital-grade nursing supervision that ensures
+                  safety, manages pain, and prevents the complications that
+                  often lead to hospital readmission.
                 </p>
                 <p>
                   Unfortunately, a lot of individuals underestimate the
@@ -42,8 +50,273 @@ const PostOperativeCare_details = () => {
                 </p>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Services
+                  The Importance of Professional Post-Surgical Support For many,
+                  the goal is to return home as quickly as possible. However,
+                  without professional oversight, simple recovery can turn into
+                  a medical emergency.
                 </h4>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Reducing Readmission Rates:
+                      </span>
+                      Statistics show that professional home nursing
+                      significantly reduces the likelihood of being readmitted
+                      to the hospital due to infections or medication errors.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Infection Surveillance:
+                      </span>{" "}
+                      Our nurses are trained to spot the earliest signs of
+                      surgical site infections (SSIs) that a non-medical family
+                      member might overlook.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Psychological Comfort:
+                      </span>{" "}
+                      Recovery is faster when a patient is in a familiar
+                      environment, surrounded by loved ones, but supported by a
+                      clinical professional.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                  Our Core Post-Operative Clinical Interventions Carehub
+                  provides a multidisciplinary approach to recovery, covering
+                  every aspect of the patient's physical and medical needs.
+                </h4>
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Advanced Wound & Incision Care The integrity of the surgical
+                  site is our highest priority.
+                </h5>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Sterile Dressing Changes:
+                      </span>
+                      We follow strict aseptic techniques to clean and dress
+                      wounds, preventing bacterial contamination.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Drainage Management:</span>{" "}
+                      Expert monitoring and emptying of surgical drains (such as
+                      Jackson-Pratt or Hemovac drains).
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Suture and Staple Removal:
+                      </span>{" "}
+                      Once the surgeon provides clearance, our licensed nurses
+                      perform painless removal of clips or stitches at your
+                      home.
+                    </p>
+                  </li>
+                </ul>
+
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Medication & Pain Optimization Effective pain management is
+                  essential for mobility and healing.
+                </h5>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">IV Infusion Therapy:</span>
+                      If oral medications are insufficient, our nurses can
+                      administer intravenous pain relief and antibiotics.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Anticoagulation Therapy:
+                      </span>{" "}
+                      Post-surgery patients are at higher risk for DVT (Deep
+                      Vein Thrombosis). We manage blood-thinning injections and
+                      monitor for clotting symptoms.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Nausea Management:</span>{" "}
+                      Post-anesthesia nausea is common; we provide
+                      pharmacological and lifestyle support to ensure patient
+                      comfort.
+                    </p>
+                  </li>
+                </ul>
+
+                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                  Mobility & Respiratory Therapy Staying stationary for too long
+                  after surgery is dangerous.
+                </h5>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Early Ambulation:</span>
+                      We assist patients in safe movement, from sitting up in
+                      bed to walking, reducing the risk of pneumonia and blood
+                      clots.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Deep Breathing Exercises:
+                      </span>{" "}
+                      Utilizing incentive spirometry to keep the lungs clear
+                      after general anesthesia.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                  Specialized Recovery Programs by Surgery Type Carehub tailors
+                  every care plan to the specific procedure the patient
+                  underwent.
+                </h4>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Orthopedic Recovery:</span>
+                      Specialized support for hip replacements, knee surgeries,
+                      and spinal procedures, focusing on mobility and physical
+                      therapy coordination.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Cardiac Post-Op:</span>{" "}
+                      High-vigilance monitoring of vitals, heart rate, and
+                      oxygen levels following bypass or valve surgeries.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Plastic & Aesthetic Surgery:
+                      </span>{" "}
+                      Discreet, high-end care for patients recovering from
+                      cosmetic procedures, focusing on swelling reduction and
+                      wound aesthetics.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Bariatric Support:</span>{" "}
+                      Nutritional guidance and monitoring for patients following
+                      weight-loss surgery.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                  The Carehub "Continuum of Care" Model We don't just provide a
+                  nurse; we provide a medical ecosystem.
+                </h4>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Discharge Liaison:</span>
+                      We coordinate with your hospital team before you leave to
+                      ensure we have all orders and equipment ready.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Home Setup:</span> We assist
+                      in setting up medical beds, oxygen concentrators, or
+                      monitoring devices in your bedroom.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        24/7 Nursing Supervision:
+                      </span>{" "}
+                      Whether you need a morning visit or a live-in nurse for
+                      the first week, our scheduling is flexible.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Doctor Integration:</span>{" "}
+                      If complications arise, our Doctor Home Visit team is on
+                      standby to provide an immediate medical consultation.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                  Why Carehub is Dubai’s Preferred Recovery Partner
+                </h4>
+
+                <ul className="service_page_features_list">
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Licensed Authority:</span>
+                      Every nurse is DHA-certified and has undergone specialized
+                      post-surgical training.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">Cultural Sensitivity:</span>{" "}
+                      We offer a diverse team of male and female nurses to
+                      respect the privacy and cultural preferences of our
+                      patients.
+                    </p>
+                  </li>
+                  <li>
+                    <img src={FeatureIcon} className="me-2" />
+                    <p className="service_feature m-0 fw-semibold">
+                      <span className="fw-semibold">
+                        Detailed Documentation:
+                      </span>{" "}
+                      We maintain a daily clinical log that you can present to
+                      your surgeon during follow-up visits.
+                    </p>
+                  </li>
+                </ul>
 
                 <ul className="service_page_features_list">
                   <li>

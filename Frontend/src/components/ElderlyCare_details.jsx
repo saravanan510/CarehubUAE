@@ -18,15 +18,26 @@ const ElderlyCare_details = () => {
             </div>
 
             <div className="text-start pe-5" lg={8}>
-              <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                Elderly Care Services/Caretakers
-              </h2>
+              <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}></h2>
+              <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Compassionate Elderly Care Services in Dubai: Aging with Dignity
+                at Home
+              </h1>
+              <h5>
+                Expert Elderly Care in Dubai: Dedicated Support for a Life
+                Well-Lived
+              </h5>
+
               <p>
-                We realize that you want to be at home. However, your care
-                demands may have grown to the point that you require 24-hour
-                care. Carehub healthcare will help you stay in the comfort of
-                your own home if you require care 24 hours a day, seven days a
-                week.
+                As our loved ones age, their needs evolve from simple
+                companionship to complex medical and physical support. In the
+                fast-paced environment of the UAE, finding a balance between
+                professional obligations and family care can be overwhelming.
+                Carehub Healthcare bridges this gap by providing premier elderly
+                care in Dubai, allowing seniors to maintain their independence
+                within the comfort and safety of their own homes. Our mission is
+                to transform the aging process into a journey of dignity,
+                health, and emotional fulfillment.
               </p>
               <p>
                 Carehub Services is UAEs leading provider of 24 hour home care.
@@ -49,20 +60,163 @@ const ElderlyCare_details = () => {
                 the level of assistance as needed.
               </p>
               <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                Planning for Your Home Care
+                The Core Pillars of Carehub Senior Support
               </h4>
+              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                Clinical & Medical Supervision
+              </h5>
               <p>
-                Our team of after surgery care experts knows the right questions
-                to ask your discharge planner, nurse or surgical coordinator, so
-                we can create a personalized care plan that meets all your
-                needs. We specially train every member of our post op care team
-                in the transition that occurs when patients are discharged from
-                the hospital to their homes, and we are here for you through
-                every step of that process. We strive to provide first-rate care
-                during your recovery.
+                Unlike basic caregiving, Carehub provides DHA-licensed nursing
+                professionals who can manage the technical aspects of senior
+                health:
               </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">
+                      Chronic Condition Management:
+                    </span>
+                    Expert care for seniors living with Diabetes, Hypertension,
+                    and Cardiovascular issues
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Medication Compliance:</span>{" "}
+                    Rigorous tracking and administration of prescriptions to
+                    prevent adverse drug interactions.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Vital Sign Analysis:</span>{" "}
+                    Daily monitoring of blood pressure, glucose levels, and
+                    oxygen saturation to catch health changes before they become
+                    emergencies.
+                  </p>
+                </li>
+              </ul>
+
+              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                Specialized Memory Care (Alzheimer’s & Dementia)
+              </h5>
+              <p>
+                Cognitive decline requires a specialized approach that
+                prioritizes routine and calm.
+              </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Cognitive Stimulation:</span>
+                    Engaging seniors in memory-enhancing activities and social
+                    interaction to slow the progression of symptoms.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">
+                      Safe Environment Management:
+                    </span>{" "}
+                    Modifying the home to reduce confusion and prevent
+                    "wandering" behaviors.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Emotional Anchoring:</span>{" "}
+                    Providing a consistent caregiver to build a bond of trust
+                    and reduce the anxiety often associated with memory loss.
+                  </p>
+                </li>
+              </ul>
+
+              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                Physical Mobility & Fall Prevention
+              </h5>
+              <p>
+                In the senior population, a single fall can lead to a long-term
+                loss of independence.
+              </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Safe Transfers:</span>
+                    Professional assistance with moving from bed to chair or
+                    navigating the bathroom safely.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">
+                      Gentle Exercise Programs:
+                    </span>{" "}
+                    Working alongside our Physiotherapy team to keep joints
+                    mobile and muscles strong.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Home Safety Audits:</span> We
+                    identify hazards like loose rugs or poor lighting that
+                    increase the risk of injury.
+                  </p>
+                </li>
+              </ul>
+
               <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                Why Choose Carehub healthcare Services caretakers?
+                A "Day in the Life" with a Carehub Senior Caregiver
+              </h4>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Morning:</span>
+                    Gentle waking, assistance with personal hygiene
+                    (bathing/dressing), and a nutritious breakfast tailored to
+                    dietary needs.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Mid-Day:</span> Medication
+                    administration followed by a light walk or cognitive
+                    activities like puzzles or reading.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Afternoon:</span>{" "}
+                    Accompaniment to doctor appointments in Dubai or social
+                    outings, ensuring the senior never feels isolated.
+                  </p>
+                </li>
+                <li>
+                  <img src={FeatureIcon} className="me-2" />
+                  <p className="service_feature m-0 fw-semibold">
+                    <span className="fw-semibold">Evening:</span> Preparing a
+                    calm environment for sleep, ensuring all medical needs are
+                    met, and providing the family with a daily progress report.
+                  </p>
+                </li>
+              </ul>
+
+              <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                Why Home Care Outperforms Residential Facilities in the UAE
               </h4>
               <p>
                 We are ready to help your recover comfortably in your home with
