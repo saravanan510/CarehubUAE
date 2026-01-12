@@ -11,39 +11,29 @@ import ServiceFAQ from "./ServiceFAQ";
 
 const TableData = [
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Metric",
+    value1: "Carehub Home Care",
+    value2: "Residential Nursing Home",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Personal Freedom",
+    value1: "Complete; follows the senior's preferred schedule.",
+    value2: "Restricted; follows the facility's schedule.",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Health Risks",
+    value1: "Low; avoids exposure to community-spread infections.",
+    value2: "Higher; shared living spaces increase viral risks.",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Emotional Health",
+    value1: "High; surrounded by family and personal belongings.",
+    value2: "Moderate; potential for relocation stress syndrome.",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "One-on-One Care",
+    value1: "100% focused on one individual.",
+    value2: "Divided focus among 5–10 residents.",
   },
   {
     title: "Personalized attention",
@@ -53,31 +43,24 @@ const TableData = [
       "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
   },
 ];
-
 const FAQData = [
   {
     key: "0",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: Does Carehub provide male and female caregivers for seniors?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Yes. We respect the cultural preferences of our UAE clients and offer both male and female licensed nurses to ensure the patient feels completely comfortable.",
   },
   {
     key: "1",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: How do you handle medical emergencies at home?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Our nurses are trained in BLS (Basic Life Support) and have immediate protocols to stabilize the patient while coordinating with emergency services and the family physician.",
   },
   {
     key: "2",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: Can we hire a nurse for just 4 hours a day?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
-  },
-  {
-    key: "3",
-    question: "How quickly can a nurse be deployed?",
-    answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Absolutely. Our plans are flexible, ranging from respite care (a few hours to give family members a break) to full 24/7 live-in support",
   },
 ];
 
@@ -97,10 +80,11 @@ const ElderlyCare_details = () => {
                 Compassionate Elderly Care Services in Dubai: Aging with Dignity
                 at Home
               </h1>
-              <h5>
+
+              <h3 className="fs-6 fw-semibold">
                 Expert Elderly Care in Dubai: Dedicated Support for a Life
                 Well-Lived
-              </h5>
+              </h3>
 
               <p>
                 As our loved ones age, their needs evolve from simple
@@ -137,7 +121,7 @@ const ElderlyCare_details = () => {
                 The Core Pillars of Carehub Senior Support
               </h4>
               <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                Clinical & Medical Supervision
+                A. Clinical & Medical Supervision
               </h5>
               <p>
                 Unlike basic caregiving, Carehub provides DHA-licensed nursing
@@ -148,7 +132,7 @@ const ElderlyCare_details = () => {
               <ul className="service_page_features_list">
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Chronic Condition Management:
                     </span>
@@ -158,7 +142,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Medication Compliance:</span>{" "}
                     Rigorous tracking and administration of prescriptions to
                     prevent adverse drug interactions.
@@ -166,7 +150,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Vital Sign Analysis:</span>{" "}
                     Daily monitoring of blood pressure, glucose levels, and
                     oxygen saturation to catch health changes before they become
@@ -176,7 +160,7 @@ const ElderlyCare_details = () => {
               </ul>
 
               <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                Specialized Memory Care (Alzheimer’s & Dementia)
+                B. Specialized Memory Care (Alzheimer’s & Dementia)
               </h5>
               <p>
                 Cognitive decline requires a specialized approach that
@@ -186,7 +170,7 @@ const ElderlyCare_details = () => {
               <ul className="service_page_features_list">
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Cognitive Stimulation:</span>
                     Engaging seniors in memory-enhancing activities and social
                     interaction to slow the progression of symptoms.
@@ -194,7 +178,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Safe Environment Management:
                     </span>{" "}
@@ -204,7 +188,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Emotional Anchoring:</span>{" "}
                     Providing a consistent caregiver to build a bond of trust
                     and reduce the anxiety often associated with memory loss.
@@ -213,7 +197,7 @@ const ElderlyCare_details = () => {
               </ul>
 
               <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                Physical Mobility & Fall Prevention
+                C. Physical Mobility & Fall Prevention
               </h5>
               <p>
                 In the senior population, a single fall can lead to a long-term
@@ -223,7 +207,7 @@ const ElderlyCare_details = () => {
               <ul className="service_page_features_list">
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Safe Transfers:</span>
                     Professional assistance with moving from bed to chair or
                     navigating the bathroom safely.
@@ -231,7 +215,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Gentle Exercise Programs:
                     </span>{" "}
@@ -241,7 +225,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Home Safety Audits:</span> We
                     identify hazards like loose rugs or poor lighting that
                     increase the risk of injury.
@@ -256,7 +240,7 @@ const ElderlyCare_details = () => {
               <ul className="service_page_features_list">
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Morning:</span>
                     Gentle waking, assistance with personal hygiene
                     (bathing/dressing), and a nutritious breakfast tailored to
@@ -265,7 +249,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Mid-Day:</span> Medication
                     administration followed by a light walk or cognitive
                     activities like puzzles or reading.
@@ -273,7 +257,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Afternoon:</span>{" "}
                     Accompaniment to doctor appointments in Dubai or social
                     outings, ensuring the senior never feels isolated.
@@ -281,7 +265,7 @@ const ElderlyCare_details = () => {
                 </li>
                 <li>
                   <img src={FeatureIcon} className="me-2" />
-                  <p className="service_feature m-0 fw-semibold">
+                  <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Evening:</span> Preparing a
                     calm environment for sleep, ensuring all medical needs are
                     met, and providing the family with a daily progress report.

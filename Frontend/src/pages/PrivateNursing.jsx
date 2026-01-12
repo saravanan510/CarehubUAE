@@ -9,15 +9,16 @@ const PrivateNursing = () => {
     <>
       <ScrollToTop />
       <Helmet>
-        <title>Home Nursing in Dubai, Home Health Care Services in UAE – Carehub
-</title>
+        <title>
+          Home Nursing Services Dubai | Licensed Private Nurses | Carehub
+        </title>
         <meta
           name="description"
-          content="Choose Carehub Healthcare for premium home care nursing services in Dubai. Our dedicated team offers tailored care, ensuring comfort and recovery at home."
+          content="Experience elite home nursing in Dubai. DHA-licensed nurses for post-op care, IV therapy, and 24/7 medical support. Personalized care for faster recovery. Book your free consult!"
         />
         <meta
           name="keywords"
-          content="Home Nursing Services in Dubai, Home Care Nursing Dubai"
+          content="Home nursing services Dubai, DHA licensed nurses Dubai, private nursing care UAE, 24 hour home nursing, post-surgical care at home, IV drip at home Dubai, wound care nursing services."
         />
         <link
           rel="canonical"

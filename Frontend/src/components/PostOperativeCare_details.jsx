@@ -10,73 +10,55 @@ import ServiceFAQ from "./ServiceFAQ";
 
 const TableData = [
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Metric",
+    value1: "Carehub Home Recovery",
+    value2: "Extended Hospital Stay",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Nurse-to-Patient Ratio",
+    value1: "1-to-1 Dedicated Care",
+    value2: "Shared among multiple beds",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Infection Risk",
+    value1: "Sharp Drop (Home germs are familiar)",
+    value2: "Higher risk of hospital-acquired infections (HAI)",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Environment",
+    value1: "Familiar, quiet, and promotes rest",
+    value2: "High-stress, noisy, and clinical",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Cost Factors",
+    value1: "Highly Cost-Effective (Pay for care only)",
+    value2: "Expensive daily room and service charges",
   },
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Recovery Speed",
+    value1: "Often faster due to better sleep and mood",
+    value2: "Standard clinical progression",
   },
 ];
 
 const FAQData = [
   {
     key: "0",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: How soon can I start home nursing after surgery?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: We recommend starting the same day you are discharged. We can even provide a nurse to accompany you in the ambulance or car from the hospital.",
   },
   {
     key: "1",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: Can you help with physical therapy after surgery?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Yes. We have dedicated Physiotherapy services that work alongside your nurse to help you regain strength and range of motion.",
   },
   {
     key: "2",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: What if I have a surgical emergency at 2 AM?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
-  },
-  {
-    key: "3",
-    question: "How quickly can a nurse be deployed?",
-    answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Carehub provides 24/7 support. Our on-duty nurses are trained in emergency protocols to stabilize patients and coordinate with emergency services.",
   },
 ];
 
@@ -96,11 +78,10 @@ const PostOperativeCare_details = () => {
                   Post-Operative Care Services in Dubai: The Complete Guide to
                   Safe Recovery
                 </h1>
-                <h5>
+                <h3 className="fs-6 fw-semibold">
                   Expert Post-Operative Care in Dubai: Accelerate Your Healing
                   in the Comfort of Home
-                </h5>
-
+                </h3>
                 <p>
                   The hours and days following a surgical procedure are the most
                   critical for a patient’s long-term health. While modern
@@ -124,16 +105,18 @@ const PostOperativeCare_details = () => {
                 </p>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  The Importance of Professional Post-Surgical Support For many,
-                  the goal is to return home as quickly as possible. However,
-                  without professional oversight, simple recovery can turn into
-                  a medical emergency.
+                  The Importance of Professional Post-Surgical Support
                 </h4>
+                <p>
+                  For many, the goal is to return home as quickly as possible.
+                  However, without professional oversight, simple recovery can
+                  turn into a medical emergency.
+                </p>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Reducing Readmission Rates:
                       </span>
@@ -144,7 +127,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Infection Surveillance:
                       </span>{" "}
@@ -155,7 +138,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Psychological Comfort:
                       </span>{" "}
@@ -168,18 +151,21 @@ const PostOperativeCare_details = () => {
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
                   Our Core Post-Operative Clinical Interventions Carehub
+                </h4>
+                <p>
+                  {" "}
                   provides a multidisciplinary approach to recovery, covering
                   every aspect of the patient's physical and medical needs.
-                </h4>
+                </p>
                 <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                  Advanced Wound & Incision Care The integrity of the surgical
-                  site is our highest priority.
+                  A. Advanced Wound & Incision Care The integrity of the
+                  surgical site is our highest priority.
                 </h5>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Sterile Dressing Changes:
                       </span>
@@ -189,7 +175,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Drainage Management:</span>{" "}
                       Expert monitoring and emptying of surgical drains (such as
                       Jackson-Pratt or Hemovac drains).
@@ -197,7 +183,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Suture and Staple Removal:
                       </span>{" "}
@@ -209,14 +195,14 @@ const PostOperativeCare_details = () => {
                 </ul>
 
                 <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                  Medication & Pain Optimization Effective pain management is
+                  B. Medication & Pain Optimization Effective pain management is
                   essential for mobility and healing.
                 </h5>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">IV Infusion Therapy:</span>
                       If oral medications are insufficient, our nurses can
                       administer intravenous pain relief and antibiotics.
@@ -224,7 +210,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Anticoagulation Therapy:
                       </span>{" "}
@@ -235,7 +221,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Nausea Management:</span>{" "}
                       Post-anesthesia nausea is common; we provide
                       pharmacological and lifestyle support to ensure patient
@@ -245,14 +231,14 @@ const PostOperativeCare_details = () => {
                 </ul>
 
                 <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                  Mobility & Respiratory Therapy Staying stationary for too long
-                  after surgery is dangerous.
+                  C. Mobility & Respiratory Therapy Staying stationary for too
+                  long after surgery is dangerous.
                 </h5>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Early Ambulation:</span>
                       We assist patients in safe movement, from sitting up in
                       bed to walking, reducing the risk of pneumonia and blood
@@ -272,15 +258,17 @@ const PostOperativeCare_details = () => {
                 </ul>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Specialized Recovery Programs by Surgery Type Carehub tailors
-                  every care plan to the specific procedure the patient
-                  underwent.
+                  Specialized Recovery Programs by Surgery Type
                 </h4>
+                <p>
+                  Carehub tailors every care plan to the specific procedure the
+                  patient underwent.
+                </p>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Orthopedic Recovery:</span>
                       Specialized support for hip replacements, knee surgeries,
                       and spinal procedures, focusing on mobility and physical
@@ -289,7 +277,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Cardiac Post-Op:</span>{" "}
                       High-vigilance monitoring of vitals, heart rate, and
                       oxygen levels following bypass or valve surgeries.
@@ -297,7 +285,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Plastic & Aesthetic Surgery:
                       </span>{" "}
@@ -308,7 +296,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Bariatric Support:</span>{" "}
                       Nutritional guidance and monitoring for patients following
                       weight-loss surgery.
@@ -317,14 +305,16 @@ const PostOperativeCare_details = () => {
                 </ul>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  The Carehub "Continuum of Care" Model We don't just provide a
-                  nurse; we provide a medical ecosystem.
+                  The Carehub "Continuum of Care" Model
                 </h4>
+                <p>
+                  We don't just provide a nurse; we provide a medical ecosystem.
+                </p>
 
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Discharge Liaison:</span>
                       We coordinate with your hospital team before you leave to
                       ensure we have all orders and equipment ready.
@@ -332,7 +322,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Home Setup:</span> We assist
                       in setting up medical beds, oxygen concentrators, or
                       monitoring devices in your bedroom.
@@ -340,7 +330,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         24/7 Nursing Supervision:
                       </span>{" "}
@@ -350,7 +340,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Doctor Integration:</span>{" "}
                       If complications arise, our Doctor Home Visit team is on
                       standby to provide an immediate medical consultation.
@@ -365,7 +355,7 @@ const PostOperativeCare_details = () => {
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Licensed Authority:</span>
                       Every nurse is DHA-certified and has undergone specialized
                       post-surgical training.
@@ -373,7 +363,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Cultural Sensitivity:</span>{" "}
                       We offer a diverse team of male and female nurses to
                       respect the privacy and cultural preferences of our
@@ -382,7 +372,7 @@ const PostOperativeCare_details = () => {
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
+                    <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Detailed Documentation:
                       </span>{" "}
@@ -395,72 +385,84 @@ const PostOperativeCare_details = () => {
                 <ul className="service_page_features_list">
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Comprehensive care: Carehub Services provides a wide range
-                      of home health care services that are tailored to meet the
-                      unique needs of each patient after hospitalization. This
-                      includes everything from wound care and medication
-                      management to physical therapy and occupational therapy.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Comprehensive care:</span>{" "}
+                      Carehub Services provides a wide range of home health care
+                      services that are tailored to meet the unique needs of
+                      each patient after hospitalization. This includes
+                      everything from wound care and medication management to
+                      physical therapy and occupational therapy.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Skilled and experienced staff: Our team of nurses,
-                      therapists, and other healthcare professionals are highly
-                      skilled and experienced in providing post-hospitalization
-                      care. They are dedicated to helping patients regain their
-                      strength and independence as quickly and safely as
-                      possible.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Skilled and experienced staff:
+                      </span>{" "}
+                      Our team of nurses, therapists, and other healthcare
+                      professionals are highly skilled and experienced in
+                      providing post-hospitalization care. They are dedicated to
+                      helping patients regain their strength and independence as
+                      quickly and safely as possible.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Convenience and comfort: With home health care services
-                      from Carehub healthcare Services, patients can recover in
-                      the comfort of their own home rather than in a hospital or
-                      nursing home. This can be a more comfortable and less
-                      stressful option for many people.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Convenience and comfort:
+                      </span>{" "}
+                      With home health care services from Carehub healthcare
+                      Services, patients can recover in the comfort of their own
+                      home rather than in a hospital or nursing home. This can
+                      be a more comfortable and less stressful option for many
+                      people.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Coordination with other healthcare providers: Our staff
-                      works closely with patients' physicians, hospitals, and
-                      other healthcare providers to ensure that all aspects of
-                      their care are coordinated and that their recovery is on
-                      track.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Coordination with other healthcare providers:
+                      </span>{" "}
+                      Our staff works closely with patients' physicians,
+                      hospitals, and other healthcare providers to ensure that
+                      all aspects of their care are coordinated and that their
+                      recovery is on track.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Continuous monitoring: Our staff will keep a watchful eye
-                      on the patient's condition and report any changes or
-                      concerns to the physician. They will also provide
-                      education and support to the patient and their family so
-                      that they can manage their care at home.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">
+                        Continuous monitoring:
+                      </span>{" "}
+                      Our staff will keep a watchful eye on the patient's
+                      condition and report any changes or concerns to the
+                      physician. They will also provide education and support to
+                      the patient and their family so that they can manage their
+                      care at home.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Cost-effective: Getting post-hospitalization home health
-                      care services can often be a more cost-effective option
-                      than staying in a hospital or nursing home. It can also
-                      help to avoid unnecessary readmissions to the hospital.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Cost-effective:</span>{" "}
+                      Getting post-hospitalization home health care services can
+                      often be a more cost-effective option than staying in a
+                      hospital or nursing home. It can also help to avoid
+                      unnecessary readmissions to the hospital.
                     </p>
                   </li>
                   <li>
                     <img src={FeatureIcon} className="me-2" />
-                    <p className="service_feature m-0 fw-semibold">
-                      Quality care: At Carehub healthcare Services, we are
-                      committed to providing high-quality care to our patients.
-                      Our staff is regularly trained and updated with the latest
-                      techniques and technologies to provide the best care
-                      possible.
+                    <p className="service_feature m-0 fw-normal">
+                      <span className="fw-semibold">Quality care:</span> At
+                      Carehub healthcare Services, we are committed to providing
+                      high-quality care to our patients. Our staff is regularly
+                      trained and updated with the latest techniques and
+                      technologies to provide the best care possible.
                     </p>
                   </li>
                 </ul>

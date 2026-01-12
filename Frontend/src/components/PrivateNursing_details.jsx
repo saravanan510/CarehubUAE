@@ -10,73 +10,70 @@ import ServiceFAQ from "./ServiceFAQ";
 
 const TableData = [
   {
-    title: "Personalized attention",
-    value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+    title: "Metric",
+    value1: "Carehub Home Care",
+    value2: "Residential Nursing Home",
   },
   {
     title: "Personalized attention",
     value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one.",
     value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Shared staff. One nurse often manages 5–10 patients simultaneously.",
   },
   {
-    title: "Personalized attention",
+    title: "Infection Control",
     value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
-    value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Significantly Safer. Minimizes exposure to hospital-acquired infections (HAIs).",
+    value2: "Higher risk. Hospitals are hubs for multi-drug resistant germs.",
   },
   {
-    title: "Personalized attention",
+    title: "Psychological Impact",
     value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Familiar Comfort. Reduces Relocation Stress and promotes faster mental healing.",
     value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "High Stress. Clinical environments often lead to isolation and anxiety.",
   },
   {
-    title: "Personalized attention",
+    title: "Cost Management",
     value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Economical Choice. Avoids expensive Dubai hospital room charges (AED 3k–7k/night).",
     value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "High Overhead. You pay for facility maintenance, meals, and admin fees.",
   },
   {
-    title: "Personalized attention",
+    title: "Family Inclusion",
     value1:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Unlimited Access. No visiting hour restrictions; families stay involved.",
     value2:
-      "1-to-1 Dedicated Care. The nurse's focus is 100% on your loved one",
+      "Restricted. Strict visiting hours and hospital policies limit family time.",
+  },
+  {
+    title: "Recovery Speed",
+    value1:
+      "Accelerated. 24/7 monitoring in a low-stress environment leads to better outcomes.",
+    value2: "Standardized. Recovery follows a rigid institutional protocol.",
   },
 ];
 
 const FAQData = [
   {
     key: "0",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q:How quickly can a nurse be deployed?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
   },
   {
     key: "1",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: Can Carehub nurses travel with us for Medical Tourism?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Yes, our nurses can provide accompaniment during travel to ensure medical continuity across borders.",
   },
   {
     key: "2",
-    question: "How quickly can a nurse be deployed?",
+    question: "Q: Is home nursing covered by insurance in the UAE?",
     answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
-  },
-  {
-    key: "3",
-    question: "How quickly can a nurse be deployed?",
-    answer:
-      "We aim to start care within 24 to 48 hours of the initial assessment, ensuring no gap in your medical support.",
+      "A: Coverage varies by provider and policy; we provide all necessary clinical documentation to assist with your reimbursement claims.",
   },
 ];
 
@@ -93,13 +90,13 @@ const PrivateNursing_details = () => {
 
               <div className="text-start pe-5" lg={8}>
                 <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Home Nursing Services in Dubai:The Ultimate Guide to
+                  Home Nursing Services in Dubai: The Ultimate Guide to
                   Professional In-Home Care
                 </h1>
-                <h5>
+                <h3 className="fs-6 fw-semibold">
                   Professional Home Nursing Services in Dubai: Championing Your
                   Recovery at Home
-                </h5>
+                </h3>
 
                 <p>
                   In an era where medical technology allows for hospital-grade
@@ -170,15 +167,15 @@ const PrivateNursing_details = () => {
                 </ul>
 
                 <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Specialized Clinical Capabilities
+                  Deep-Dive: Specialized Clinical Capabilities
                 </h4>
 
-                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                <p style={{ color: "#012a4a" }}>
                   Post-Operative & Wound Care Management Recovery after major
-                  surgery—such as orthopedic, cardiac, or abdominal
-                  procedures—requires vigilant monitoring. Our nurses specialize
-                  in:
-                </h5>
+                  surgery-such as orthopedic, cardiac, or abdominal
+                  procedures-requires vigilant monitoring. Our nurses specialize
+                  in
+                </p>
                 <h5 class="fs-6 fw-bold" style={{ color: "#012a4a" }}>
                   Our nurses specialize in
                 </h5>
@@ -216,10 +213,10 @@ const PrivateNursing_details = () => {
                 <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
                   Complex Clinical Support
                 </h5>
-                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                <p style={{ color: "#012a4a" }}>
                   For patients with high-dependency needs, Carehub provides
                   hospital-level intervention:
-                </h5>
+                </p>
 
                 <ul className="service_page_features_list">
                   <li>

@@ -10,14 +10,17 @@ const DoctorHomeVisit = () => {
     <>
       <ScrollToTop />
       <Helmet>
-        <title>Doctor Home Visit Services in Dubai, Doctor on Call 24x7</title>
+        <title>
+          Professional Doctor Home Visit Dubai | 24/7 Licensed Carehub
+          Physicians
+        </title>
         <meta
           name="description"
-          content="CareHub Healthcare provides reliable doctor home visit services in Dubai. Get access to expert doctors on call, delivering quality healthcare at your convenience."
+          content="Skip the clinic wait. Get a DHA-licensed doctor at home in Dubai within 60 minutes. Expert consultations, prescriptions, and lab tests at your doorstep."
         />
         <meta
           name="keywords"
-          content="Doctor home visit dubai, Doctor on call in Dubai"
+          content="Doctor home visit Dubai, DHA licensed doctor at home, On-call doctor Dubai, 24/7 home physician UAE, Pediatric doctor home visit, Emergency doctor at home."
         />
         <link
           rel="canonical"

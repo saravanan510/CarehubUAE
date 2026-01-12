@@ -10,14 +10,16 @@ const ElderlyCare = () => {
     <>
       <ScrollToTop />
       <Helmet>
-        <title>Elderly Home Care Nursing Services in Dubai at Home</title>
+        <title>
+          Elderly Care Services in Dubai | Compassionate Senior Home Nursing
+        </title>
         <meta
           name="description"
-          content="Choose Carehub Healthcare for comprehensive elderly care in Dubai. Our services include nursing care, personal assistance, and companionship, promoting independence and well-being."
+          content="Professional elderly care in Dubai by Carehub. We offer DHA-licensed nursing, dementia support, and 24/7 companionship. Help your loved ones age with dignity."
         />
         <meta
           name="keywords"
-          content="Home Care for Elderly in Dubai, Elderly Care in Dubai, Elderly Care Nursing in Dubai at Home, Elderly Care Services in Dubai"
+          content="Elderly care Dubai, Senior home nursing UAE, Dementia care at home, DHA licensed nurses for seniors, Fall prevention for elderly."
         />
         <link
           rel="canonical"

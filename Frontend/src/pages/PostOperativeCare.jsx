@@ -14,11 +14,11 @@ const PostOperativeCare = () => {
         </title>
         <meta
           name="description"
-          content="Experience seamless post-operative care with Carehub Healthcare. Our dedicated nurses offer professional care and monitoring in the comfort of your home in Dubai."
+          content="Professional post-operative care in Dubai. DHA-licensed nurses for wound care, pain management, and 24/7 recovery support. Ensure a safe and fast recovery at home."
         />
         <meta
           name="keywords"
-          content="Post Operative Care at Home in Dubai, Post Operative Nursing Care in Dubai, Post Operative Care Dubai, Post Surgery Home Care in Dubai"
+          content="Post-operative care Dubai, Home nursing after surgery, Surgical wound care UAE, Post-surgical recovery services, Licensed private nurses Dubai."
         />
         <link
           rel="canonical"
