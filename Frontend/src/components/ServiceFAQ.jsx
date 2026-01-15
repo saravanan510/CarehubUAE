@@ -4,10 +4,6 @@ const ServiceFAQ = ({ data }) => {
     <div style={{ marginTop: "48px" }}>
       <div style={{ textAlign: "center", marginBottom: "32px" }}>
         <h2 className="fs-3 fw-bold">Frequently Asked Questions</h2>
-        <p>
-          At Carehub Healthcare, we offer a wide range of comprehensive services
-          designed to cater to the unique needs of our clients.
-        </p>
       </div>
       <Accordion defaultActiveKey="0">
         {data.map((faq) => {

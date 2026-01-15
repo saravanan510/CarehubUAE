@@ -344,6 +344,9 @@ const ElderlyCare_details = () => {
           </Col>
         </Row>
         <div>
+          <h2 className="fs-4 fw-bold">
+            Why Home Care Outperforms Residential Facilities in the UAE
+          </h2>
           <Table data={TableData} />
           <ServiceFAQ data={FAQData} />
         </div>

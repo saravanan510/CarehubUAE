@@ -8,19 +8,19 @@ import { AnimatedOnScroll } from "react-animated-css-onscroll";
 const cardItems = [
   {
     title: "Private Nursing",
-    para: "At Carehub Nursing Services, we understand the importance of maintaining a sense of independence and autonomy for our clients. ",
+    para: "Skilled Home Nursing Professional bedside care, including injection services, blood tests at home, and medication management. ",
   },
   {
     title: "Home Nursing",
-    para: "Carehub healthcare  is a leading provider of in-home care services for individuals in need of assistance with daily living activities. ",
+    para: "Critical & Post-Operative Care Specialized Ventilator care, Post-Stroke recovery, and Paralytic care to ensure a safe transition from hospital to home. ",
   },
   {
     title: "Post-Hospitalization",
-    para: "Anybody's life can be completely upended by a serious sickness, accident, or other health incident.",
+    para: "Elderly & Chronic Care Compassionate Elderly care and specialized Parkinson’s care designed to maintain independence and dignity.",
   },
   {
     title: "Palliative Care",
-    para: "Palliative care is an essential service that provides comfort and support to individuals who are living with a serious illness. ",
+    para: "Specialized Therapy & Wellness Expert Physiotherapy services, Palliative care, and premium Hydrafacial services for holistic wellbeing. ",
   },
 ];
 
@@ -31,10 +31,24 @@ const ComperhensiveService = () => {
         <Row>
           <AnimatedOnScroll animationIn="animate__slideInUp">
             <Col className="header animate__animated animate__fadeInDown">
-              <h2 className="fs-2 fw-bold">Our Comprehensive Services</h2>
+              <h2 className="fs-2 fw-bold">
+                Our Comprehensive Clinical & Home Care Services
+              </h2>
+              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
+                A Full Spectrum of Licensed Medical & Home Nursing Solutions in
+                Dubai
+              </h5>
               <p>
-                At Carehub Healthcare, we offer a wide range of comprehensive
-                services designed to cater to the unique needs of our clients.
+                At Carehub Healthcare, we understand that medical needs are
+                rarely singular; they require a multi-disciplinary approach that
+                evolves with the patient. We have meticulously designed a
+                "Healthcare Hub" that integrates acute clinical nursing,
+                specialized chronic care, and preventative wellness services
+                under one roof. Every service we provide is delivered by
+                DHA-licensed professionals who adhere to international safety
+                protocols, ensuring that whether you require a simple blood test
+                or complex ventilator support, you receive hospital-grade
+                excellence in the privacy of your home.
               </p>
             </Col>
           </AnimatedOnScroll>

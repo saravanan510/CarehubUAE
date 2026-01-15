@@ -474,6 +474,9 @@ const PostOperativeCare_details = () => {
             </Col>
           </Row>
           <div>
+            <h2 className="fs-4 fw-bold">
+              Benefits of Home Nursing vs. Extended Hospitalization
+            </h2>
             <Table data={TableData} />
             <ServiceFAQ data={FAQData} />
           </div>

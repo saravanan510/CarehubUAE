@@ -22,11 +22,14 @@ function UncontrolledExample() {
 
         <Carousel.Caption className="banner_caption">
           <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
-            To us, it's Personal, Live Well with In-Home Care
+            Championing Your Recovery, Elevating Your Future: Expert Home
+            Nursing in Dubai
           </h1>
           <p>
-            At Care hub Healthcare, we know that people are happiest and most
-            comfortable when in their own home.
+            Access world-class medical care from internationally trained,
+            licensed nursing professionals in the comfort of your home. From
+            post-surgical recovery to 24/7 elderly care, Carehub Healthcare is
+            your partner in healing.
           </p>
           <Link to={"/contact"}>
             <button className="banner_btn fw-semibold">Book Appointment</button>{" "}
@@ -41,11 +44,12 @@ function UncontrolledExample() {
         )}
         <Carousel.Caption className="banner_caption">
           <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
-            Regenerative Aesthetic care, Where innovation meets excellence
+            Your Health, Our Priority. Expert Nursing at Home.
           </h1>
           <p>
-            At Carehub Nursing Services, we understand the importance of
-            maintaining a sense of independence and autonomy for our clients.
+            Licensed DHA professionals providing clinical excellence 24/7. From
+            pain management to elderly support, we bring the hospital to
+            you—safely and professionally.
           </p>
           <Link to={"/contact"}>
             <button className="banner_btn fw-semibold">Book Appointment</button>{" "}
@@ -60,11 +64,12 @@ function UncontrolledExample() {
         )}
         <Carousel.Caption className="banner_caption">
           <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
-            Championing Your Comeback, Elevating Your Future
+            Recover Faster. Heal Better. Stay Home.
           </h1>
           <p>
-            Access to service of qualified, experienced and internationally
-            trained medical professionals right in the comfort of your home.
+            Premium home nursing and physician visits tailored to your recovery.
+            Experience one-on-one medical care designed for your comfort and
+            independence in Dubai.
           </p>
 
           <Link to={"/contact"}>

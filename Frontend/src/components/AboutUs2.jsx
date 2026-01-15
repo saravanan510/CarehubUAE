@@ -6,24 +6,19 @@ import list_icon from "../assets/list-icon.svg";
 import React from "react";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import ScrollToTop from "../components/ScrollTop";
-
-const AboutUs = () => {
+const AboutUs2 = () => {
   return (
     <>
       <ScrollToTop />
       <section className="assistance">
         <Container>
           <Row className="assistance_row">
-            <Col lg={4} className="about_img">
-              <img src={Assistance} className=" rounded" />
-            </Col>
-
             <Col>
               <Row className="mb-4">
                 <Col>
                   <AnimatedOnScroll animationIn="animate__slideInUp ">
                     <h2 className="about_heading fs-2 fw-bold animate__animated animate__fadeInDown">
-                      Why Choose Carehub Healthcare for Private Home Nursing?
+                      Why We Stand Out
                     </h2>
                   </AnimatedOnScroll>
                   <p className="about_para">
@@ -75,6 +70,9 @@ const AboutUs = () => {
                 </Col>
               </Row>
             </Col>
+            <Col lg={4} className="about_img">
+              <img src={Assistance} className=" rounded" />
+            </Col>
           </Row>
         </Container>
       </section>
@@ -82,4 +80,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUs2;

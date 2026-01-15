@@ -7,6 +7,7 @@ import Testimonial from "../components/Testimonial";
 import Broucher from "../components/Broucher";
 import Question2 from "../components/Questions2";
 import AboutUs from "../components/AboutUs";
+import AboutUs2 from "../components/AboutUs2";
 import SimpleSlider from "../components/SimpleSlider";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <HeroBanners />
       <ComperhensiveService />
       <AboutUs />
+      <AboutUs2 />
       <Services />
       <Assistence />
       <Testimonial />

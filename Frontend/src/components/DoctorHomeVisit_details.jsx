@@ -378,6 +378,9 @@ const DoctorHomeVisit_details = () => {
           </Col>
         </Row>
         <div>
+          <h2 className="fs-4 fw-bold">
+            Comparison: Carehub Home Visit vs. Hospital ER/Clinics
+          </h2>
           <Table data={TableData} />
           <ServiceFAQ data={FAQData} />
         </div>
