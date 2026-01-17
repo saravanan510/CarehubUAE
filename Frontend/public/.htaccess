@@ -2,8 +2,16 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# --- START PERMANENT 301 REDIRECT ---
+# Forces HTTPS and removes WWW for carehubuae.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.carehubuae\.com [NC]
+RewriteRule ^(.*)$ https://carehubuae.com/$1 [L,R=301]
+# --- END PERMANENT 301 REDIRECT ---
+
+# --- START REACT/SPA ROUTING ---
 # Redirect all traffic to index.html except actual files and directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [QSA,L]
-
+# --- END REACT/SPA ROUTING ---

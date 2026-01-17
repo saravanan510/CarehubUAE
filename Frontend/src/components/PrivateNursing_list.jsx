@@ -9,11 +9,11 @@ import FeatureIcon from "../assets/features.svg";
 const services = [
   {
     name: "Home Nursing Services",
-    link: "/home-nursing-services",
+    link: "/home-nursing-services-dubai",
   },
   {
     name: "Post Operative Care",
-    link: "/post-operative-care",
+    link: "/post-operative-care-dubai",
   },
   {
     name: "Ventilator Care",
@@ -25,7 +25,7 @@ const services = [
   },
   {
     name: "Elderly Care",
-    link: "/elderly-care",
+    link: "/elderly-care-services-dubai",
   },
   {
     name: "Pediatric Palliative",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     name: "Doctor Home Visits",
-    link: "/doctor-home-visits",
+    link: "/doctor-home-visit-dubai",
   },
   {
     name: "Medical Tourism",
@@ -57,7 +57,7 @@ const services = [
   },
   {
     name: "Blood Test",
-    link: "/blood-test",
+    link: "/blood-test-at-home-dubai",
   },
   {
     name: "Hydrafacial Services",

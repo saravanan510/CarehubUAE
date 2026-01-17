@@ -21,26 +21,16 @@ const AboutUs2 = () => {
                       Why We Stand Out
                     </h2>
                   </AnimatedOnScroll>
-                  <p className="about_para">
-                    Selecting the right care for your loved one is a journey
-                    built on trust. At Carehub Healthcare, we provide elite
-                    1-to-1 private nursing care in Dubai, ensuring a seamless
-                    recovery and total peace of mind for your family. As a
-                    premier provider of home care services in the UAE, we take
-                    immense pride in delivering superior clinical expertise
-                    combined with a compassionate, human-centered approach.
-                  </p>
-                  <div className="about_sub">
+
+                  <div className="about_sub2 mt-4">
                     <div className="about_list">
                       <div className="about_icon">
                         <img src={list_icon} />
                       </div>
                       <p>
-                        Our internationally trained nurses are specialists in
-                        their fields. They work tirelessly to help patients
-                        manage complex medical conditions, promote physical
-                        independence, and significantly enhance overall quality
-                        of life within the comfort of home.
+                        Expert Clinical Management: Full support with medication
+                        administration, enteral feeding (PEG), pain management,
+                        tracheostomy care, stoma, and catheter care.
                       </p>
                     </div>
                     <div className="about_list">
@@ -48,11 +38,9 @@ const AboutUs2 = () => {
                         <img src={list_icon} />
                       </div>
                       <p>
-                        Tailored 24/7 Support: Receive individualized attention
-                        from a dedicated nurse or a specialized care team. We
-                        offer flexible scheduling, including short-term nursing
-                        visits, live-in home care, overnight cover, or full
-                        24-hour medical support.
+                        Personalized Care Pathways: Every patient receives a
+                        bespoke care plan tailored to their unique medical
+                        history, recovery goals, and personal lifestyle wishes.
                       </p>
                     </div>
                     <div className="about_list">
@@ -60,10 +48,31 @@ const AboutUs2 = () => {
                         <img src={list_icon} />
                       </div>
                       <p>
-                        Comprehensive Clinical Visits: Our expert nursing team
-                        provides on-site assessments, professional wound care,
-                        dressing changes, IVF injections, and IV infusions,
-                        ensuring hospital-grade treatment at your doorstep.
+                        Multidisciplinary Specialists: Our nursing team includes
+                        experts in Cancer care, Cardiovascular health, Diabetes
+                        management, Post-Stroke recovery, and Neurological
+                        rehabilitation.
+                      </p>
+                    </div>
+                    <div className="about_list">
+                      <div className="about_icon">
+                        <img src={list_icon} />
+                      </div>
+                      <p>
+                        Full-Service Coordination: We provide accompaniment to
+                        medical appointments and act as a constant liaison
+                        between you and your hospital doctors for seamless
+                        post-surgery support.
+                      </p>
+                    </div>
+                    <div className="about_list">
+                      <div className="about_icon">
+                        <img src={list_icon} />
+                      </div>
+                      <p>
+                        Emotional & Holistic Guidance: Beyond medical tasks, we
+                        offer expert emotional support and continual reassurance
+                        to help families navigate the challenges of recovery.
                       </p>
                     </div>
                   </div>

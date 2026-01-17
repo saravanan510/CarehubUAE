@@ -25,9 +25,8 @@ const AboutUs = () => {
                       <img src={list_icon} />
                     </div>
                     <p>
-                      Support with medication management/administration, enteral
-                      feeding, pain management, tracheotomy, stoma and catheter
-                      care.
+                      Support with clinical management: Expert administration of
+                      enteral feeding, tracheostomy care, and stoma management.
                     </p>
                   </div>
                   <div className="about_list mb-3">
@@ -35,8 +34,8 @@ const AboutUs = () => {
                       <img src={list_icon} />
                     </div>
                     <p>
-                      Personalized care plans tailored to your unique needs,
-                      medical history and personal wishes.
+                      Personalized Care Plans: Tailored to your unique medical
+                      history, specific recovery goals, and personal wishes.
                     </p>
                   </div>
                   <div className="about_list mb-3">
@@ -44,20 +43,8 @@ const AboutUs = () => {
                       <img src={list_icon} />
                     </div>
                     <p>
-                      Specialist nurses in various fields including: cancer
-                      care, cardiovascular conditions, later living, diabetes
-                      management, lung conditions, palliative & end of life
-                      care, post operative recovery, neurological
-                      rehabilitation.
-                    </p>
-                  </div>
-                  <div className="about_list mb-3">
-                    <div className="about_icon">
-                      <img src={list_icon} />
-                    </div>
-                    <p>
-                      Accompaniment to and from medical appointments, advice and
-                      liaison with medical professionals and post surgery
+                      Specialized Nursing Fields: Including cancer care,
+                      neurological rehabilitation, and end-of-life palliative
                       support.
                     </p>
                   </div>
@@ -66,8 +53,17 @@ const AboutUs = () => {
                       <img src={list_icon} />
                     </div>
                     <p>
-                      Expert guidance, emotional support and continual
-                      reassurance.
+                      Medical Liaison: Accompaniment to appointments and
+                      constant liaison with your primary medical professionals.
+                    </p>
+                  </div>
+                  <div className="about_list mb-3">
+                    <div className="about_icon">
+                      <img src={list_icon} />
+                    </div>
+                    <p>
+                      Holistic Guidance: Expert emotional support and continual
+                      reassurance for both patients and their families.
                     </p>
                   </div>
                 </div>

@@ -7,6 +7,7 @@ import BookAppointment from "./BookAppointment";
 import OtherServices from "./OtherServices";
 import Table from "./Table";
 import ServiceFAQ from "./ServiceFAQ";
+import { TbHexagon3D } from "react-icons/tb";
 
 const TableData = [
   {
@@ -74,14 +75,14 @@ const PostOperativeCare_details = () => {
               </div>
 
               <div className="text-start pe-5" lg={8}>
-                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
                   Post-Operative Care Services in Dubai: The Complete Guide to
                   Safe Recovery
-                </h1>
-                <h3 className="fs-6 fw-semibold">
+                </h3>
+                <h1 className="fs-6 fw-semibold">
                   Expert Post-Operative Care in Dubai: Accelerate Your Healing
                   in the Comfort of Home
-                </h3>
+                </h1>
                 <p>
                   The hours and days following a surgical procedure are the most
                   critical for a patient’s long-term health. While modern
@@ -474,7 +475,7 @@ const PostOperativeCare_details = () => {
             </Col>
           </Row>
           <div>
-            <h2 className="fs-4 fw-bold">
+            <h2 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
               Benefits of Home Nursing vs. Extended Hospitalization
             </h2>
             <Table data={TableData} />

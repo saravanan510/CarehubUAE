@@ -75,16 +75,15 @@ const ElderlyCare_details = () => {
             </div>
 
             <div className="text-start pe-5" lg={8}>
-              <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}></h2>
-              <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
                 Compassionate Elderly Care Services in Dubai: Aging with Dignity
                 at Home
-              </h1>
+              </h3>
 
-              <h3 className="fs-6 fw-semibold">
+              <h1 className="fs-6 fw-semibold">
                 Expert Elderly Care in Dubai: Dedicated Support for a Life
                 Well-Lived
-              </h3>
+              </h1>
 
               <p>
                 As our loved ones age, their needs evolve from simple
@@ -344,7 +343,7 @@ const ElderlyCare_details = () => {
           </Col>
         </Row>
         <div>
-          <h2 className="fs-4 fw-bold">
+          <h2 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
             Why Home Care Outperforms Residential Facilities in the UAE
           </h2>
           <Table data={TableData} />

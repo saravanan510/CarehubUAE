@@ -42,6 +42,9 @@ function Testimonial() {
                 <img src={Client_img} alt="" className="testimonial_profile" />
                 <h3 style={{ color: "white", fontWeight: 600 }}>Friendly</h3>
                 <p style={{ color: "white" }}>
+                  "I can't thank CareHub Health Care enough for the wonderful
+                  support they provided for my family during a challenging time.
+                  Their team went above and beyond to ensure our loved one
                   received the best possible care at home in Dubai. From
                   medication management to daily activities, they were there
                   every step of the way with kindness and expertise. Highly

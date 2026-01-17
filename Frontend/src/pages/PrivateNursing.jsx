@@ -22,7 +22,7 @@ const PrivateNursing = () => {
         />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/home-nursing-services"
+          href="https://www.carehubuae.com/home-nursing-services-dubai"
         />
       </Helmet>
       <div className="servicepage_banner">

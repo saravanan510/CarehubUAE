@@ -89,14 +89,14 @@ const PrivateNursing_details = () => {
               </div>
 
               <div className="text-start pe-5" lg={8}>
-                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
                   Home Nursing Services in Dubai: The Ultimate Guide to
                   Professional In-Home Care
-                </h1>
-                <h3 className="fs-6 fw-semibold">
+                </h3>
+                <h1 className="fs-6 fw-semibold">
                   Professional Home Nursing Services in Dubai: Championing Your
                   Recovery at Home
-                </h3>
+                </h1>
 
                 <p>
                   In an era where medical technology allows for hospital-grade
@@ -354,6 +354,9 @@ const PrivateNursing_details = () => {
             </Col>
           </Row>
           <div>
+            <h2 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+              Benefits of Home Nursing vs. Facility-Based Care
+            </h2>
             <Table data={TableData} />
             <ServiceFAQ data={FAQData} />
           </div>

@@ -51,11 +51,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/home-nursing-services",
+        path: "/home-nursing-services-dubai",
         element: <PrivateNursing />,
       },
       {
-        path: "/post-operative-care",
+        path: "/post-operative-care-dubai",
         element: <PostOperativeCare />,
       },
       {
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         element: <PalliativeCare />,
       },
       {
-        path: "/elderly-care",
+        path: "/elderly-care-services-dubai",
         element: <ElderlyCare />,
       },
       {
@@ -87,7 +87,7 @@ const router = createBrowserRouter([
         element: <PysiotheraphyServices />,
       },
       {
-        path: "/doctor-home-visits",
+        path: "/doctor-home-visit-dubai",
         element: <DoctorHomeVisit />,
       },
       {
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
         element: <InjectionServices />,
       },
       {
-        path: "/blood-test",
+        path: "/blood-test-at-home-dubai",
         element: <BloodTest />,
       },
       {

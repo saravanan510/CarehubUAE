@@ -22,7 +22,10 @@ const BloodTest = () => {
           name="keywords"
           content="Blood Test at Home in Dubai, Lab Test at Home Service in Dubai, Diagnostic Blood Test at Home in Dubai, UAE"
         />
-        <link rel="canonical" href="https://www.carehubuae.com/blood-test" />
+        <link
+          rel="canonical"
+          href="https://www.carehubuae.com/blood-test-at-home-dubai"
+        />
       </Helmet>
       <div className="servicepage_banner">
         <Container>

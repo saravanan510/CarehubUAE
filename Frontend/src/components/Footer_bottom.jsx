@@ -44,15 +44,17 @@ const Footer_bottom = () => {
               <h6>Services</h6>
               <ul className="custom-ul">
                 <li>
-                  <Link to={"/home-nursing-services"}>
+                  <Link to={"/home-nursing-services-dubai"}>
                     Home Nursing Services{" "}
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/elderly-care"}>Elderly Care</Link>
+                  <Link to={"/elderly-care-services-dubai"}>Elderly Care</Link>
                 </li>
                 <li>
-                  <Link to={"/doctor-home-visits"}>Doctor Home Visits</Link>
+                  <Link to={"/doctor-home-visit-dubai"}>
+                    Doctor Home Visits
+                  </Link>
                 </li>
               </ul>
             </div>

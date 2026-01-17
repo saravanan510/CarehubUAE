@@ -85,7 +85,7 @@ p {
 .header p {
   font-family: "Open Sans", sans-serif;
   color: var(--color-secondary-text);
-  width: 80ch;
+  /* width: 90ch; */
   line-height: 1.6;
   color: var(--color-secondary-text);
   font-weight: 500;

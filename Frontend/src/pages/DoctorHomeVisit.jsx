@@ -24,7 +24,7 @@ const DoctorHomeVisit = () => {
         />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/doctor-home-visits"
+          href="https://www.carehubuae.com/doctor-home-visit-dubai"
         />
       </Helmet>
       <div className="servicepage_banner">

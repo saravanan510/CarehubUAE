@@ -58,7 +58,7 @@ let router = createBrowserRouter([
         element: <PrivateNursing />,
       },
       {
-        path: "/post-operative-care",
+        path: "/post-operative-care-dubai",
         element: <PostOperativeCare />,
       },
       {
@@ -70,7 +70,7 @@ let router = createBrowserRouter([
         element: <PalliativeCare />,
       },
       {
-        path: "/elderly-care",
+        path: "/elderly-care-services-dubai",
         element: <ElderlyCare />,
       },
       {
@@ -90,7 +90,7 @@ let router = createBrowserRouter([
         element: <PysiotheraphyServices />,
       },
       {
-        path: "/doctor-home-visits",
+        path: "/doctor-home-visit-dubai",
         element: <DoctorHomeVisit />,
       },
       {
@@ -102,7 +102,7 @@ let router = createBrowserRouter([
         element: <InjectionServices />,
       },
       {
-        path: "/blood-test",
+        path: "/blood-test-at-home-dubai",
         element: <BloodTest />,
       },
       {
@@ -136,7 +136,7 @@ export const services: any = [
   },
   {
     name: "Post Operative Care",
-    link: "/post-operative-care",
+    link: "/post-operative-care-dubai",
   },
   {
     name: "Ventilator Care",
@@ -148,7 +148,7 @@ export const services: any = [
   },
   {
     name: "Elderly Care",
-    link: "/elderly-care",
+    link: "/elderly-care-services-dubai",
   },
   {
     name: "Pediatric Palliative",
@@ -168,7 +168,7 @@ export const services: any = [
   },
   {
     name: "Doctor Home Visits",
-    link: "/doctor-home-visits",
+    link: "/doctor-home-visit-dubai",
   },
   {
     name: "Medical Tourism",
@@ -180,7 +180,7 @@ export const services: any = [
   },
   {
     name: "Blood Test",
-    link: "/blood-test",
+    link: "/blood-test-at-home-dubai",
   },
   {
     name: "Hydrafacial Services",

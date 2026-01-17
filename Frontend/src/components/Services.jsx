@@ -31,13 +31,13 @@ const services = [
     image: service_1,
     title: "HOME NURSING",
     para: "Carehub healthcare  is a leading provider of in-home care services...",
-    link: "/home-nursing-services",
+    link: "/home-nursing-services-dubai",
   },
   {
     image: service_2,
     title: "POST OPERATIVE CARE",
     para: "Anybody's life can be completely upended by a serious sickness...",
-    link: "/post-operative-care",
+    link: "/post-operative-care-dubai",
   },
   {
     image: service_3,
@@ -55,7 +55,7 @@ const services = [
     image: service_5,
     title: "ELDERLY CARE",
     para: "We realize that you want to be at home. However, your care demands may have...",
-    link: "/elderly-care",
+    link: "/elderly-care-services-dubai",
   },
   {
     image: service_6,
@@ -85,7 +85,7 @@ const services = [
     image: service_10,
     title: "DOCTOR HOME VISITS",
     para: "Having access to a doctor at the comfort of your home was a privilege few could...",
-    link: "/doctor-home-visits",
+    link: "/doctor-home-visit-dubai",
   },
   {
     image: service_11,
@@ -103,7 +103,7 @@ const services = [
     image: service_13,
     title: "BLOOD TEST AT HOME",
     para: "If you are looking for an emergency Lab test at home, Carehub is with you...",
-    link: "/blood-test",
+    link: "/blood-test-at-home-dubai",
   },
   {
     image: service_14,

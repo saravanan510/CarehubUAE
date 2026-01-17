@@ -67,14 +67,14 @@ const DoctorHomeVisit_details = () => {
             </div>
 
             <div className="text-start pe-5" lg={8}>
-              <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
                 Doctor Home Visit Services in Dubai: The Ultimate Guide to
                 Private Medical Care
-              </h1>
-              <h3 className="fs-6 fw-semibold">
+              </h3>
+              <h1 className="fs-6 fw-semibold">
                 Professional Doctor Home Visit in Dubai: Exceptional Medical
                 Care Delivered to Your Doorstep
-              </h3>
+              </h1>
 
               <p>
                 In a fast-paced metropolis like Dubai, your health should never
@@ -378,7 +378,7 @@ const DoctorHomeVisit_details = () => {
           </Col>
         </Row>
         <div>
-          <h2 className="fs-4 fw-bold">
+          <h2 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
             Comparison: Carehub Home Visit vs. Hospital ER/Clinics
           </h2>
           <Table data={TableData} />

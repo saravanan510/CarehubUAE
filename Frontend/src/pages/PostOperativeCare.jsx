@@ -22,7 +22,7 @@ const PostOperativeCare = () => {
         />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/post-operative-care"
+          href="https://www.carehubuae.com/post-operative-care-dubai"
         />
       </Helmet>
       <div className="servicepage_banner">

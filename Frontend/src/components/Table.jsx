@@ -1,6 +1,6 @@
 const Table = ({ data }) => {
   return (
-    <div style={{ overflowX: "auto", marginTop: "32px" }}>
+    <div style={{ overflowX: "auto", marginTop: "20px" }}>
       <table>
         <tbody>
           {data.map((d) => {
