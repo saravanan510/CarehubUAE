@@ -7,6 +7,8 @@ import BookAppointment from "./BookAppointment";
 import OtherServices from "./OtherServices";
 import Table from "./Table";
 import ServiceFAQ from "./ServiceFAQ";
+import { useNavigate } from "react-router";
+import { useMediaQuery } from "react-responsive";
 const TableData = [
   {
     title: "Feature",
@@ -59,10 +61,46 @@ const FAQData = [
       "A: Absolutely. Carehub operates 7 days a week, including early morning slots for fasting blood tests.",
   },
 ];
+
 const BloodTest_details = () => {
+  const isMobile = useMediaQuery({ maxWidth: 475 });
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/book-blood-test");
+  };
   return (
     <section>
       <Container>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: isMobile ? "column" : "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "20px 12px",
+            backgroundColor: "#f9f9f9",
+            marginBottom: "20px",
+          }}
+        >
+          <p style={{ margin: "0px", fontWeight: "600" }}>
+            Book hassle-free healthcare with Carehub - your trusted partner for
+            home diagnostic services in Dubai!
+          </p>
+          <button
+            onClick={handleClick}
+            style={{
+              padding: "6px 12px",
+              borderRadius: "4px",
+              background: "#009b45",
+              color: "white",
+              marginRight: "12px",
+            }}
+            className="splash-button"
+          >
+            Book Blood Test
+          </button>
+        </div>
+
         <Row>
           <Col lg={8}>
             <div className="service_img">
@@ -301,10 +339,6 @@ const BloodTest_details = () => {
               </ul>
 
               <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                Frequently Asked Questions
-              </h4>
-
-              <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
                 Customized Care for Everyone
               </h4>
               <p>
@@ -344,10 +378,6 @@ const BloodTest_details = () => {
                   </p>
                 </li>
               </ul>
-              <p>
-                Book hassle-free healthcare with Carehub—your trusted partner
-                for home diagnostic services in Dubai!
-              </p>
             </div>
           </Col>
           <Col lg={4}>

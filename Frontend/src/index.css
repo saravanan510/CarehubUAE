@@ -948,3 +948,49 @@ ul.breadcrumb li a:hover {
   color: rgb(255, 255, 255);
   margin-right: 12px;
 }
+.splash-button {
+  background: #008080; /* Replace with Carehub brand color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* 2. The Animated "Splash" Layer */
+.splash-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  animation: splash-pulse 2s infinite; /* Loop the animation forever */
+}
+
+/* 3. The Animation Logic */
+@keyframes splash-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6); /* How far the splash spreads */
+    opacity: 0; /* Fades out as it expands */
+  }
+}
+
+/* Hover Effect for Better UX */
+.splash-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
