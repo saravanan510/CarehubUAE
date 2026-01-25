@@ -22,7 +22,7 @@ const services = [
   },
   {
     name: "Palliative Care",
-    link: "/palliative-care",
+    link: "/palliative-care-dubai",
   },
   {
     name: "Elderly Care",
@@ -54,7 +54,7 @@ const services = [
   },
   {
     name: "Injection Services",
-    link: "/injection-services",
+    link: "/injection-services-at-home-dubai",
   },
   {
     name: "Blood Test",

@@ -9,15 +9,21 @@ const ParalyticCare = () => {
     <>
       <ScrollToTop />
       <Helmet>
-        <title>Paralytic care services at home in dubai,UAE</title>
+        <title>
+          Specialist Palliative Care Services in Dubai | Compassionate Home
+          Support
+        </title>
         <meta
           name="description"
-          content="Carehub Healthcare provides specialized paralytic care services in Dubai, offering compassionate, expert support to enhance comfort and quality of life for individuals with paralysis in Dubai, UAE."
+          content="Experience dignity and expert medical comfort with our DHA-licensed palliative care in Dubai. We specialize in symptom relief and family support for serious illnesses at home."
         />
-        <meta name="keywords" content="Paralytic care services Dubai" />
+        <meta
+          name="keywords"
+          content="Palliative care Dubai, DHA licensed palliative care, chronic illness support UAE, home pain management Dubai, end of life care Dubai."
+        />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/paralytic-care"
+          href="https://www.carehubuae.com/palliative-care-dubai"
         />
       </Helmet>
       <div className="servicepage_banner">

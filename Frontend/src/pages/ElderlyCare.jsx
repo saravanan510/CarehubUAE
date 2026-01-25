@@ -23,7 +23,7 @@ const ElderlyCare = () => {
         />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/ventilator-care"
+          href="https://www.carehubuae.com/elderly-care-services-dubai "
         />
       </Helmet>
       <div className="servicepage_banner">

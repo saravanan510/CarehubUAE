@@ -49,7 +49,7 @@ const services = [
     image: service_15,
     title: "PALLIATIVE CARE",
     para: "Palliative care is an essential service that provides comfort and support to...",
-    link: "/palliative-care",
+    link: "/palliative-care-dubai",
   },
   {
     image: service_5,
@@ -97,7 +97,7 @@ const services = [
     image: service_12,
     title: "INJECTION SERVICES ",
     para: "Injection services at home- Get the facility of getting injections sitting...",
-    link: "/injection-services",
+    link: "/injection-services-at-home-dubai",
   },
   {
     image: service_13,

@@ -2,16 +2,30 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# --- START PERMANENT 301 REDIRECT ---
-# Forces HTTPS and removes WWW for carehubuae.com
+# 1. REMOVE WWW AND FORCE HTTPS
+
+# Sends anyone from www.carehubuae.com to https://carehubuae.com
+
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.carehubuae\.com [NC]
-RewriteRule ^(.*)$ https://carehubuae.com/$1 [L,R=301]
-# --- END PERMANENT 301 REDIRECT ---
+RewriteRule ^(.\*)$ https://carehubuae.com/$1 [L,R=301]
 
-# --- START REACT/SPA ROUTING ---
-# Redirect all traffic to index.html except actual files and directories
+# 2. SERVICE PAGE REDIRECTS (Old to New)
+
+# This fixes the 404 errors for your services
+
+RewriteRule ^home-nursing-services$ /home-nursing-services-dubai [L,R=301]
+RewriteRule ^post-operative-care$ /post-operative-care-dubai [L,R=301]
+RewriteRule ^elderly-care-services$ /elderly-care-services-dubai [L,R=301]
+RewriteRule ^doctor-home-visit$ /doctor-home-visit-dubai [L,R=301]
+RewriteRule ^blood-test-at-home$ /blood-test-at-home-dubai [L,R=301]
+RewriteRule ^palliative-care$ /palliative-care-dubai [L,R=301]
+RewriteRule ^injection-services$ /injection-services-at-home-dubai [L,R=301]
+
+# 3. REACT ROUTING
+
+# This keeps your website working when people click links inside the site
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [QSA,L]
-# --- END REACT/SPA ROUTING ---

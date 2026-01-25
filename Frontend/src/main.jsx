@@ -63,7 +63,7 @@ const router = createBrowserRouter([
         element: <VentilatorCare />,
       },
       {
-        path: "/palliative-care",
+        path: "/palliative-care-dubai",
         element: <PalliativeCare />,
       },
       {
@@ -95,7 +95,7 @@ const router = createBrowserRouter([
         element: <MedicalTourism />,
       },
       {
-        path: "/injection-services",
+        path: "/injection-services-at-home-dubai",
         element: <InjectionServices />,
       },
       {
@@ -207,5 +207,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </HelmetProvider>
       </BookingProvider>
     </AuthProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

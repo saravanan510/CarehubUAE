@@ -66,7 +66,7 @@ let router = createBrowserRouter([
         element: <VentilatorCare />,
       },
       {
-        path: "/palliative-care",
+        path: "/palliative-care-dubai",
         element: <PalliativeCare />,
       },
       {
@@ -98,7 +98,7 @@ let router = createBrowserRouter([
         element: <MedicalTourism />,
       },
       {
-        path: "/injection-services",
+        path: "/injection-services-at-home-dubai",
         element: <InjectionServices />,
       },
       {
@@ -144,7 +144,7 @@ export const services: any = [
   },
   {
     name: "Palliative Care",
-    link: "/palliative-care",
+    link: "/palliative-care-dubai",
   },
   {
     name: "Elderly Care",
@@ -176,7 +176,7 @@ export const services: any = [
   },
   {
     name: "Injection Services",
-    link: "/injection-services",
+    link: "/injection-services-at-home-dubai",
   },
   {
     name: "Blood Test",
@@ -206,7 +206,7 @@ function Layout() {
       }
       return location.key;
     },
-    []
+    [],
   );
 
   const HandleChange = (e) => {

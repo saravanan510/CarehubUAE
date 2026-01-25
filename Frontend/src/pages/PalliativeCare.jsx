@@ -23,7 +23,7 @@ const PalliativeCare = () => {
         />
         <link
           rel="canonical"
-          href="https://www.carehubuae.com/palliative-care"
+          href="https://www.carehubuae.com/palliative-care-dubai"
         />
       </Helmet>
       <div className="servicepage_banner">
