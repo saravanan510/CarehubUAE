@@ -1,24 +1,28 @@
 Options -MultiViews
 RewriteEngine On
 
-# 1. FORCE HTTPS AND REMOVE WWW
+# TEST (remove after confirmation)
+
+Redirect 301 /htaccess-test https://google.com
+
+# FORCE HTTPS + NON-WWW
 
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.carehubuae\.com$ [NC]
-RewriteRule ^(.\*)$ https://carehubuae.com/$1 [L,R=301,END]
+RewriteRule ^(.\*)$ https://carehubuae.com/$1 [R=301,L]
 
-# 2. SERVICE PAGE REDIRECTS
+# SERVICE REDIRECTS
 
-RewriteRule ^home-nursing-services/?$ https://carehubuae.com/home-nursing-services-dubai [L,R=301,END]
-RewriteRule ^post-operative-care/?$ https://carehubuae.com/post-operative-care-dubai [L,R=301,END]
-RewriteRule ^elderly-care-services/?$ https://carehubuae.com/elderly-care-services-dubai [L,R=301,END]
-RewriteRule ^doctor-home-visit/?$ https://carehubuae.com/doctor-home-visit-dubai [L,R=301,END]
-RewriteRule ^blood-test-at-home/?$ https://carehubuae.com/blood-test-at-home-dubai [L,R=301,END]
-RewriteRule ^palliative-care/?$ https://carehubuae.com/palliative-care-dubai [L,R=301,END]
-RewriteRule ^injection-services/?$ https://carehubuae.com/injection-services-at-home-dubai [L,R=301,END]
+RewriteRule ^home-nursing-services/?$ https://carehubuae.com/home-nursing-services-dubai [R=301,L]
+RewriteRule ^post-operative-care/?$ https://carehubuae.com/post-operative-care-dubai [R=301,L]
+RewriteRule ^elderly-care-services/?$ https://carehubuae.com/elderly-care-services-dubai [R=301,L]
+RewriteRule ^doctor-home-visit/?$ https://carehubuae.com/doctor-home-visit-dubai [R=301,L]
+RewriteRule ^blood-test-at-home/?$ https://carehubuae.com/blood-test-at-home-dubai [R=301,L]
+RewriteRule ^palliative-care/?$ https://carehubuae.com/palliative-care-dubai [R=301,L]
+RewriteRule ^injection-services/?$ https://carehubuae.com/injection-services-at-home-dubai [R=301,L]
 
-# 3. REACT SPA ROUTING
+# REACT SPA
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ /index.html [L]
+RewriteRule . /index.html [L]
