@@ -502,52 +502,131 @@ footer {
 
 /* ── DATA ──────────────────────────────────────────────────── */
 const BASE_TESTS = [
-  { icon: "❤️", name: "Lipid Profile",      count: "8 tests · Heart health"      },
-  { icon: "🫁", name: "Liver Function",     count: "11 tests · LFT panel"        },
-  { icon: "🫘", name: "Kidney Function",    count: "6 tests · Renal profile"     },
-  { icon: "💉", name: "Hemogram CBC",       count: "21 tests · Full blood count" },
-  { icon: "🦋", name: "Thyroid Panel",      count: "TSH, FT3, FT4"              },
-  { icon: "☀️", name: "Vitamins & Minerals",count: "Vit D, B12, Folate, Mg"     },
-  { icon: "🩸", name: "Diabetes Profile",   count: "HbA1c, FBS, Insulin"        },
-  { icon: "🔬", name: "Pancreatic",         count: "Amylase, Lipase"            },
+  { icon: "❤️", name: "Lipid Profile", count: "8 tests · Heart health" },
+  { icon: "🫁", name: "Liver Function", count: "11 tests · LFT panel" },
+  { icon: "🫘", name: "Kidney Function", count: "6 tests · Renal profile" },
+  { icon: "💉", name: "Hemogram CBC", count: "21 tests · Full blood count" },
+  { icon: "🦋", name: "Thyroid Panel", count: "TSH, FT3, FT4" },
+  { icon: "☀️", name: "Vitamins & Minerals", count: "Vit D, B12, Folate, Mg" },
+  { icon: "🩸", name: "Diabetes Profile", count: "HbA1c, FBS, Insulin" },
+  { icon: "🔬", name: "Pancreatic", count: "Amylase, Lipase" },
 ];
 
 const ADDONS_PREVIEW = [
   { icon: "🎗️", name: "Cancer Screening Panel", price: "from AED 50" },
-  { icon: "🌸", name: "Hormone Profile",         price: "from AED 50" },
-  { icon: "🧲", name: "Full Iron Profile",        price: "AED 80"      },
-  { icon: "⚡", name: "Electrolytes & CRP",       price: "from AED 30" },
-  { icon: "🧬", name: "Allergy / Intolerance",    price: "from AED 150"},
+  { icon: "🌸", name: "Hormone Profile", price: "from AED 50" },
+  { icon: "🧲", name: "Full Iron Profile", price: "AED 80" },
+  { icon: "⚡", name: "Electrolytes & CRP", price: "from AED 30" },
+  { icon: "🧬", name: "Allergy / Intolerance", price: "from AED 150" },
 ];
 
 const STEPS = [
-  { icon: "📋", title: "Choose Your Package",  desc: "Start with ArogyaPlus 100 base and add optional tests to fit your health goals." },
-  { icon: "📅", title: "Book a Time Slot",     desc: "Pick a date and preferred time window. Morning or evening — we work around you." },
-  { icon: "🏠", title: "We Come to You",       desc: "Our certified phlebotomist arrives at your home or office at the scheduled time." },
-  { icon: "📲", title: "Get Your Results",     desc: "Receive a detailed digital report within 24 hours on email and WhatsApp." },
+  {
+    icon: "📋",
+    title: "Choose Your Package",
+    desc: "Start with ArogyaPlus 100 base and add optional tests to fit your health goals.",
+  },
+  {
+    icon: "📅",
+    title: "Book a Time Slot",
+    desc: "Pick a date and preferred time window. Morning or evening — we work around you.",
+  },
+  {
+    icon: "🏠",
+    title: "We Come to You",
+    desc: "Our certified phlebotomist arrives at your home or office at the scheduled time.",
+  },
+  {
+    icon: "📲",
+    title: "Get Your Results",
+    desc: "Receive a detailed digital report within 24 hours on email and WhatsApp.",
+  },
 ];
 
 const WHY_CARDS = [
-  { icon: "🏠", bg: "blue-bg",   title: "Free Home Collection",    desc: "No travel, no queues. Our certified team comes to your door anywhere in the UAE."                      },
-  { icon: "🔬", bg: "teal-bg",   title: "MOHAP Certified Lab",     desc: "All samples processed in UAE Ministry of Health approved, ISO-accredited laboratories."              },
-  { icon: "⚡", bg: "sky-bg",    title: "24-Hour Results",         desc: "Detailed digital reports delivered to your email and WhatsApp within 24 hours of collection."        },
-  { icon: "💊", bg: "green-bg",  title: "100+ Tests in One Draw",  desc: "ArogyaPlus covers over 100 biomarkers in a single blood draw — unrivalled value."                   },
-  { icon: "👨‍⚕️", bg: "purple-bg", title: "Doctor Report Review",    desc: "Add a 30-minute consultation with a specialist doctor to walk through your results together."        },
-  { icon: "💳", bg: "indigo-bg", title: "Pay on Collection",       desc: "No advance payment required. Pay cash or card when our team arrives at your home."                   },
+  {
+    icon: "🏠",
+    bg: "blue-bg",
+    title: "Free Home Collection",
+    desc: "No travel, no queues. Our certified team comes to your door anywhere in the UAE.",
+  },
+  {
+    icon: "🔬",
+    bg: "teal-bg",
+    title: "MOHAP Certified Lab",
+    desc: "All samples processed in UAE Ministry of Health approved, ISO-accredited laboratories.",
+  },
+  {
+    icon: "⚡",
+    bg: "sky-bg",
+    title: "24-Hour Results",
+    desc: "Detailed digital reports delivered to your email and WhatsApp within 24 hours of collection.",
+  },
+  {
+    icon: "💊",
+    bg: "green-bg",
+    title: "100+ Tests in One Draw",
+    desc: "ArogyaPlus covers over 100 biomarkers in a single blood draw — unrivalled value.",
+  },
+  {
+    icon: "👨‍⚕️",
+    bg: "purple-bg",
+    title: "Doctor Report Review",
+    desc: "Add a 30-minute consultation with a specialist doctor to walk through your results together.",
+  },
+  {
+    icon: "💳",
+    bg: "indigo-bg",
+    title: "Pay on Collection",
+    desc: "No advance payment required. Pay cash or card when our team arrives at your home.",
+  },
 ];
 
 const TESTIMONIALS = [
-  { stars: 5, text: "Absolutely seamless. Booked the night before, the nurse arrived at 7am sharp. Results were on WhatsApp by evening. Will never go to a clinic again.", name: "Rania M.", loc: "Dubai Marina", color: "#1a56db" },
-  { stars: 5, text: "I added the hormone panel and cancer markers. The report was incredibly detailed and easy to understand. My doctor was impressed by the range of tests.", name: "Karthik P.", loc: "Sharjah", color: "#16a34a" },
-  { stars: 5, text: "As someone with diabetes, I need regular tests. CareHub has made this completely stress-free. The HbA1c results come faster than the clinic ever managed.", name: "Fatima A.", loc: "Abu Dhabi", color: "#7c3aed" },
+  {
+    stars: 5,
+    text: "Absolutely seamless. Booked the night before, the nurse arrived at 7am sharp. Results were on WhatsApp by evening. Will never go to a clinic again.",
+    name: "Rania M.",
+    loc: "Dubai Marina",
+    color: "#1a56db",
+  },
+  {
+    stars: 5,
+    text: "I added the hormone panel and cancer markers. The report was incredibly detailed and easy to understand. My doctor was impressed by the range of tests.",
+    name: "Karthik P.",
+    loc: "Sharjah",
+    color: "#16a34a",
+  },
+  {
+    stars: 5,
+    text: "As someone with diabetes, I need regular tests. CareHub has made this completely stress-free. The HbA1c results come faster than the clinic ever managed.",
+    name: "Fatima A.",
+    loc: "Abu Dhabi",
+    color: "#7c3aed",
+  },
 ];
 
 const FAQS = [
-  { q: "Do I need to fast before my blood test?", a: "For the base ArogyaPlus 100 package (which includes fasting tests like blood glucose and lipid profile), we recommend fasting for 10–12 hours before collection. Our team will confirm fasting requirements when booking." },
-  { q: "Which areas do you cover in the UAE?", a: "We cover all 7 emirates — Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Home collection is available 7 days a week, 7am–8pm." },
-  { q: "How do I receive my results?", a: "Your detailed report is sent as a PDF to your email and WhatsApp within 24 hours of sample collection. The report includes reference ranges and flagged values for easy review." },
-  { q: "Can I book for multiple family members?", a: "Yes! Let us know during booking how many individuals need testing. Our phlebotomist will collect all samples in a single visit. Family discounts are available for 3+ members." },
-  { q: "What if I need to reschedule my appointment?", a: "You can reschedule up to 2 hours before your appointment at no charge. Just WhatsApp us on +971 50 886 0612 or call and we'll sort it out." },
+  {
+    q: "Do I need to fast before my blood test?",
+    a: "For the base ArogyaPlus 100 package (which includes fasting tests like blood glucose and lipid profile), we recommend fasting for 10–12 hours before collection. Our team will confirm fasting requirements when booking.",
+  },
+  {
+    q: "Which areas do you cover in the UAE?",
+    a: "We cover all 7 emirates — Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Home collection is available 7 days a week, 7am–8pm.",
+  },
+  {
+    q: "How do I receive my results?",
+    a: "Your detailed report is sent as a PDF to your email and WhatsApp within 24 hours of sample collection. The report includes reference ranges and flagged values for easy review.",
+  },
+  {
+    q: "Can I book for multiple family members?",
+    a: "Yes! Let us know during booking how many individuals need testing. Our phlebotomist will collect all samples in a single visit. Family discounts are available for 3+ members.",
+  },
+  {
+    q: "What if I need to reschedule my appointment?",
+    a: "You can reschedule up to 2 hours before your appointment at no charge. Just WhatsApp us on +971 50 886 0612 or call and we'll sort it out.",
+  },
 ];
 
 /* ── COMPONENTS ────────────────────────────────────────────── */
@@ -562,7 +641,9 @@ function Navbar({ onBook }) {
     <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
       <a href="/" className="nav-logo">
         <div className="nav-logo-mark">C</div>
-        <div className="nav-logo-text">Care<em>Hub</em></div>
+        <div className="nav-logo-text">
+          Care<em>Hub</em>
+        </div>
       </a>
       <div className="nav-links">
         <a href="#tests">What's Included</a>
@@ -570,8 +651,12 @@ function Navbar({ onBook }) {
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </div>
-      <button className="nav-cta" onClick={onBook}>Book Now →</button>
-      <button className="nav-mobile-toggle" onClick={onBook}>☰</button>
+      <button className="nav-cta" onClick={onBook}>
+        Book Now →
+      </button>
+      <button className="nav-mobile-toggle" onClick={onBook}>
+        ☰
+      </button>
     </nav>
   );
 }
@@ -580,7 +665,7 @@ function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false);
   return (
     <div className={`faq-item${open ? " open" : ""}`}>
-      <button className="faq-q" onClick={() => setOpen(o => !o)}>
+      <button className="faq-q" onClick={() => setOpen((o) => !o)}>
         {q}
         <span className="faq-icon">+</span>
       </button>
@@ -592,7 +677,7 @@ function FaqItem({ q, a }) {
 /* ── APP ───────────────────────────────────────────────────── */
 export default function App() {
   const handleBook = () => {
-    window.location.href = "/package";
+    window.location.href = "/arogyaPlusPackage";
   };
 
   return (
@@ -615,12 +700,17 @@ export default function App() {
                 UAE's Premium Home Health Testing
               </div>
               <h1 className="animate-up delay-1">
-                100+ Tests.<br />
-                <span className="accent-blue">Zero Hassle.</span><br />
+                100+ Tests.
+                <br />
+                <span className="accent-blue">Zero Hassle.</span>
+                <br />
                 Your Doorstep.
               </h1>
               <p className="hero-sub animate-up delay-2">
-                ArogyaPlus brings a complete health screening to your home. Certified nurses, same-day collection, 24-hour digital results — starting at just <strong style={{color:"#7aa4f5"}}>AED 499</strong>.
+                ArogyaPlus brings a complete health screening to your home.
+                Certified nurses, same-day collection, 24-hour digital results —
+                starting at just{" "}
+                <strong style={{ color: "#7aa4f5" }}>AED 499</strong>.
               </p>
               <div className="hero-actions animate-up delay-3">
                 <button className="btn-primary-hero" onClick={handleBook}>
@@ -659,18 +749,28 @@ export default function App() {
                 <div className="hero-card">
                   <div className="hero-card-header">
                     <span className="hero-card-label">ArogyaPlus 100</span>
-                    <div className="hero-card-price">499 <small>AED</small></div>
+                    <div className="hero-card-price">
+                      499 <small>AED</small>
+                    </div>
                   </div>
                   <div className="hero-card-tests">
-                    {BASE_TESTS.slice(0, 6).map(t => (
+                    {BASE_TESTS.slice(0, 6).map((t) => (
                       <div className="hero-test-pill" key={t.name}>
                         <span className="hero-test-dot" />
                         {t.name}
                       </div>
                     ))}
                   </div>
-                  <div style={{marginTop:11,fontSize:".74rem",color:"rgba(255,255,255,.4)",textAlign:"center"}}>
-                    + {BASE_TESTS.length - 6} more panels · 100+ biomarkers total
+                  <div
+                    style={{
+                      marginTop: 11,
+                      fontSize: ".74rem",
+                      color: "rgba(255,255,255,.4)",
+                      textAlign: "center",
+                    }}
+                  >
+                    + {BASE_TESTS.length - 6} more panels · 100+ biomarkers
+                    total
                   </div>
                 </div>
                 <div className="hero-mini-card">
@@ -680,7 +780,13 @@ export default function App() {
                     Our nurse comes to you · 7am–8pm daily
                   </div>
                 </div>
-                <div className="hero-mini-card" style={{background:"rgba(26,86,219,.15)",border:"1px solid rgba(122,164,245,.2)"}}>
+                <div
+                  className="hero-mini-card"
+                  style={{
+                    background: "rgba(26,86,219,.15)",
+                    border: "1px solid rgba(122,164,245,.2)",
+                  }}
+                >
                   <span className="hero-mini-icon">📲</span>
                   <div className="hero-mini-text">
                     <strong>Results in 24 Hours</strong>
@@ -698,7 +804,13 @@ export default function App() {
         <div className="container">
           <div className="logos-inner">
             <span className="logos-label">Trusted & Certified</span>
-            {["🏥 MOHAP Approved","🧪 ISO Accredited Lab","✅ DHA Licensed","🔒 HIPAA Compliant","⭐ Google 4.9★"].map(l => (
+            {[
+              "🏥 MOHAP Approved",
+              "🧪 ISO Accredited Lab",
+              "✅ DHA Licensed",
+              "🔒 HIPAA Compliant",
+              "⭐ Google 4.9★",
+            ].map((l) => (
               <div className="logo-pill" key={l}>
                 <span>{l.split(" ")[0]}</span>
                 {l.split(" ").slice(1).join(" ")}
@@ -714,10 +826,14 @@ export default function App() {
           <div className="section-header">
             <div className="section-eyebrow eyebrow-blue">What's Inside</div>
             <h2 className="section-title">100+ Tests in One Package</h2>
-            <p className="section-desc">The ArogyaPlus 100 base package covers every major organ system — heart, liver, kidneys, thyroid, blood, and more. All from a single blood draw.</p>
+            <p className="section-desc">
+              The ArogyaPlus 100 base package covers every major organ system —
+              heart, liver, kidneys, thyroid, blood, and more. All from a single
+              blood draw.
+            </p>
           </div>
           <div className="tests-grid">
-            {BASE_TESTS.map(t => (
+            {BASE_TESTS.map((t) => (
               <div className="test-card" key={t.name}>
                 <div className="test-card-icon">{t.icon}</div>
                 <div className="test-card-name">{t.name}</div>
@@ -725,9 +841,15 @@ export default function App() {
               </div>
             ))}
             <div className="tests-plus">
-              ➕ Customize with<br />
-              <span style={{color:"var(--blue)",fontSize:"1.15rem"}}>15+ Add-On Tests</span><br />
-              <span style={{fontSize:".79rem",opacity:.65}}>Cancer · Hormones · Allergy · Iron</span>
+              ➕ Customize with
+              <br />
+              <span style={{ color: "var(--blue)", fontSize: "1.15rem" }}>
+                15+ Add-On Tests
+              </span>
+              <br />
+              <span style={{ fontSize: ".79rem", opacity: 0.65 }}>
+                Cancer · Hormones · Allergy · Iron
+              </span>
             </div>
           </div>
         </div>
@@ -737,9 +859,19 @@ export default function App() {
       <section className="steps-section" id="how">
         <div className="container">
           <div className="section-header">
-            <div className="section-eyebrow" style={{color:"#7aa4f5"}}>Simple Process</div>
-            <h2 className="section-title" style={{color:"#fff"}}>Health Testing, Reimagined</h2>
-            <p className="section-desc" style={{color:"rgba(255,255,255,.5)"}}>From booking to results in under 24 hours. No clinic visits, no waiting rooms.</p>
+            <div className="section-eyebrow" style={{ color: "#7aa4f5" }}>
+              Simple Process
+            </div>
+            <h2 className="section-title" style={{ color: "#fff" }}>
+              Health Testing, Reimagined
+            </h2>
+            <p
+              className="section-desc"
+              style={{ color: "rgba(255,255,255,.5)" }}
+            >
+              From booking to results in under 24 hours. No clinic visits, no
+              waiting rooms.
+            </p>
           </div>
           <div className="steps-grid">
             {STEPS.map((s, i) => (
@@ -760,9 +892,14 @@ export default function App() {
       <section className="section" id="pricing">
         <div className="container">
           <div className="section-header">
-            <div className="section-eyebrow eyebrow-blue">Transparent Pricing</div>
+            <div className="section-eyebrow eyebrow-blue">
+              Transparent Pricing
+            </div>
             <h2 className="section-title">One Price. No Surprises.</h2>
-            <p className="section-desc">AED 499 covers everything in the base package. Add optional tests at clear, fixed prices. Home collection always included.</p>
+            <p className="section-desc">
+              AED 499 covers everything in the base package. Add optional tests
+              at clear, fixed prices. Home collection always included.
+            </p>
           </div>
           <div className="pricing-wrap">
             {/* Price Card */}
@@ -774,8 +911,12 @@ export default function App() {
                   <span className="price-num">499</span>
                   <span className="price-was">AED 2,500</span>
                 </div>
-                <div className="price-sub">One-time · Includes everything below</div>
-                <div className="price-incl">✓ Free home collection included</div>
+                <div className="price-sub">
+                  One-time · Includes everything below
+                </div>
+                <div className="price-incl">
+                  ✓ Free home collection included
+                </div>
               </div>
               <div className="price-card-body">
                 <ul className="price-feat-list">
@@ -788,7 +929,7 @@ export default function App() {
                     "Pay on collection — cash or card",
                     "Certified, experienced phlebotomist",
                     "Free fasting guidance & pre-test support",
-                  ].map(f => (
+                  ].map((f) => (
                     <li className="price-feat-item" key={f}>
                       <span className="price-feat-check">✓</span>
                       {f}
@@ -804,8 +945,11 @@ export default function App() {
             {/* Addons Side */}
             <div className="addon-side">
               <div className="addon-side-title">+ Optional Add-Ons</div>
-              <div className="addon-side-sub">Enhance your package with targeted tests. Prices update automatically in the builder.</div>
-              {ADDONS_PREVIEW.map(a => (
+              <div className="addon-side-sub">
+                Enhance your package with targeted tests. Prices update
+                automatically in the builder.
+              </div>
+              {ADDONS_PREVIEW.map((a) => (
                 <div className="addon-chip" key={a.name}>
                   <span className="addon-chip-left">
                     <span className="addon-chip-icon">{a.icon}</span>
@@ -814,8 +958,14 @@ export default function App() {
                   <span className="addon-chip-price">{a.price}</span>
                 </div>
               ))}
-              <div className="addons-more">+ Doctor Consultation · Priority 6hr Results · and more</div>
-              <button className="price-cta" style={{marginTop:14}} onClick={handleBook}>
+              <div className="addons-more">
+                + Doctor Consultation · Priority 6hr Results · and more
+              </div>
+              <button
+                className="price-cta"
+                style={{ marginTop: 14 }}
+                onClick={handleBook}
+              >
                 See All Add-Ons →
               </button>
             </div>
@@ -829,10 +979,13 @@ export default function App() {
           <div className="section-header">
             <div className="section-eyebrow eyebrow-blue">Why CareHub</div>
             <h2 className="section-title">Built Around Your Life</h2>
-            <p className="section-desc">We designed every part of this experience to be effortless, trustworthy, and genuinely better than a clinic visit.</p>
+            <p className="section-desc">
+              We designed every part of this experience to be effortless,
+              trustworthy, and genuinely better than a clinic visit.
+            </p>
           </div>
           <div className="why-grid">
-            {WHY_CARDS.map(w => (
+            {WHY_CARDS.map((w) => (
               <div className="why-card" key={w.title}>
                 <div className={`why-icon ${w.bg}`}>{w.icon}</div>
                 <div className="why-title">{w.title}</div>
@@ -849,16 +1002,25 @@ export default function App() {
           <div className="section-header">
             <div className="section-eyebrow eyebrow-blue">Patient Stories</div>
             <h2 className="section-title">Loved Across the UAE</h2>
-            <p className="section-desc">Over 8,400 patients have trusted CareHub with their health. Here's what some of them say.</p>
+            <p className="section-desc">
+              Over 8,400 patients have trusted CareHub with their health. Here's
+              what some of them say.
+            </p>
           </div>
           <div className="testimonials-grid">
-            {TESTIMONIALS.map(t => (
+            {TESTIMONIALS.map((t) => (
               <div className="testi-card" key={t.name}>
                 <div className="testi-stars">{"★".repeat(t.stars)}</div>
                 <div className="testi-text">"{t.text}"</div>
                 <div className="testi-author">
-                  <div className="testi-avatar" style={{background:`${t.color}18`,color:t.color}}>
-                    {t.name.split(" ").map(n => n[0]).join("")}
+                  <div
+                    className="testi-avatar"
+                    style={{ background: `${t.color}18`, color: t.color }}
+                  >
+                    {t.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
                   </div>
                   <div>
                     <div className="testi-name">{t.name}</div>
@@ -879,7 +1041,9 @@ export default function App() {
             <h2 className="section-title">Common Questions</h2>
           </div>
           <div className="faq-list">
-            {FAQS.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+            {FAQS.map((f) => (
+              <FaqItem key={f.q} q={f.q} a={f.a} />
+            ))}
           </div>
         </div>
       </section>
@@ -889,18 +1053,38 @@ export default function App() {
         <div className="cta-band-glow" />
         <div className="container">
           <div className="cta-inner">
-            <h2>Your Health Deserves<br /><em>More Than a Waiting Room.</em></h2>
-            <p>Book your ArogyaPlus home health screening today. Starts from AED 499.</p>
+            <h2>
+              Your Health Deserves
+              <br />
+              <em>More Than a Waiting Room.</em>
+            </h2>
+            <p>
+              Book your ArogyaPlus home health screening today. Starts from AED
+              499.
+            </p>
             <div className="cta-actions">
-              <button className="btn-primary-hero" style={{fontSize:"1rem",padding:"15px 34px"}} onClick={handleBook}>
+              <button
+                className="btn-primary-hero"
+                style={{ fontSize: "1rem", padding: "15px 34px" }}
+                onClick={handleBook}
+              >
                 Build My Package →
               </button>
-              <a href="https://wa.me/971508860612" className="btn-ghost-hero" style={{fontSize:"1rem",padding:"14px 28px"}}>
+              <a
+                href="https://wa.me/971508860612"
+                className="btn-ghost-hero"
+                style={{ fontSize: "1rem", padding: "14px 28px" }}
+              >
                 💬 WhatsApp Us
               </a>
             </div>
             <div className="cta-trust">
-              {["🏠 Free Home Collection","⚡ Results in 24 Hours","💳 Pay on Collection","📞 24/7 Support"].map(t => (
+              {[
+                "🏠 Free Home Collection",
+                "⚡ Results in 24 Hours",
+                "💳 Pay on Collection",
+                "📞 24/7 Support",
+              ].map((t) => (
                 <div className="cta-trust-item" key={t}>
                   <span>{t.split(" ")[0]}</span>
                   <span>{t.split(" ").slice(1).join(" ")}</span>
@@ -916,46 +1100,91 @@ export default function App() {
         <div className="container">
           <div className="footer-grid">
             <div>
-              <a href="/" className="nav-logo" style={{marginBottom:0,textDecoration:"none"}}>
+              <a
+                href="/"
+                className="nav-logo"
+                style={{ marginBottom: 0, textDecoration: "none" }}
+              >
                 <div className="nav-logo-mark">C</div>
-                <div className="footer-nav-logo-text">Care<em>Hub</em></div>
+                <div className="footer-nav-logo-text">
+                  Care<em>Hub</em>
+                </div>
               </a>
               <p className="footer-brand-desc">
-                UAE's most trusted home health testing service. Bringing certified diagnostics to your doorstep since 2021.
+                UAE's most trusted home health testing service. Bringing
+                certified diagnostics to your doorstep since 2021.
               </p>
               <div className="footer-social">
-                {["📘","📸","🐦","💼"].map((s, i) => <a key={i} href="#" className="social-btn">{s}</a>)}
+                {["📘", "📸", "🐦", "💼"].map((s, i) => (
+                  <a key={i} href="#" className="social-btn">
+                    {s}
+                  </a>
+                ))}
               </div>
             </div>
             <div>
               <div className="footer-col-title">Services</div>
               <ul className="footer-links">
-                {["ArogyaPlus 100","Add-On Tests","Cancer Screening","Hormone Panel","Doctor Consultation"].map(l => (
-                  <li key={l}><a href="#">{l}</a></li>
+                {[
+                  "ArogyaPlus 100",
+                  "Add-On Tests",
+                  "Cancer Screening",
+                  "Hormone Panel",
+                  "Doctor Consultation",
+                ].map((l) => (
+                  <li key={l}>
+                    <a href="#">{l}</a>
+                  </li>
                 ))}
               </ul>
             </div>
             <div>
               <div className="footer-col-title">Company</div>
               <ul className="footer-links">
-                {["About Us","How It Works","Certifications","Careers","Blog"].map(l => (
-                  <li key={l}><a href="#">{l}</a></li>
+                {[
+                  "About Us",
+                  "How It Works",
+                  "Certifications",
+                  "Careers",
+                  "Blog",
+                ].map((l) => (
+                  <li key={l}>
+                    <a href="#">{l}</a>
+                  </li>
                 ))}
               </ul>
             </div>
             <div>
               <div className="footer-col-title">Contact</div>
               <ul className="footer-links">
-                <li><a href="tel:+971508860612">📞 +971 50 886 0612</a></li>
-                <li><a href="https://wa.me/971508860612">💬 WhatsApp</a></li>
-                <li><a href="mailto:hello@carehub.ae">✉️ hello@carehub.ae</a></li>
-                <li><a href="#">📍 Dubai, UAE</a></li>
-                <li style={{color:"rgba(255,255,255,.25)",fontSize:".81rem",marginTop:3}}>Available 7am–8pm · 7 days</li>
+                <li>
+                  <a href="tel:+971508860612">📞 +971 50 886 0612</a>
+                </li>
+                <li>
+                  <a href="https://wa.me/971508860612">💬 WhatsApp</a>
+                </li>
+                <li>
+                  <a href="mailto:hello@carehub.ae">✉️ hello@carehub.ae</a>
+                </li>
+                <li>
+                  <a href="#">📍 Dubai, UAE</a>
+                </li>
+                <li
+                  style={{
+                    color: "rgba(255,255,255,.25)",
+                    fontSize: ".81rem",
+                    marginTop: 3,
+                  }}
+                >
+                  Available 7am–8pm · 7 days
+                </li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom">
-            <span className="footer-copy">© 2025 CareHub Health Services LLC · All rights reserved</span>
+            <span className="footer-copy">
+              © 2025 CareHub Health Services LLC · All rights reserved
+            </span>
             <div className="footer-legal">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
