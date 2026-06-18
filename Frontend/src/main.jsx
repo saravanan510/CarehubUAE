@@ -30,7 +30,8 @@ import RefundPolicy from "./pages/RefundPolicy";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentCancel from "./pages/PaymentCancel";
 import PaymentStatus from "./pages/PaymentStatus";
-import ArogyaPlus from "./pages/landing";
+import ArogyaPlus from "./pages/AgapureLanding";
+import ArogyaPlusAdmin from "./pages/AgapureAdmin";
 import ArogyaPlusPackage from "./pages/package";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider, BookingProvider } from "./context/Context";
@@ -161,6 +162,10 @@ const router = createBrowserRouter([
   {
     path: "/arogyaPlusPackage",
     element: <ArogyaPlusPackage />,
+  },
+  {
+    path: "/arogyaPlusAdmin",
+    element: <ArogyaPlusAdmin />,
   },
   {
     path: "/admin",
