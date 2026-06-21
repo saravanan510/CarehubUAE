@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,7 +13,7 @@ const PysiotheraphyServices_details = () => {
         <Row className="g-4">
           <Col lg={8}>
             <div className="service_img">
-              <img src={PysiotheraphyService} />
+              <Image src={PysiotheraphyService} alt="Pysiotheraphy Service" />
             </div>
 
             <div className="text-start pe-5" lg={8}>

@@ -1,3 +1,4 @@
+"use client";
 import Accordion from "react-bootstrap/Accordion";
 const ServiceFAQ = ({ data }) => {
   return (

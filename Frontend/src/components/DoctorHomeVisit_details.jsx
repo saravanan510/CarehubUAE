@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -63,7 +64,7 @@ const DoctorHomeVisit_details = () => {
         <Row className="g-4">
           <Col lg={8}>
             <div className="service_img">
-              <img src={DoctorHomeVisit} />
+              <Image src={DoctorHomeVisit} alt="Doctor Home Visit" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -109,7 +110,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Eliminating the "White Coat" Stress:
@@ -121,7 +122,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Immediate Intervention:</span>{" "}
                     When an illness strikes at 2:00 AM, the ability to have a
@@ -130,7 +131,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Focused 1-to-1 Consultation:
@@ -162,7 +163,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Respiratory & Flu Support:
@@ -172,7 +173,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Gastrointestinal Distress:
@@ -182,7 +183,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Infection Control:</span>{" "}
                     Diagnosing and treating urinary tract infections (UTIs),
@@ -202,7 +203,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Diabetes & Hypertension:
@@ -212,7 +213,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Cardiovascular Check-ups:
@@ -234,7 +235,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Child-Friendly Care:</span>
                     We provide gentle consultations for children, covering
@@ -243,7 +244,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Senior Wellness:</span>{" "}
                     Holistic geriatric assessments that focus on mobility,
@@ -268,7 +269,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Mobile Laboratory Services:
@@ -279,7 +280,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Prescription Delivery:</span>{" "}
                     We work with leading pharmacies across Dubai to ensure your
@@ -288,7 +289,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Specialist Referrals:</span>{" "}
                     Should your condition require a consultant or hospital
@@ -305,7 +306,7 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Medical Tourism Support:
@@ -316,7 +317,7 @@ const DoctorHomeVisit_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Corporate Wellness:</span> We
                     offer on-site consultations for employees at their place of
@@ -343,26 +344,26 @@ const DoctorHomeVisit_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Physical examination and vitals monitoring
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Coordination of skilled nurses and treatment protocols
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Referral for physical therapy and any other specialized
                     rehabilitation services
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Follow up care for chronic conditions including but not
                     limited to Heart diseases, Stroke, Parkinson’s disease,

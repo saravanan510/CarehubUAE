@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -15,7 +17,7 @@ const AboutUs = () => {
         <Container>
           <Row className="assistance_row">
             <Col lg={4} className="about_img">
-              <img src={Assistance} className=" rounded" />
+              <Image src={Assistance} alt="Assistance" className=" rounded" />
             </Col>
 
             <Col>
@@ -38,7 +40,7 @@ const AboutUs = () => {
                   <div className="about_sub">
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Our internationally trained nurses are specialists in
@@ -50,7 +52,7 @@ const AboutUs = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Tailored 24/7 Support: Receive individualized attention
@@ -62,7 +64,7 @@ const AboutUs = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Comprehensive Clinical Visits: Our expert nursing team

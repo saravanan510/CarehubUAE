@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Metrics from "../Metrics/Metrics";
 import Table from "../Table/Table";

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -13,7 +14,7 @@ const PostStrokeRecovery_details = () => {
           <Row>
             <Col lg={8}>
               <div className="service_img">
-                <img src={PostStrokeRecovery} />
+                <Image src={PostStrokeRecovery} alt="Post Stroke Recovery" />
               </div>
 
               <div className="text-start pe-5" lg={8}>

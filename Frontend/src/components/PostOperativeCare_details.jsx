@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -71,7 +72,7 @@ const PostOperativeCare_details = () => {
           <Row className="g-4">
             <Col lg={8}>
               <div className="service_img">
-                <img src={PostOperativeCare} />
+                <Image src={PostOperativeCare} alt="Post Operative Care" />
               </div>
 
               <div className="text-start pe-5" lg={8}>
@@ -116,7 +117,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Reducing Readmission Rates:
@@ -127,7 +128,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Infection Surveillance:
@@ -138,7 +139,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Psychological Comfort:
@@ -165,7 +166,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Sterile Dressing Changes:
@@ -175,7 +176,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Drainage Management:</span>{" "}
                       Expert monitoring and emptying of surgical drains (such as
@@ -183,7 +184,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Suture and Staple Removal:
@@ -202,7 +203,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">IV Infusion Therapy:</span>
                       If oral medications are insufficient, our nurses can
@@ -210,7 +211,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Anticoagulation Therapy:
@@ -221,7 +222,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Nausea Management:</span>{" "}
                       Post-anesthesia nausea is common; we provide
@@ -238,7 +239,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Early Ambulation:</span>
                       We assist patients in safe movement, from sitting up in
@@ -247,7 +248,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-semibold">
                       <span className="fw-semibold">
                         Deep Breathing Exercises:
@@ -268,7 +269,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Orthopedic Recovery:</span>
                       Specialized support for hip replacements, knee surgeries,
@@ -277,7 +278,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Cardiac Post-Op:</span>{" "}
                       High-vigilance monitoring of vitals, heart rate, and
@@ -285,7 +286,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Plastic & Aesthetic Surgery:
@@ -296,7 +297,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Bariatric Support:</span>{" "}
                       Nutritional guidance and monitoring for patients following
@@ -314,7 +315,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Discharge Liaison:</span>
                       We coordinate with your hospital team before you leave to
@@ -322,7 +323,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Home Setup:</span> We assist
                       in setting up medical beds, oxygen concentrators, or
@@ -330,7 +331,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         24/7 Nursing Supervision:
@@ -340,7 +341,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Doctor Integration:</span>{" "}
                       If complications arise, our Doctor Home Visit team is on
@@ -355,7 +356,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Licensed Authority:</span>
                       Every nurse is DHA-certified and has undergone specialized
@@ -363,7 +364,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Cultural Sensitivity:</span>{" "}
                       We offer a diverse team of male and female nurses to
@@ -372,7 +373,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Detailed Documentation:
@@ -385,7 +386,7 @@ const PostOperativeCare_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Comprehensive care:</span>{" "}
                       Carehub Services provides a wide range of home health care
@@ -396,7 +397,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Skilled and experienced staff:
@@ -409,7 +410,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Convenience and comfort:
@@ -422,7 +423,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Coordination with other healthcare providers:
@@ -434,7 +435,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Continuous monitoring:
@@ -447,7 +448,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Cost-effective:</span>{" "}
                       Getting post-hospitalization home health care services can
@@ -457,7 +458,7 @@ const PostOperativeCare_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Quality care:</span> At
                       Carehub healthcare Services, we are committed to providing

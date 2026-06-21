@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "@/utils/router-compat";
 import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollTop";

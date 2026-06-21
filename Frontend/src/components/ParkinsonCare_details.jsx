@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -13,7 +14,7 @@ const ParkinsonCare_details = () => {
         <Row className="g-4">
           <Col lg={8}>
             <div className="service_img">
-              <img src={ParkinsonCare} />
+              <Image src={ParkinsonCare} alt="Parkinson Care" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -39,7 +40,7 @@ const ParkinsonCare_details = () => {
               </h4>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Medication Management: Our nurses help manage the patient's
                     medications and ensure they are taken at the right time and
@@ -47,7 +48,7 @@ const ParkinsonCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Mobility Assistance: Our nurses assist patients with
                     mobility, providing support with walking, transferring, and
@@ -55,7 +56,7 @@ const ParkinsonCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Personal Care: Our nurses provide personal care services,
                     including bathing, dressing, and grooming, to ensure the
@@ -63,14 +64,14 @@ const ParkinsonCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Meal Preparation: Our nurses help prepare meals, ensuring
                     that the patient's dietary needs are met.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Monitoring and Observation: Our nurses monitor the patient's
                     symptoms and report any changes to the doctor. They also
@@ -79,7 +80,7 @@ const ParkinsonCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Companion Care: Our nurses provide emotional support and
                     companionship, helping to reduce feelings of loneliness and

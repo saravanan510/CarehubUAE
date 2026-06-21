@@ -1,3 +1,4 @@
+"use client";
 import Header from "../Header/Header";
 import Services from "../Services/Services";
 import BloodTest from "../BloodTest/BloodTest";

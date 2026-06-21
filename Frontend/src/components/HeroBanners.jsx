@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Carousel from "react-bootstrap/Carousel";
 import Banner_1 from "../assets/Banner_1.webp";
 import Banner_2 from "../assets/Banner_2.webp";
@@ -6,7 +8,7 @@ import Mobile_Banner_1 from "../assets/Mobile_Banner_1.webp";
 import Mobile_Banner_2 from "../assets/Mobile_Banner_2.webp";
 import Mobile_Banner_3 from "../assets/Mobile_Banner_3.webp";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 
 function UncontrolledExample() {
   const isMobile = useMediaQuery({ maxWidth: 475 });
@@ -15,9 +17,9 @@ function UncontrolledExample() {
     <Carousel controls={controls}>
       <Carousel.Item className="banner">
         {isMobile ? (
-          <img src={Mobile_Banner_1} alt="First slide" className="" />
+          <Image src={Mobile_Banner_1} alt="First slide" />
         ) : (
-          <img src={Banner_1} alt="First slide" className="" />
+          <Image src={Banner_1} alt="First slide" />
         )}
 
         <Carousel.Caption className="banner_caption">
@@ -38,9 +40,9 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item className="banner">
         {isMobile ? (
-          <img src={Mobile_Banner_2} alt="First slide" className="" />
+          <Image src={Mobile_Banner_2} alt="First slide" />
         ) : (
-          <img src={Banner_2} alt="First slide" className="" />
+          <Image src={Banner_2} alt="First slide" />
         )}
         <Carousel.Caption className="banner_caption">
           <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
@@ -58,9 +60,9 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item className="banner">
         {isMobile ? (
-          <img src={Mobile_Banner_3} alt="First slide" className="" />
+          <Image src={Mobile_Banner_3} alt="First slide" />
         ) : (
-          <img src={Banner_3} alt="First slide" className="" />
+          <Image src={Banner_3} alt="First slide" />
         )}
         <Carousel.Caption className="banner_caption">
           <h1 className={isMobile ? "fw-bold" : "fw-bold"}>

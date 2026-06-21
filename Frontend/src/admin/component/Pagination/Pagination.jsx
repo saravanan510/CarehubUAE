@@ -1,3 +1,4 @@
+"use client";
 import "./pagination.css";
 const Pagination = ({ currentPage, handlePage }) => {
   const pages = [1, 2, 3, 4, 5];

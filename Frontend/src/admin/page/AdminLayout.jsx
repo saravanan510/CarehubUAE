@@ -1,7 +1,8 @@
+"use client";
 import React, { useState } from "react";
 import AppBar from "../component/AppBar/AppBar";
 import View from "../component/View/View";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "@/utils/router-compat";
 
 const AdminLayout = () => {
   return (

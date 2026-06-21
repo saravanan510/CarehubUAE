@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import { IoIosCall } from "react-icons/io";
 import { IoIosContact } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Action = () => {
   return (
@@ -22,7 +22,7 @@ const Action = () => {
           </Col>
           <Col className="text-center">
             <div className="action-item">
-              <Link to={"/contact"}>
+              <Link href={"/contact"}>
                 <IoIosContact style={{ color: "white" }} className="fs-2" />
                 <p>Call Back</p>
               </Link>

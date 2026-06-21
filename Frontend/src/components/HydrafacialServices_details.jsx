@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,7 +13,7 @@ const HydrafacialServices_details = () => {
         <Row>
           <Col lg={8}>
             <div className="service_img">
-              <img src={Hydrafacial} />
+              <Image src={Hydrafacial} alt="Hydrafacial" />
             </div>
 
             <div className="text-start pe-5" lg={8}>

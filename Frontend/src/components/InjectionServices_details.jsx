@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -63,7 +64,7 @@ const InjectionServices_details = () => {
         <Row className="g-4">
           <Col lg={8}>
             <div className="service_img">
-              <img src={Injection_Service} />
+              <Image src={Injection_Service} alt="Injection_ Service" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -106,7 +107,7 @@ const InjectionServices_details = () => {
               </p>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Prescribed Medications:</span>{" "}
                      Reliable administration of antibiotics, anticoagulants, or
@@ -114,7 +115,7 @@ const InjectionServices_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Vitamin & Wellness Drips:
@@ -124,7 +125,7 @@ const InjectionServices_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Vaccinations:</span>
                     Convenient home immunization for children, adults, and
@@ -132,7 +133,7 @@ const InjectionServices_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Diabetes Management:</span>{" "}
                     Expert assistance with insulin administration and glucose
@@ -140,7 +141,7 @@ const InjectionServices_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Post-Operative Care:</span>{" "}
                     Essential injections required during the recovery phase
@@ -153,7 +154,7 @@ const InjectionServices_details = () => {
               </h4>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Quick Booking:</span>
                     Contact us via phone or WhatsApp to schedule a time that
@@ -162,7 +163,7 @@ const InjectionServices_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Professional Arrival:</span> 
                     A DHA-licensed nurse arrives at your Dubai residence
@@ -171,7 +172,7 @@ const InjectionServices_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Safe Administration:</span>   
                     After verifying your prescription, the nurse administers the
@@ -185,7 +186,7 @@ const InjectionServices_details = () => {
               </h4>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Convenience:</span> Skip long
                     hospital waits and avoid crowded spaces.
@@ -193,7 +194,7 @@ const InjectionServices_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Cost-Effective:</span> Save  
                     money on transportation and parking fees.
@@ -201,7 +202,7 @@ const InjectionServices_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Safety & Comfort:</span> Stay
                     protected at home, especially if mobility or time is a
@@ -210,7 +211,7 @@ const InjectionServices_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Quality Care:</span>
                     Experienced medical professionals ensure safe, hygienic, and

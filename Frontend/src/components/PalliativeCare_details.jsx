@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -70,7 +71,7 @@ const PalliativeCare_details = () => {
         <Row>
           <Col lg={8}>
             <div className="service_img">
-              <img src={PalliativeCare} />
+              <Image src={PalliativeCare} alt="Palliative Care" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -148,7 +149,7 @@ const PalliativeCare_details = () => {
               </p>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Clinical Symptom Control:
@@ -160,7 +161,7 @@ const PalliativeCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Psychological Well-being:
@@ -172,7 +173,7 @@ const PalliativeCare_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Family-Centered Guidance:
@@ -184,7 +185,7 @@ const PalliativeCare_details = () => {
                 </li>
 
                 <li>
-                  <img src={FeatureIcon} className="me-2" /> 
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} /> 
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       24/7 Professional Availability:
@@ -200,7 +201,7 @@ const PalliativeCare_details = () => {
               </h4>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Clinical Consultation:</span>
                     We begin with a comprehensive home assessment in Dubai to
@@ -208,7 +209,7 @@ const PalliativeCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Multidisciplinary Strategy:
@@ -219,7 +220,7 @@ const PalliativeCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Dedicated Home Implementation:

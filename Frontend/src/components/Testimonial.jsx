@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -22,7 +24,7 @@ function Testimonial() {
           <Col>
             <Slider {...settings}>
               <div className="testimonial_review">
-                <img src={Client_img} alt="" className="testimonial_profile" />
+                <Image src={Client_img} alt="" className="testimonial_profile" />
                 <h2
                   style={{ color: "white", fontWeight: 600 }}
                   className="mb-3"
@@ -39,7 +41,7 @@ function Testimonial() {
                 </p>
               </div>
               <div className="testimonial_review">
-                <img src={Client_img} alt="" className="testimonial_profile" />
+                <Image src={Client_img} alt="" className="testimonial_profile" />
                 <h3 style={{ color: "white", fontWeight: 600 }}>Friendly</h3>
                 <p style={{ color: "white" }}>
                   "I can't thank CareHub Health Care enough for the wonderful

@@ -1,9 +1,10 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import testData from "../utils/testData";
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 import { useBookingDetails } from "../context/Context";
 const Cart = ({ selectedTest }) => {
   const { bookingDetails, handleDetails } = useBookingDetails();

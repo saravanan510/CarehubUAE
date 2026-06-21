@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -71,7 +72,7 @@ const ElderlyCare_details = () => {
         <Row>
           <Col lg={8}>
             <div className="service_img">
-              <img src={ElderlyCare} />
+              <Image src={ElderlyCare} alt="Elderly Care" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -130,7 +131,7 @@ const ElderlyCare_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Chronic Condition Management:
@@ -140,7 +141,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Medication Compliance:</span>{" "}
                     Rigorous tracking and administration of prescriptions to
@@ -148,7 +149,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Vital Sign Analysis:</span>{" "}
                     Daily monitoring of blood pressure, glucose levels, and
@@ -168,7 +169,7 @@ const ElderlyCare_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Cognitive Stimulation:</span>
                     Engaging seniors in memory-enhancing activities and social
@@ -176,7 +177,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Safe Environment Management:
@@ -186,7 +187,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Emotional Anchoring:</span>{" "}
                     Providing a consistent caregiver to build a bond of trust
@@ -205,7 +206,7 @@ const ElderlyCare_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Safe Transfers:</span>
                     Professional assistance with moving from bed to chair or
@@ -213,7 +214,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Gentle Exercise Programs:
@@ -223,7 +224,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Home Safety Audits:</span> We
                     identify hazards like loose rugs or poor lighting that
@@ -238,7 +239,7 @@ const ElderlyCare_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Morning:</span>
                     Gentle waking, assistance with personal hygiene
@@ -247,7 +248,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Mid-Day:</span> Medication
                     administration followed by a light walk or cognitive
@@ -255,7 +256,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Afternoon:</span>{" "}
                     Accompaniment to doctor appointments in Dubai or social
@@ -263,7 +264,7 @@ const ElderlyCare_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Evening:</span> Preparing a
                     calm environment for sleep, ensuring all medical needs are
@@ -288,43 +289,43 @@ const ElderlyCare_details = () => {
               </h4>
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Following discharge orders.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Transportation to your home and your appointments.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Prescription pickup, grocery shopping and other ends.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Medication reminders.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Meal preparation.
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Communication with healthcare providers and loved ones
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Reduced chances of secondary infections
                   </p>

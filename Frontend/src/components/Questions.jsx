@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,7 +12,7 @@ const Questions = () => {
       <Container fluid>
         <Row>
           <Col md={12} lg={6}>
-            <img src={FAQ} width="100%" alt="" srcset="" />
+            <Image src={FAQ} alt="" style={{ width: "100%", height: "auto" }} />
           </Col>
           <Col className="faq_content">
             <Accordion defaultActiveKey="0" className="faq_accodian">

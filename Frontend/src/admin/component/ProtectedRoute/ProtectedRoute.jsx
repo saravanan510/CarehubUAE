@@ -1,4 +1,5 @@
-import { Navigate } from "react-router";
+"use client";
+import { Navigate } from "@/utils/router-compat";
 import { useAuth } from "../../../context/Context";
 const isLoggedIn = true;
 

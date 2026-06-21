@@ -1,3 +1,4 @@
+"use client";
 import "./metrics.css";
 const Metrics = ({ label, count }) => {
   return (

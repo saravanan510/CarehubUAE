@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,8 +8,7 @@ import BookAppointment from "./BookAppointment";
 import OtherServices from "./OtherServices";
 import Table from "./Table";
 import ServiceFAQ from "./ServiceFAQ";
-import { useNavigate } from "react-router";
-import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 const TableData = [
   {
     title: "Feature",
@@ -63,48 +63,40 @@ const FAQData = [
 ];
 
 const BloodTest_details = () => {
-  const isMobile = useMediaQuery({ maxWidth: 475 });
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/book-blood-test");
-  };
   return (
     <section>
       <Container>
         <div
+          className="d-flex flex-column flex-sm-row justify-content-between align-items-center p-3 mb-4"
           style={{
-            display: "flex",
-            flexDirection: isMobile ? "column" : "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "20px 12px",
             backgroundColor: "#f9f9f9",
-            marginBottom: "20px",
           }}
         >
           <p style={{ margin: "0px", fontWeight: "600" }}>
             Book hassle-free healthcare with Carehub - your trusted partner for
             home diagnostic services in Dubai!
           </p>
-          <button
-            onClick={handleClick}
+          <Link
+            href="/book-blood-test"
             style={{
               padding: "6px 12px",
               borderRadius: "4px",
               background: "#009b45",
               color: "white",
               marginRight: "12px",
+              textDecoration: "none",
+              display: "inline-block",
             }}
             className="splash-button"
           >
             Book Blood Test
-          </button>
+          </Link>
         </div>
 
         <Row>
           <Col lg={8}>
             <div className="service_img">
-              <img src={BloodTest} />
+              <Image src={BloodTest} alt="Blood Test" />
             </div>
 
             <div className="text-start pe-5" lg={8}>
@@ -139,7 +131,7 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       DHA-Licensed Phlebotomists:
@@ -150,7 +142,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Rapid Turnaround Times:</span>
                     We understand that waiting for results can be stressful.
@@ -158,7 +150,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Gold-Standard Hygiene:</span>
                     Every collection follows strict international protocols for
@@ -166,7 +158,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Total Privacy:</span>
                     Get tested in the confidentiality of your own home, away
@@ -189,7 +181,7 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Full Blood Count (FBC/CBC):
@@ -198,7 +190,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Vitamin & Mineral Profile:
@@ -207,7 +199,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Kidney & Liver Function (KFT/LFT):
@@ -223,7 +215,7 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Diabetes Management (HbA1c):
@@ -232,7 +224,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Thyroid Profile (T3, T4, TSH):
@@ -241,7 +233,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Lipid Profile:</span>
                     Detailed analysis of cholesterol and triglycerides for heart
@@ -256,7 +248,7 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Food Intolerance & Allergy Testing:
@@ -265,7 +257,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Hormonal Panels:</span>
                     Including Testosterone, Estrogen, and Progesterone for men’s
@@ -273,7 +265,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Infectious Disease Screening:
@@ -294,7 +286,7 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Seamless Booking:</span>{" "}
                     Contact us via WhatsApp or our website to book your
@@ -302,7 +294,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Professional Collection:
@@ -312,7 +304,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Secure Transportation:</span>
                     Samples are transported in specialized bio-hazard containers
@@ -320,7 +312,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Accredited Lab Analysis:
@@ -329,7 +321,7 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Digital Reports:</span>
                     Receive your results directly on your phone with an optional
@@ -354,25 +346,25 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     24x7 Diagnostic Test at Home in Dubai
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Trusted, certified labs for accurate results
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Quick, painless sample collection
                   </p>
                 </li>
                 <li>
-                  <img src={FeatureIcon} className="me-2" />
+                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                   <p className="service_feature m-0 fw-semibold">
                     Transparent pricing and timely reports
                   </p>

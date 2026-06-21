@@ -1,9 +1,11 @@
+"use client";
+import Image from "next/image";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import NursingServices from "../assets/Nursing-services.png";
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 import FeatureIcon from "../assets/features.svg";
 
 const services = [
@@ -71,7 +73,7 @@ const PrivateNursing_list = () => {
         <Container>
           <Row className="g-4">
             <Col lg={9} className="service_img me-6 d-none d-sm-block">
-              <img src={NursingServices} />
+              <Image src={NursingServices} alt="Nursing Services" />
             </Col>
             <Col className="otherservices rounded-4">
               <h3 className="fs-5 fw-bold mb-3" style={{ color: "#012a4a" }}>
@@ -81,7 +83,7 @@ const PrivateNursing_list = () => {
                 {services.map((ele, i) => {
                   return (
                     <li key={i}>
-                      <img src={FeatureIcon} className="me-2" />
+                      <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                       <Link to={ele.link}>{ele.name}</Link>
                     </li>
                   );

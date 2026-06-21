@@ -7,7 +7,7 @@ import { IoMdMail } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoYoutube } from "react-icons/io";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const Footer_bottom = () => {
   return (
     <section className="footer">
@@ -22,37 +22,39 @@ const Footer_bottom = () => {
 
           <Col md={6} lg={4}>
             <div>
-              <h6>Quick Link</h6>
+              <h6 style={{ color: "white" }}>Quick Link</h6>
               <ul className="custom-ul">
                 <li>
-                  <Link to={"/"}>Home</Link>
+                  <Link href={"/"}>Home</Link>
                 </li>
                 <li>
-                  <Link to={"/aboutus"}>About Us</Link>
+                  <Link href={"/aboutus"}>About Us</Link>
                 </li>
                 <li>
-                  <Link to={"/contact"}>Contact Us</Link>
+                  <Link href={"/contact"}>Contact Us</Link>
                 </li>
                 <li>
-                  <Link to={"/refund-policy"}>Refund Policy</Link>
+                  <Link href={"/refund-policy"}>Refund Policy</Link>
                 </li>
               </ul>
             </div>
           </Col>
           <Col md={6} lg={4}>
             <div>
-              <h6>Services</h6>
+              <h6 style={{ color: "white" }}>Services</h6>
               <ul className="custom-ul">
                 <li>
-                  <Link to={"/home-nursing-services-dubai"}>
+                  <Link href={"/home-nursing-services-dubai"}>
                     Home Nursing Services{" "}
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/elderly-care-services-dubai"}>Elderly Care</Link>
+                  <Link href={"/elderly-care-services-dubai"}>
+                    Elderly Care
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"/doctor-home-visit-dubai"}>
+                  <Link href={"/doctor-home-visit-dubai"}>
                     Doctor Home Visits
                   </Link>
                 </li>

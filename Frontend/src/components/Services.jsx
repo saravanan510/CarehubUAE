@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -24,7 +26,7 @@ import service_13 from "../assets/Service_13.webp";
 import service_14 from "../assets/Service_14.webp";
 import service_15 from "../assets/Service_15.webp";
 
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 
 const services = [
   {
@@ -139,7 +141,7 @@ const Services = () => {
             return (
               // <Col xs={12} md={6} lg={3} className="d-flex flex-column">
               //   <Card className="service_card border-0 flex-grow-1">
-              //     <img src={service.image} className="service_img" />
+              //     <Image src={service.image} alt="" className="service_img" />
               //     <Card.Body className="px-0">
               //       <Card.Title className="comp_service-title">
               //         <h6>{service.title}</h6>
@@ -155,11 +157,7 @@ const Services = () => {
               <Col xs={12} md={6} lg={4} xl={3}>
                 <AnimatedOnScroll animationIn="animate__slideInUp">
                   <div className="service2_card animate__animated animate__slideInUp">
-                    <img
-                      src={service.image}
-                      className="service_img"
-                      width="100%"
-                    />
+                    <Image src={service.image} alt="" className="service_img" style={{ width: "100%", height: "auto" }} />
                     <div className="service2_card-body">
                       <TbNurse className="service2_icon" />
                       <h5>{service.title}</h5>

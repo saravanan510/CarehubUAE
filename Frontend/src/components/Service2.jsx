@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,7 +11,7 @@ export default function service2() {
       <Row>
         <Col lg={3}>
           <div className="service2_card">
-            <img src={service_1} className="service_img" width="100%" />
+            <Image src={service_1} alt="Service_1" className="service_img" style={{ width: "100%", height: "auto" }} />
             <div className="service2_card-body">
               <TbNurse className="comperhensive_icon" />
               <h5>Private Home Nursing Care</h5>

@@ -1,8 +1,11 @@
+"use client";
+
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Logo from "../assets/carehub_logo.png";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react"; // Import useState
@@ -86,10 +89,10 @@ export default function NavBar() {
     >
       <Container>
         <Navbar.Brand>
-          <Link to={"/"} onClick={closeNavbar}>
+          <Link href={"/"} onClick={closeNavbar}>
             {" "}
             {/* Close on logo click */}
-            <img src={Logo} className="logo" alt="" />
+            <Image src={Logo} alt="" className="logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -98,10 +101,10 @@ export default function NavBar() {
           className={isMobile && "mobile-toggle"}
         >
           <Nav className="ms-auto me-5 nav_item">
-            <Nav.Link as={Link} to={"/"} onClick={closeNavbar}>
+            <Nav.Link as={Link} href={"/"} onClick={closeNavbar}>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to={"/aboutus"} onClick={closeNavbar}>
+            <Nav.Link as={Link} href={"/aboutus"} onClick={closeNavbar}>
               About Us
             </Nav.Link>
             <NavDropdown
@@ -115,15 +118,16 @@ export default function NavBar() {
                     className="nav_service_link"
                     key={i}
                     onClick={closeNavbar}
+                    as="div"
                   >
-                    <Link to={item.link}>{item.name}</Link>
+                    <Link href={item.link}>{item.name}</Link>
                   </NavDropdown.Item>
                 );
               })}
             </NavDropdown>
             <Nav.Link
               as={Link}
-              to={"/book-blood-test"}
+              href={"/book-blood-test"}
               onClick={closeNavbar}
               style={{
                 backgroundImage: "linear-gradient(to right, #009b45, #00829B)",
@@ -139,7 +143,7 @@ export default function NavBar() {
             className={isMobile ? "custom-button mt-3" : "custom-button px-4 "}
             onClick={closeNavbar}
           >
-            <Link to={"/contact"}>Contact </Link>
+            <Link href={"/contact"}>Contact </Link>
           </button>
         </Navbar.Collapse>
       </Container>

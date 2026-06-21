@@ -1,6 +1,7 @@
+"use client";
 import "./table.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 const Table = ({ data, filterData, name }) => {
   const [filterTableData, setFilterTableData] = useState([]);
 

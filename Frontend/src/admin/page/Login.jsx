@@ -1,8 +1,10 @@
+"use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/utils/router-compat";
 import axios from "../../utils/axios";
 import { useAuth } from "../../context/Context";
 import Logo from "../../assets/carehub_logo.png";
@@ -85,7 +87,7 @@ const Login = () => {
                 marginBottom: "36px",
               }}
             >
-              <img src={Logo} alt="carehub" height={"48px"} />
+              <Image src={Logo} alt="carehub" style={{ height: "48px", width: "auto" }} />
             </div>
             <div style={{ padding: "0px", marginBottom: "12px" }}>
               <label>User Email</label>

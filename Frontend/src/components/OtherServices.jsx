@@ -1,7 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import FeatureIcon from "../assets/features.svg";
-import { Link } from "react-router-dom";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
+import Link from "next/link";
+
 const services = [
   {
     name: "Home Nursing Services",
@@ -67,23 +68,21 @@ const services = [
 
 const OtherServices = () => {
   return (
-    <AnimatedOnScroll animationIn="animate__slideInUp ">
-      <div className="otherservices rounded-4 animate__animated">
-        <h3 className="fs-5 fw-bold mb-3" style={{ color: "#012a4a" }}>
-          Other Services
-        </h3>
-        <ul className="ServicePage_list-list">
-          {services.map((ele, i) => {
-            return (
-              <li key={i}>
-                <img src={FeatureIcon} className="me-2" />
-                <Link to={ele.link}>{ele.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </AnimatedOnScroll>
+    <div className="otherservices rounded-4">
+      <h3 className="fs-5 fw-bold mb-3" style={{ color: "#012a4a" }}>
+        Other Services
+      </h3>
+      <ul className="ServicePage_list-list">
+        {services.map((ele, i) => {
+          return (
+            <li key={i}>
+              <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+              <Link href={ele.link}>{ele.name}</Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 

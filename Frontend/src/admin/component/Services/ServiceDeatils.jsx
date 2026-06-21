@@ -1,8 +1,9 @@
+"use client";
 import { useState, useEffect } from "react";
 import "./services.css";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import Header from "../Header/Header";
-import { useParams } from "react-router";
+import { useParams } from "@/utils/router-compat";
 import axios from "../../../utils/axios";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";

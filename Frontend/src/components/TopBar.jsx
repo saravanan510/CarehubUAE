@@ -3,12 +3,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { IoIosCall } from "react-icons/io";
-import { useMediaQuery } from "react-responsive";
 import { IoIosGlobe } from "react-icons/io";
 const TopBar = () => {
-  const isMobile = useMediaQuery({ maxWidth: 991 });
   return (
-    <div className={isMobile ? "d-none" : "topBar"}>
+    <div className="d-none d-lg-block topBar">
       <Container>
         <Row>
           <Col className="fw-semibold">

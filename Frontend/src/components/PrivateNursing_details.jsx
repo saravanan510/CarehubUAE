@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -85,7 +86,7 @@ const PrivateNursing_details = () => {
           <Row>
             <Col lg={8}>
               <div className="service_img">
-                <img src={NursingServices} alt="Home-Nursing-in-Dubai-UAE" />
+                <Image src={NursingServices} alt="Home-Nursing-in-Dubai-UAE" />
               </div>
 
               <div className="text-start pe-5" lg={8}>
@@ -127,7 +128,7 @@ const PrivateNursing_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Clinical Consultation:
@@ -138,7 +139,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">On-Site Safety Audit:</span>{" "}
                       A senior nursing supervisor conducts a home visit to
@@ -147,7 +148,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Bespoke Care Mapping:</span>{" "}
                       Our medical director creates a personalized care plan that
@@ -156,7 +157,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Nurse Matching:</span> We
                       assign a nurse whose specific clinical background (e.g.,
@@ -181,7 +182,7 @@ const PrivateNursing_details = () => {
                 </h5>
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Surgical Site Monitoring:
@@ -191,7 +192,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Pain Management:</span>{" "}
                       Administering prescribed analgesics and monitoring for
@@ -199,7 +200,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Suture and Staple Removal:
@@ -220,7 +221,7 @@ const PrivateNursing_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Tracheostomy & Ventilator Care:
@@ -230,7 +231,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Enteral Feeding (PEG/NG Tube):
@@ -240,7 +241,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Infusion Therapy:</span>{" "}
                       Professional administration of IV fluids, antibiotics, and
@@ -255,7 +256,7 @@ const PrivateNursing_details = () => {
 
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">
                         Chronic Disease Management:
@@ -265,7 +266,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Limited Mobility:</span> For
                       patients recovering from strokes or spinal injuries who
@@ -273,7 +274,7 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Maternity Support:</span>{" "}
                       New mothers needing help with newborn care, lactation, and
@@ -308,21 +309,21 @@ const PrivateNursing_details = () => {
                 <p>Beyond 24-hour care, we provide:</p>
                 <ul className="service_page_features_list">
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Respite Care:</span>{" "}
                       Short-term relief for families.
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Live-In Care:</span>{" "}
                       Full-time nurses for round-the-clock attention.
                     </p>
                   </li>
                   <li>
-                    <img src={FeatureIcon} className="me-2" />
+                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
                     <p className="service_feature m-0 fw-normal">
                       <span className="fw-semibold">Recovery Care:</span>{" "}
                       Post-hospitalization or illness rehabilitation.

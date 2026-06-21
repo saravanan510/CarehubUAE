@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import "./appBar.css";
 import carehub_logo from "../../../assets/carehub_logo.png";
@@ -5,7 +7,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { MdOutlineBloodtype } from "react-icons/md";
 
-import { Link } from "react-router-dom";
+import { Link } from "@/utils/router-compat";
 
 const AppBar = () => {
   const [selected, setSelected] = useState("services");
@@ -15,7 +17,7 @@ const AppBar = () => {
   return (
     <>
       <div className="Appbar-container">
-        <img src={carehub_logo} height="40px" />
+        <Image src={carehub_logo} alt="Carehub_logo" style={{ height: "40px", width: "auto" }} />
         <ul>
           <li>
             <Link

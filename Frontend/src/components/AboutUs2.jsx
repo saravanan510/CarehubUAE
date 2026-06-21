@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -25,7 +27,7 @@ const AboutUs2 = () => {
                   <div className="about_sub2 mt-4">
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Expert Clinical Management: Full support with medication
@@ -35,7 +37,7 @@ const AboutUs2 = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Personalized Care Pathways: Every patient receives a
@@ -45,7 +47,7 @@ const AboutUs2 = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Multidisciplinary Specialists: Our nursing team includes
@@ -56,7 +58,7 @@ const AboutUs2 = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Full-Service Coordination: We provide accompaniment to
@@ -67,7 +69,7 @@ const AboutUs2 = () => {
                     </div>
                     <div className="about_list">
                       <div className="about_icon">
-                        <img src={list_icon} />
+                        <Image src={list_icon} alt="List icon" width={20} height={20} />
                       </div>
                       <p>
                         Emotional & Holistic Guidance: Beyond medical tasks, we
@@ -80,7 +82,7 @@ const AboutUs2 = () => {
               </Row>
             </Col>
             <Col lg={4} className="about_img">
-              <img src={Assistance} className=" rounded" />
+              <Image src={Assistance} alt="Assistance" className=" rounded" />
             </Col>
           </Row>
         </Container>

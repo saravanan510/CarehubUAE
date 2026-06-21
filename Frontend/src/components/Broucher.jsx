@@ -1,8 +1,9 @@
+"use client";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FAQ from "../assets/faq.png";
-import BroucherPDF from "../assets/Broucher.pdf";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 const Broucher = () => {
   return (
@@ -17,7 +18,7 @@ const Broucher = () => {
                   At Carehub Healthcare, we offer a wide range of comprehensive
                   services designed to cater to the unique needs of our clients.
                 </p>
-                <a href={BroucherPDF} download="Broucher.pdf">
+                <a href="/assets/Broucher.pdf" download="Broucher.pdf">
                   <button type="button" class="custom-button border border-0">
                     Download
                   </button>
@@ -26,7 +27,7 @@ const Broucher = () => {
             </AnimatedOnScroll>
           </Col>
           <Col md={12} lg={6} className="broucher_img">
-            <img src={FAQ} width="100%" />
+            <Image src={FAQ} alt="F A Q" style={{ width: "100%", height: "auto" }} />
           </Col>
         </Row>
       </Container>

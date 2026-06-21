@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Benefits from "../assets/benefits.png";
 import list_icon from "../assets/list-icon.svg";
 import React from "react";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 const AboutUs = () => {
   return (
@@ -14,15 +14,13 @@ const AboutUs = () => {
           <Col lg={8}>
             <Row className="mb-4">
               <Col>
-                <AnimatedOnScroll animationIn="animate__slideInUp">
-                  <h2 className="about_heading fs-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-                    Key Benefits of Choosing Carehub Healthcare
-                  </h2>
-                </AnimatedOnScroll>
+                <h2 className="about_heading fs-3 fw-bold mb-4">
+                  Key Benefits of Choosing Carehub Healthcare
+                </h2>
                 <div>
                   <div className="about_list mb-3">
                     <div className="about_icon">
-                      <img src={list_icon} />
+                      <Image src={list_icon} alt="List icon" width={20} height={20} />
                     </div>
                     <p>
                       Support with clinical management: Expert administration of
@@ -31,7 +29,7 @@ const AboutUs = () => {
                   </div>
                   <div className="about_list mb-3">
                     <div className="about_icon">
-                      <img src={list_icon} />
+                      <Image src={list_icon} alt="List icon" width={20} height={20} />
                     </div>
                     <p>
                       Personalized Care Plans: Tailored to your unique medical
@@ -40,7 +38,7 @@ const AboutUs = () => {
                   </div>
                   <div className="about_list mb-3">
                     <div className="about_icon">
-                      <img src={list_icon} />
+                      <Image src={list_icon} alt="List icon" width={20} height={20} />
                     </div>
                     <p>
                       Specialized Nursing Fields: Including cancer care,
@@ -50,7 +48,7 @@ const AboutUs = () => {
                   </div>
                   <div className="about_list mb-3">
                     <div className="about_icon">
-                      <img src={list_icon} />
+                      <Image src={list_icon} alt="List icon" width={20} height={20} />
                     </div>
                     <p>
                       Medical Liaison: Accompaniment to appointments and
@@ -59,7 +57,7 @@ const AboutUs = () => {
                   </div>
                   <div className="about_list mb-3">
                     <div className="about_icon">
-                      <img src={list_icon} />
+                      <Image src={list_icon} alt="List icon" width={20} height={20} />
                     </div>
                     <p>
                       Holistic Guidance: Expert emotional support and continual
@@ -71,7 +69,7 @@ const AboutUs = () => {
             </Row>
           </Col>
           <Col className="about_img">
-            <img src={Benefits} className=" rounded" />
+            <Image src={Benefits} alt="Benefits" className=" rounded" />
           </Col>
         </Row>
       </Container>
