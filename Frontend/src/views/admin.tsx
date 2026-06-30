@@ -15,18 +15,18 @@ import {
 import Head from "next/head";
 
 // ─── Types ──────────────────────────────────────────────────────────
-// interface Package {
-//   name: string;
-//   tagline?: string;
-//   price: number;
-//   currency?: string;
-//   icon?: string;
-//   category?: string;
-//   order?: number;
-//   featured?: boolean;
-//   tests?: string[];
-//   customTests?: string[];
-// }
+interface Package {
+  name: string;
+  tagline?: string;
+  price: number;
+  currency?: string;
+  icon?: string;
+  category?: string;
+  order?: number;
+  featured?: boolean;
+  tests?: string[];
+  customTests?: string[];
+}
 
 interface Test {
   name: string;
