@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { initializeApp } from "firebase/app";
 import {
   getDatabase,
@@ -183,6 +183,7 @@ export default function ArogyaAdminPage() {
   });
   const [editPkgTests, setEditPkgTests] = useState<string[]>([]);
   const [editPkgCustomTests, setEditPkgCustomTests] = useState<string[]>([]);
+  const [customTestInput, setCustomTestInput] = useState("");
 
   const [testDlgOpen, setTestDlgOpen] = useState(false);
   const [testDlgEditId, setTestDlgEditId] = useState("");
@@ -383,6 +384,49 @@ export default function ArogyaAdminPage() {
     setConfirmOpen(true);
   };
 
+  const closeConfirm = () => {
+    setConfirmOpen(false);
+    setConfirmCallback(null);
+  };
+
+  const onConfirmAction = () => {
+    if (confirmCallback) {
+      confirmCallback();
+    }
+    closeConfirm();
+  };
+
+  const removeSelectedTest = (index: number) => {
+    if (index < editPkgTests.length) {
+      setEditPkgTests(editPkgTests.filter((_, i) => i !== index));
+    } else {
+      const customIndex = index - editPkgTests.length;
+      setEditPkgCustomTests(
+        editPkgCustomTests.filter((_, i) => i !== customIndex),
+      );
+    }
+  };
+
+  const addCustomTest = () => {
+    const val = customTestInput.trim();
+    if (val) {
+      setEditPkgCustomTests([...editPkgCustomTests, val]);
+      setCustomTestInput("");
+    }
+  };
+
+  const removeCustomTest = (index: number) => {
+    setEditPkgCustomTests(editPkgCustomTests.filter((_, i) => i !== index));
+  };
+
+  const toggleTest = (testName: string) => {
+    if (editPkgTests.includes(testName)) {
+      setEditPkgTests(editPkgTests.filter((t) => t !== testName));
+    } else {
+      setEditPkgTests([...editPkgTests, testName]);
+    }
+  };
+
   // ── Package Dialog ──────────────────────────────────────────────
   const openPkgDlg = () => {
     setPkgDlgEditId("");
@@ -459,7 +503,7 @@ export default function ArogyaAdminPage() {
           closePkgDlg();
           showToastMsg("Package saved! ✓");
         })
-        .catch((e) => showToastMsg("Error: " + e.message, "❌"));
+        .catch((e: any) => showToastMsg("Error: " + e.message, "❌"));
     } else {
       const newRef = push(ref(db, "packages"));
       set(newRef, pkg)
@@ -467,7 +511,7 @@ export default function ArogyaAdminPage() {
           closePkgDlg();
           showToastMsg("Package saved! ✓");
         })
-        .catch((e) => showToastMsg("Error: " + e.message, "❌"));
+        .catch((e: any) => showToastMsg("Error: " + e.message, "❌"));
     }
   };
 
@@ -533,7 +577,7 @@ export default function ArogyaAdminPage() {
           closeTestDlg();
           showToastMsg("Test saved! ✓");
         })
-        .catch((e) => showToastMsg("Error: " + e.message, "❌"));
+        .catch((e: any) => showToastMsg("Error: " + e.message, "❌"));
     } else {
       const newRef = push(ref(db, "tests"));
       set(newRef, testData)
@@ -541,7 +585,7 @@ export default function ArogyaAdminPage() {
           closeTestDlg();
           showToastMsg("Test saved! ✓");
         })
-        .catch((e) => showToastMsg("Error: " + e.message, "❌"));
+        .catch((e: any) => showToastMsg("Error: " + e.message, "❌"));
     }
   };
 
@@ -642,7 +686,7 @@ export default function ArogyaAdminPage() {
         showToastMsg("Order status updated!");
         closeOrderDlg();
       })
-      .catch((e) => showToastMsg("Error: " + e.message, "❌"));
+      .catch((e: any) => showToastMsg("Error: " + e.message, "❌"));
   };
 
   const confirmDeleteOrder = (id: string) => {
@@ -825,8 +869,8 @@ export default function ArogyaAdminPage() {
                 type="text"
                 placeholder="Enter username"
                 value={loginUser}
-                onChange={(e) => setLoginUser(e.target.value)}
-                onKeyDown={(e) => {
+                onChange={(e: any) => setLoginUser(e.target.value)}
+                onKeyDown={(e: any) => {
                   if (e.key === "Enter") doLogin();
                 }}
                 style={{
@@ -860,8 +904,8 @@ export default function ArogyaAdminPage() {
                 type="password"
                 placeholder="Enter password"
                 value={loginPass}
-                onChange={(e) => setLoginPass(e.target.value)}
-                onKeyDown={(e) => {
+                onChange={(e: any) => setLoginPass(e.target.value)}
+                onKeyDown={(e: any) => {
                   if (e.key === "Enter") doLogin();
                 }}
                 style={{
@@ -1164,14 +1208,14 @@ export default function ArogyaAdminPage() {
                         : "transparent",
                     transition: "all 0.16s",
                   }}
-                  onMouseEnter={(e) => {
+                  onMouseEnter={(e: any) => {
                     if (activePanel !== item.id) {
                       e.currentTarget.style.color = "#fff";
                       e.currentTarget.style.background =
                         "rgba(255,255,255,.06)";
                     }
                   }}
-                  onMouseLeave={(e) => {
+                  onMouseLeave={(e: any) => {
                     if (activePanel !== item.id) {
                       e.currentTarget.style.color = "rgba(255,255,255,.6)";
                       e.currentTarget.style.background = "transparent";
@@ -1302,11 +1346,11 @@ export default function ArogyaAdminPage() {
               borderRadius: 6,
               transition: "all 0.16s",
             }}
-            onMouseEnter={(e) => {
+            onMouseEnter={(e: any) => {
               e.currentTarget.style.color = "#fff";
               e.currentTarget.style.background = "rgba(255,255,255,.1)";
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={(e: any) => {
               e.currentTarget.style.color = "rgba(255,255,255,.4)";
               e.currentTarget.style.background = "none";
             }}
@@ -1599,2146 +1643,6 @@ export default function ArogyaAdminPage() {
                     <strong>Users</strong> — View registered users and their
                     order history.
                   </p>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* ─── PACKAGES ─── */}
-          {activePanel === "packages" && (
-            <>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: 16,
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
-                  Manage all health packages. Changes appear live on the site.
-                </p>
-                <button
-                  onClick={openPkgDlg}
-                  style={{
-                    padding: "8px 16px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  + Add Package
-                </button>
-              </div>
-              <div
-                style={{
-                  background: "#fff",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  marginBottom: 20,
-                  overflow: "hidden",
-                  boxShadow: "var(--shadow)",
-                  padding: 0,
-                }}
-              >
-                <div style={{ overflowX: "auto" }}>
-                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                    <thead>
-                      <tr>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Package
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Category
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Price
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Tests
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Order
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Status
-                        </th>
-                        <th
-                          style={{
-                            textAlign: "left",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--muted)",
-                            fontWeight: 700,
-                            padding: "10px 16px",
-                            borderBottom: "2px solid var(--border)",
-                            background: "var(--bg)",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          Actions
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {Object.entries(allPkgs).length === 0 ? (
-                        <tr>
-                          <td
-                            colSpan={7}
-                            style={{
-                              textAlign: "center",
-                              padding: 40,
-                              color: "var(--muted)",
-                            }}
-                          >
-                            No packages yet. Click "+ Add Package" to create
-                            one.
-                          </td>
-                        </tr>
-                      ) : (
-                        Object.entries(allPkgs)
-                          .sort(
-                            (a, b) => (a[1].order ?? 99) - (b[1].order ?? 99),
-                          )
-                          .map(([id, p]) => {
-                            const testCount =
-                              (p.tests?.length ?? 0) +
-                              (p.customTests?.length ?? 0);
-                            return (
-                              <tr
-                                key={id}
-                                style={
-                                  p.order === 0
-                                    ? { opacity: 0.55, background: "#F8FAFC" }
-                                    : {}
-                                }
-                              >
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      fontWeight: 700,
-                                      color: "var(--text)",
-                                    }}
-                                  >
-                                    {p.icon ?? ""} {esc(p.name)}
-                                  </div>
-                                  <div
-                                    style={{
-                                      fontSize: "0.75rem",
-                                      color: "var(--muted)",
-                                      marginTop: 2,
-                                    }}
-                                  >
-                                    {esc(p.tagline ?? "—")}
-                                  </div>
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  {esc(p.category ?? "—")}
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  <span
-                                    style={{
-                                      fontFamily: "'Nunito',sans-serif",
-                                      fontWeight: 800,
-                                      color: "var(--blue)",
-                                      fontSize: "0.95rem",
-                                    }}
-                                  >
-                                    {esc(p.currency ?? "AED")}{" "}
-                                    {esc(String(p.price))}
-                                  </span>
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  {testCount}
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  {p.order !== undefined ? p.order : 1}
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  {p.order === 0 ? (
-                                    <span
-                                      style={{
-                                        color: "var(--red)",
-                                        fontSize: "0.78rem",
-                                        fontWeight: 700,
-                                      }}
-                                    >
-                                      🚫 Hidden
-                                    </span>
-                                  ) : p.featured ? (
-                                    <span
-                                      style={{
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        gap: 4,
-                                        background: "var(--blue-pale)",
-                                        color: "var(--blue-mid)",
-                                        fontSize: "0.68rem",
-                                        fontWeight: 700,
-                                        padding: "3px 10px",
-                                        borderRadius: 10,
-                                      }}
-                                    >
-                                      ⭐ Popular
-                                    </span>
-                                  ) : (
-                                    <span
-                                      style={{
-                                        color: "var(--muted)",
-                                        fontSize: "0.78rem",
-                                      }}
-                                    >
-                                      —
-                                    </span>
-                                  )}
-                                </td>
-                                <td
-                                  style={{
-                                    padding: "13px 16px",
-                                    borderBottom: "1px solid var(--border)",
-                                    fontSize: "0.875rem",
-                                    verticalAlign: "middle",
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      display: "flex",
-                                      gap: 6,
-                                      flexWrap: "wrap",
-                                    }}
-                                  >
-                                    <button
-                                      onClick={() => editPkg(id)}
-                                      style={{
-                                        padding: "5px 12px",
-                                        borderRadius: 6,
-                                        fontSize: "0.76rem",
-                                        fontWeight: 700,
-                                        cursor: "pointer",
-                                        fontFamily: "inherit",
-                                        transition: "all 0.16s",
-                                        border: "1.5px solid var(--blue-pale)",
-                                        background: "#fff",
-                                        color: "var(--blue-mid)",
-                                      }}
-                                      onMouseEnter={(e) => {
-                                        e.currentTarget.style.background =
-                                          "var(--blue-mid)";
-                                        e.currentTarget.style.color = "#fff";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--blue-mid)";
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        e.currentTarget.style.background =
-                                          "#fff";
-                                        e.currentTarget.style.color =
-                                          "var(--blue-mid)";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--blue-pale)";
-                                      }}
-                                    >
-                                      Edit
-                                    </button>
-                                    <button
-                                      onClick={() => confirmDeletePkg(id)}
-                                      style={{
-                                        padding: "5px 12px",
-                                        borderRadius: 6,
-                                        fontSize: "0.76rem",
-                                        fontWeight: 700,
-                                        cursor: "pointer",
-                                        fontFamily: "inherit",
-                                        transition: "all 0.16s",
-                                        border: "1.5px solid #FEE2E2",
-                                        background: "#fff",
-                                        color: "var(--red)",
-                                      }}
-                                      onMouseEnter={(e) => {
-                                        e.currentTarget.style.background =
-                                          "var(--red)";
-                                        e.currentTarget.style.color = "#fff";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--red)";
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        e.currentTarget.style.background =
-                                          "#fff";
-                                        e.currentTarget.style.color =
-                                          "var(--red)";
-                                        e.currentTarget.style.borderColor =
-                                          "#FEE2E2";
-                                      }}
-                                    >
-                                      Delete
-                                    </button>
-                                  </div>
-                                </td>
-                              </tr>
-                            );
-                          })
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* ─── TESTS ─── */}
-          {activePanel === "tests" && (
-            <>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: 16,
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
-                  Manage your test library. Add tests here, then assign them to
-                  packages.
-                </p>
-                <button
-                  onClick={openTestDlg}
-                  style={{
-                    padding: "8px 16px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  + Add Test
-                </button>
-              </div>
-              <div
-                style={{
-                  background: "#fff",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  marginBottom: 20,
-                  overflow: "hidden",
-                  boxShadow: "var(--shadow)",
-                }}
-              >
-                <div style={{ padding: 24 }}>
-                  <div style={{ position: "relative", marginBottom: 16 }}>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      style={{
-                        position: "absolute",
-                        left: 12,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        color: "var(--muted)",
-                      }}
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
-                    <input
-                      type="text"
-                      placeholder="Search tests by name or category..."
-                      value={testSearch}
-                      onChange={(e) => setTestSearch(e.target.value)}
-                      style={{
-                        width: "100%",
-                        padding: "10px 14px 10px 38px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 10,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "0.8rem",
-                      color: "var(--muted)",
-                      fontWeight: 600,
-                      marginBottom: 12,
-                    }}
-                  >
-                    {filteredTests.length} test
-                    {filteredTests.length !== 1 ? "s" : ""}
-                  </div>
-                  <div>
-                    {filteredTests.length === 0 ? (
-                      <div
-                        style={{
-                          textAlign: "center",
-                          padding: 40,
-                          color: "var(--muted)",
-                          fontSize: "0.9rem",
-                        }}
-                      >
-                        {testSearch
-                          ? "No tests match your search."
-                          : `No tests yet. Click "+ Add Test" to create your first test.`}
-                      </div>
-                    ) : (
-                      filteredTests.map(([id, t]) => (
-                        <div
-                          key={id}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            padding: "12px 16px",
-                            border: "1px solid var(--border)",
-                            borderRadius: 10,
-                            marginBottom: 8,
-                            background: "#fff",
-                            transition: "all 0.16s",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.borderColor =
-                              "var(--blue-mid)";
-                            e.currentTarget.style.background =
-                              "var(--blue-light)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.borderColor = "var(--border)";
-                            e.currentTarget.style.background = "#fff";
-                          }}
-                        >
-                          <div style={{ flex: 1, minWidth: 0 }}>
-                            <div
-                              style={{
-                                fontWeight: 700,
-                                color: "var(--text)",
-                                fontSize: "0.9rem",
-                              }}
-                            >
-                              {esc(t.name)}{" "}
-                              {t.code ? (
-                                <span
-                                  style={{
-                                    color: "var(--muted)",
-                                    fontWeight: 400,
-                                    fontSize: "0.78rem",
-                                  }}
-                                >
-                                  ({esc(t.code)})
-                                </span>
-                              ) : null}
-                            </div>
-                            <div
-                              style={{
-                                fontSize: "0.75rem",
-                                color: "var(--muted)",
-                                marginTop: 2,
-                              }}
-                            >
-                              {t.category && (
-                                <span
-                                  style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: 4,
-                                    background: "#F0FDF4",
-                                    color: "var(--green)",
-                                    fontSize: "0.68rem",
-                                    fontWeight: 700,
-                                    padding: "3px 10px",
-                                    borderRadius: 10,
-                                  }}
-                                >
-                                  {esc(t.category)}
-                                </span>
-                              )}{" "}
-                              {esc(t.description ?? "")}
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: "flex",
-                              gap: 6,
-                              flexShrink: 0,
-                              marginLeft: 12,
-                            }}
-                          >
-                            <button
-                              onClick={() => editTest(id)}
-                              style={{
-                                padding: "4px 10px",
-                                borderRadius: 6,
-                                fontSize: "0.72rem",
-                                fontWeight: 700,
-                                cursor: "pointer",
-                                fontFamily: "inherit",
-                                transition: "all 0.16s",
-                                border: "1.5px solid var(--blue-pale)",
-                                background: "#fff",
-                                color: "var(--blue-mid)",
-                              }}
-                              onMouseEnter={(e) => {
-                                e.currentTarget.style.background =
-                                  "var(--blue-mid)";
-                                e.currentTarget.style.color = "#fff";
-                                e.currentTarget.style.borderColor =
-                                  "var(--blue-mid)";
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.style.background = "#fff";
-                                e.currentTarget.style.color = "var(--blue-mid)";
-                                e.currentTarget.style.borderColor =
-                                  "var(--blue-pale)";
-                              }}
-                            >
-                              Edit
-                            </button>
-                            <button
-                              onClick={() => confirmDeleteTest(id)}
-                              style={{
-                                padding: "4px 10px",
-                                borderRadius: 6,
-                                fontSize: "0.72rem",
-                                fontWeight: 700,
-                                cursor: "pointer",
-                                fontFamily: "inherit",
-                                transition: "all 0.16s",
-                                border: "1.5px solid #FEE2E2",
-                                background: "#fff",
-                                color: "var(--red)",
-                              }}
-                              onMouseEnter={(e) => {
-                                e.currentTarget.style.background = "var(--red)";
-                                e.currentTarget.style.color = "#fff";
-                                e.currentTarget.style.borderColor =
-                                  "var(--red)";
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.style.background = "#fff";
-                                e.currentTarget.style.color = "var(--red)";
-                                e.currentTarget.style.borderColor = "#FEE2E2";
-                              }}
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        </div>
-                      ))
-                    )}
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* ─── HERO ─── */}
-          {activePanel === "hero" && (
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                marginBottom: 20,
-                overflow: "hidden",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div
-                style={{
-                  padding: "18px 24px",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  background: "#fff",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Nunito',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.95rem",
-                    color: "var(--text)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>🖼️</span> Hero Section
-                </div>
-              </div>
-              <div style={{ padding: 24 }}>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
-                    gap: 16,
-                  }}
-                >
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Eyebrow Text (small label above title)
-                    </label>
-                    <input
-                      type="text"
-                      id="h-eyebrow"
-                      defaultValue={content.heroEyebrow ?? ""}
-                      placeholder="Trusted by 50,000+ Families"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Main Headline
-                    </label>
-                    <input
-                      type="text"
-                      id="h-title"
-                      defaultValue={content.heroTitle ?? ""}
-                      placeholder="Comprehensive Health Packages for Every Family"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Subtitle / Description
-                    </label>
-                    <textarea
-                      id="h-sub"
-                      defaultValue={content.heroSubtitle ?? ""}
-                      rows={3}
-                      placeholder="Supporting sentence…"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        resize: "vertical",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                </div>
-                <div
-                  style={{
-                    marginTop: 24,
-                    paddingTop: 20,
-                    borderTop: "1px solid var(--border)",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: "var(--muted)",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.06em",
-                      marginBottom: 14,
-                    }}
-                  >
-                    Hero Statistics (4 items)
-                  </div>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns:
-                        "repeat(auto-fill,minmax(250px,1fr))",
-                      gap: 16,
-                    }}
-                  >
-                    {[0, 1, 2, 3].map((i) => (
-                      <div
-                        key={i}
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: 5,
-                        }}
-                      >
-                        <label
-                          style={{
-                            fontSize: "0.72rem",
-                            fontWeight: 700,
-                            color: "var(--muted)",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.06em",
-                          }}
-                        >
-                          Stat {i + 1} — Number
-                        </label>
-                        <input
-                          type="text"
-                          id={`hs-n-${i}`}
-                          defaultValue={heroStats[i]?.num ?? ""}
-                          style={{
-                            padding: "10px 13px",
-                            border: "1.5px solid var(--border)",
-                            borderRadius: 8,
-                            fontSize: "0.9rem",
-                            outline: "none",
-                            fontFamily: "inherit",
-                            color: "var(--text)",
-                            background: "#fff",
-                          }}
-                        />
-                      </div>
-                    ))}
-                    {[0, 1, 2, 3].map((i) => (
-                      <div
-                        key={i}
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: 5,
-                        }}
-                      >
-                        <label
-                          style={{
-                            fontSize: "0.72rem",
-                            fontWeight: 700,
-                            color: "var(--muted)",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.06em",
-                          }}
-                        >
-                          Stat {i + 1} — Label
-                        </label>
-                        <input
-                          type="text"
-                          id={`hs-l-${i}`}
-                          defaultValue={heroStats[i]?.label ?? ""}
-                          style={{
-                            padding: "10px 13px",
-                            border: "1.5px solid var(--border)",
-                            borderRadius: 8,
-                            fontSize: "0.9rem",
-                            outline: "none",
-                            fontFamily: "inherit",
-                            color: "var(--text)",
-                            background: "#fff",
-                          }}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <button
-                  onClick={saveHero}
-                  style={{
-                    marginTop: 18,
-                    padding: "11px 26px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.88rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  💾 Save Hero
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ─── TRUST ─── */}
-          {activePanel === "trust" && (
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                marginBottom: 20,
-                overflow: "hidden",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div
-                style={{
-                  padding: "18px 24px",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  background: "#fff",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Nunito',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.95rem",
-                    color: "var(--text)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>🛡️</span> Trust Strip
-                  Badges
-                </div>
-              </div>
-              <div style={{ padding: 24 }}>
-                <p
-                  style={{
-                    fontSize: "0.85rem",
-                    color: "var(--muted)",
-                    lineHeight: 1.7,
-                    marginBottom: 20,
-                  }}
-                >
-                  These four badges appear in the band directly below the hero
-                  section.
-                </p>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
-                    gap: 16,
-                  }}
-                >
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 5,
-                      }}
-                    >
-                      <label
-                        style={{
-                          fontSize: "0.72rem",
-                          fontWeight: 700,
-                          color: "var(--muted)",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.06em",
-                        }}
-                      >
-                        Badge {i} Text
-                      </label>
-                      <input
-                        type="text"
-                        id={`t${i}`}
-                        defaultValue={(content as any)[`trust${i}`] ?? ""}
-                        style={{
-                          padding: "10px 13px",
-                          border: "1.5px solid var(--border)",
-                          borderRadius: 8,
-                          fontSize: "0.9rem",
-                          outline: "none",
-                          fontFamily: "inherit",
-                          color: "var(--text)",
-                          background: "#fff",
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-                <button
-                  onClick={saveTrust}
-                  style={{
-                    marginTop: 18,
-                    padding: "11px 26px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.88rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  💾 Save Trust Strip
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ─── WHY US ─── */}
-          {activePanel === "why" && (
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                marginBottom: 20,
-                overflow: "hidden",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div
-                style={{
-                  padding: "18px 24px",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  background: "#fff",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Nunito',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.95rem",
-                    color: "var(--text)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>⭐</span> Why Us Section
-                </div>
-              </div>
-              <div style={{ padding: 24 }}>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
-                    gap: 16,
-                  }}
-                >
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Section Title
-                    </label>
-                    <input
-                      type="text"
-                      id="why-title"
-                      defaultValue={content.whyTitle ?? ""}
-                      placeholder="Healthcare You Can Trust"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Section Description
-                    </label>
-                    <input
-                      type="text"
-                      id="why-desc"
-                      defaultValue={content.whyDesc ?? ""}
-                      placeholder="Supporting sentence…"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                </div>
-                <button
-                  onClick={saveWhy}
-                  style={{
-                    marginTop: 18,
-                    padding: "11px 26px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.88rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  💾 Save Why Us
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ─── CTA ─── */}
-          {activePanel === "cta" && (
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                marginBottom: 20,
-                overflow: "hidden",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div
-                style={{
-                  padding: "18px 24px",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  background: "#fff",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Nunito',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.95rem",
-                    color: "var(--text)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>📣</span> CTA Banner
-                </div>
-              </div>
-              <div style={{ padding: 24 }}>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
-                    gap: 16,
-                  }}
-                >
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Headline
-                    </label>
-                    <input
-                      type="text"
-                      id="cta-t"
-                      defaultValue={content.ctaTitle ?? ""}
-                      placeholder="Start Your Health Journey Today"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Subtitle
-                    </label>
-                    <textarea
-                      id="cta-s"
-                      defaultValue={content.ctaSubtitle ?? ""}
-                      rows={3}
-                      placeholder="Supporting sentence…"
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        resize: "vertical",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                </div>
-                <button
-                  onClick={saveCTA}
-                  style={{
-                    marginTop: 18,
-                    padding: "11px 26px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.88rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  💾 Save CTA
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ─── SETTINGS ─── */}
-          {activePanel === "settings" && (
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                marginBottom: 20,
-                overflow: "hidden",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div
-                style={{
-                  padding: "18px 24px",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  background: "#fff",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Nunito',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.95rem",
-                    color: "var(--text)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>⚙️</span> Site Settings
-                </div>
-              </div>
-              <div style={{ padding: 24 }}>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
-                    gap: 16,
-                  }}
-                >
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Site Name
-                    </label>
-                    <input
-                      type="text"
-                      id="s-name"
-                      defaultValue={content.siteName ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Site Tagline (under logo)
-                    </label>
-                    <input
-                      type="text"
-                      id="s-tagline"
-                      defaultValue={content.siteTagline ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Footer Text
-                    </label>
-                    <input
-                      type="text"
-                      id="s-footer"
-                      defaultValue={content.footerText ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Packages Section Title
-                    </label>
-                    <input
-                      type="text"
-                      id="s-pkgtitle"
-                      defaultValue={content.pkgSectionTitle ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      gridColumn: "1 / -1",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 5,
-                    }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Packages Section Description
-                    </label>
-                    <textarea
-                      id="s-pkgdesc"
-                      defaultValue={content.pkgSectionDesc ?? ""}
-                      rows={2}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        resize: "vertical",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      How It Works Title
-                    </label>
-                    <input
-                      type="text"
-                      id="s-steptitle"
-                      defaultValue={content.stepsTitle ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{ display: "flex", flexDirection: "column", gap: 5 }}
-                  >
-                    <label
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "var(--muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      Testimonials Section Title
-                    </label>
-                    <input
-                      type="text"
-                      id="s-testitle"
-                      defaultValue={content.testiTitle ?? ""}
-                      style={{
-                        padding: "10px 13px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 8,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                </div>
-                <button
-                  onClick={saveSettings}
-                  style={{
-                    marginTop: 18,
-                    padding: "11px 26px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.88rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  💾 Save Settings
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ─── PACKAGES ─── */}
-          {activePanel === "packages" && (
-            <>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: 16,
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
-                  Manage all health packages. Changes appear live on the site.
-                </p>
-                <button
-                  onClick={openPkgDlg}
-                  style={{
-                    padding: "8px 16px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  + Add Package
-                </button>
-              </div>
-              <div
-                style={{
-                  background: "#fff",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  marginBottom: 20,
-                  overflow: "hidden",
-                  boxShadow: "var(--shadow)",
-                }}
-              >
-                <div style={{ overflowX: "auto" }}>
-                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                    <thead>
-                      <tr>
-                        <th>Package</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Tests</th>
-                        <th>Order</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {Object.entries(allPkgs).length === 0 ? (
-                        <tr>
-                          <td
-                            colSpan={7}
-                            style={{
-                              textAlign: "center",
-                              padding: 40,
-                              color: "var(--muted)",
-                            }}
-                          >
-                            No packages yet. Click "+ Add Package" to create
-                            one.
-                          </td>
-                        </tr>
-                      ) : (
-                        Object.entries(allPkgs)
-                          .sort(
-                            (a, b) => (a[1].order || 99) - (b[1].order || 99),
-                          )
-                          .map(([id, p]) => {
-                            const testCount =
-                              (p.tests || []).length +
-                              (p.customTests || []).length;
-                            return (
-                              <tr
-                                key={id}
-                                style={
-                                  p.order === 0
-                                    ? { opacity: 0.55, background: "#F8FAFC" }
-                                    : {}
-                                }
-                              >
-                                <td style={tdStyle}>
-                                  <div
-                                    style={{
-                                      fontWeight: 700,
-                                      color: "var(--text)",
-                                    }}
-                                  >
-                                    {p.icon || ""} {esc(p.name)}
-                                  </div>
-                                  <div
-                                    style={{
-                                      fontSize: "0.75rem",
-                                      color: "var(--muted)",
-                                      marginTop: 2,
-                                    }}
-                                  >
-                                    {esc(p.tagline || "—")}
-                                  </div>
-                                </td>
-                                <td style={tdStyle}>
-                                  {esc(p.category || "—")}
-                                </td>
-                                <td style={tdStyle}>
-                                  <span
-                                    style={{
-                                      fontFamily: "'Nunito',sans-serif",
-                                      fontWeight: 800,
-                                      color: "var(--blue)",
-                                      fontSize: "0.95rem",
-                                    }}
-                                  >
-                                    {esc(p.currency || "AED")}{" "}
-                                    {esc(String(p.price))}
-                                  </span>
-                                </td>
-                                <td style={tdStyle}>{testCount}</td>
-                                <td style={tdStyle}>
-                                  {p.order !== undefined ? p.order : 1}
-                                </td>
-                                <td style={tdStyle}>
-                                  {p.order === 0 ? (
-                                    <span
-                                      style={{
-                                        color: "var(--red)",
-                                        fontSize: "0.78rem",
-                                        fontWeight: 700,
-                                      }}
-                                    >
-                                      🚫 Hidden
-                                    </span>
-                                  ) : p.featured ? (
-                                    <span
-                                      style={{
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        gap: 4,
-                                        background: "var(--blue-pale)",
-                                        color: "var(--blue-mid)",
-                                        fontSize: "0.68rem",
-                                        fontWeight: 700,
-                                        padding: "3px 10px",
-                                        borderRadius: 10,
-                                      }}
-                                    >
-                                      ⭐ Popular
-                                    </span>
-                                  ) : (
-                                    <span
-                                      style={{
-                                        color: "var(--muted)",
-                                        fontSize: "0.78rem",
-                                      }}
-                                    >
-                                      —
-                                    </span>
-                                  )}
-                                </td>
-                                <td style={tdStyle}>
-                                  <div
-                                    style={{
-                                      display: "flex",
-                                      gap: 6,
-                                      flexWrap: "wrap",
-                                    }}
-                                  >
-                                    <button
-                                      onClick={() => editPkg(id)}
-                                      style={actBtnStyle(
-                                        "var(--blue-mid)",
-                                        "var(--blue-pale)",
-                                      )}
-                                      onMouseEnter={(e) => {
-                                        e.currentTarget.style.background =
-                                          "var(--blue-mid)";
-                                        e.currentTarget.style.color = "#fff";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--blue-mid)";
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        e.currentTarget.style.background =
-                                          "#fff";
-                                        e.currentTarget.style.color =
-                                          "var(--blue-mid)";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--blue-pale)";
-                                      }}
-                                    >
-                                      Edit
-                                    </button>
-                                    <button
-                                      onClick={() => confirmDeletePkg(id)}
-                                      style={actBtnStyle(
-                                        "var(--red)",
-                                        "#FEE2E2",
-                                      )}
-                                      onMouseEnter={(e) => {
-                                        e.currentTarget.style.background =
-                                          "var(--red)";
-                                        e.currentTarget.style.color = "#fff";
-                                        e.currentTarget.style.borderColor =
-                                          "var(--red)";
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        e.currentTarget.style.background =
-                                          "#fff";
-                                        e.currentTarget.style.color =
-                                          "var(--red)";
-                                        e.currentTarget.style.borderColor =
-                                          "#FEE2E2";
-                                      }}
-                                    >
-                                      Delete
-                                    </button>
-                                  </div>
-                                </td>
-                              </tr>
-                            );
-                          })
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* ─── TESTS ─── */}
-          {activePanel === "tests" && (
-            <>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: 16,
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
-                  Manage your test library. Add tests here, then assign them to
-                  packages.
-                </p>
-                <button
-                  onClick={openTestDlg}
-                  style={{
-                    padding: "8px 16px",
-                    background: "var(--blue-mid)",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: 8,
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    transition: "background 0.16s",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  + Add Test
-                </button>
-              </div>
-              <div
-                style={{
-                  background: "#fff",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  marginBottom: 20,
-                  overflow: "hidden",
-                  boxShadow: "var(--shadow)",
-                }}
-              >
-                <div style={{ padding: 24 }}>
-                  <div style={{ position: "relative", marginBottom: 16 }}>
-                    <svg
-                      style={{
-                        position: "absolute",
-                        left: 12,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        color: "var(--muted)",
-                      }}
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
-                    <input
-                      type="text"
-                      placeholder="Search tests by name or category..."
-                      value={testSearch}
-                      onChange={(e) => setTestSearch(e.target.value)}
-                      style={{
-                        width: "100%",
-                        padding: "10px 14px 10px 38px",
-                        border: "1.5px solid var(--border)",
-                        borderRadius: 10,
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        transition: "border 0.16s, box-shadow 0.16s",
-                        fontFamily: "inherit",
-                        color: "var(--text)",
-                        background: "#fff",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "0.8rem",
-                      color: "var(--muted)",
-                      fontWeight: 600,
-                      marginBottom: 12,
-                    }}
-                  >
-                    {filteredTests.length} test
-                    {filteredTests.length !== 1 ? "s" : ""}
-                  </div>
-                  {filteredTests.length === 0 ? (
-                    <div
-                      style={{
-                        textAlign: "center",
-                        padding: 40,
-                        color: "var(--muted)",
-                        fontSize: "0.9rem",
-                      }}
-                    >
-                      No tests match your search.
-                    </div>
-                  ) : (
-                    filteredTests.map(([id, t]) => (
-                      <div
-                        key={id}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          padding: "12px 16px",
-                          border: "1px solid var(--border)",
-                          borderRadius: 10,
-                          marginBottom: 8,
-                          background: "#fff",
-                          transition: "all 0.16s",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = "var(--blue-mid)";
-                          e.currentTarget.style.background =
-                            "var(--blue-light)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.borderColor = "var(--border)";
-                          e.currentTarget.style.background = "#fff";
-                        }}
-                      >
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div
-                            style={{
-                              fontWeight: 700,
-                              color: "var(--text)",
-                              fontSize: "0.9rem",
-                            }}
-                          >
-                            {esc(t.name)}{" "}
-                            {t.code && (
-                              <span
-                                style={{
-                                  color: "var(--muted)",
-                                  fontWeight: 400,
-                                  fontSize: "0.78rem",
-                                }}
-                              >
-                                ({esc(t.code)})
-                              </span>
-                            )}
-                          </div>
-                          <div
-                            style={{
-                              fontSize: "0.75rem",
-                              color: "var(--muted)",
-                              marginTop: 2,
-                            }}
-                          >
-                            {t.category && (
-                              <span
-                                style={{
-                                  display: "inline-flex",
-                                  alignItems: "center",
-                                  gap: 4,
-                                  background: "#F0FDF4",
-                                  color: "var(--green)",
-                                  fontSize: "0.68rem",
-                                  fontWeight: 700,
-                                  padding: "3px 10px",
-                                  borderRadius: 10,
-                                  marginRight: 6,
-                                }}
-                              >
-                                {esc(t.category)}
-                              </span>
-                            )}
-                            {esc(t.description || "")}
-                          </div>
-                        </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: 6,
-                            flexShrink: 0,
-                            marginLeft: 12,
-                          }}
-                        >
-                          <button
-                            onClick={() => editTest(id)}
-                            style={{
-                              ...actBtnStyle(
-                                "var(--blue-mid)",
-                                "var(--blue-pale)",
-                              ),
-                              padding: "4px 10px",
-                              fontSize: "0.72rem",
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.background =
-                                "var(--blue-mid)";
-                              e.currentTarget.style.color = "#fff";
-                              e.currentTarget.style.borderColor =
-                                "var(--blue-mid)";
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.background = "#fff";
-                              e.currentTarget.style.color = "var(--blue-mid)";
-                              e.currentTarget.style.borderColor =
-                                "var(--blue-pale)";
-                            }}
-                          >
-                            Edit
-                          </button>
-                          <button
-                            onClick={() => confirmDeleteTest(id)}
-                            style={{
-                              ...actBtnStyle("var(--red)", "#FEE2E2"),
-                              padding: "4px 10px",
-                              fontSize: "0.72rem",
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.background = "var(--red)";
-                              e.currentTarget.style.color = "#fff";
-                              e.currentTarget.style.borderColor = "var(--red)";
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.background = "#fff";
-                              e.currentTarget.style.color = "var(--red)";
-                              e.currentTarget.style.borderColor = "#FEE2E2";
-                            }}
-                          >
-                            Delete
-                          </button>
-                        </div>
-                      </div>
-                    ))
-                  )}
                 </div>
               </div>
             </>
@@ -4112,7 +2016,7 @@ export default function ArogyaAdminPage() {
                       type="text"
                       placeholder="Search tests by name or category..."
                       value={testSearch}
-                      onChange={(e) => setTestSearch(e.target.value)}
+                      onChange={(e: any) => setTestSearch(e.target.value)}
                       style={{
                         width: "100%",
                         padding: "10px 14px 10px 38px",
@@ -4149,7 +2053,7 @@ export default function ArogyaAdminPage() {
                         }}
                       >
                         {Object.keys(allTests).length === 0
-                          ? `No tests yet. Click "+ Add Test" to create your first test.`
+                          ? 'No tests yet. Click "+ Add Test" to create your first test.'
                           : "No tests match your search."}
                       </div>
                     ) : (
@@ -4167,13 +2071,13 @@ export default function ArogyaAdminPage() {
                             background: "#fff",
                             transition: "all 0.16s",
                           }}
-                          onMouseEnter={(e) => {
+                          onMouseEnter={(e: any) => {
                             e.currentTarget.style.borderColor =
                               "var(--blue-mid)";
                             e.currentTarget.style.background =
                               "var(--blue-light)";
                           }}
-                          onMouseLeave={(e) => {
+                          onMouseLeave={(e: any) => {
                             e.currentTarget.style.borderColor = "var(--border)";
                             e.currentTarget.style.background = "#fff";
                           }}
@@ -5305,7 +3209,7 @@ export default function ArogyaAdminPage() {
                 >
                   <select
                     value={orderStatusFilter}
-                    onChange={(e) => setOrderStatusFilter(e.target.value)}
+                    onChange={(e: any) => setOrderStatusFilter(e.target.value)}
                     style={{
                       padding: "8px 12px",
                       border: "1.5px solid var(--border)",
@@ -5326,7 +3230,7 @@ export default function ArogyaAdminPage() {
                   <input
                     type="date"
                     value={orderDateFrom}
-                    onChange={(e) => setOrderDateFrom(e.target.value)}
+                    onChange={(e: any) => setOrderDateFrom(e.target.value)}
                     style={{
                       padding: "8px 12px",
                       border: "1.5px solid var(--border)",
@@ -5340,7 +3244,7 @@ export default function ArogyaAdminPage() {
                   <input
                     type="date"
                     value={orderDateTo}
-                    onChange={(e) => setOrderDateTo(e.target.value)}
+                    onChange={(e: any) => setOrderDateTo(e.target.value)}
                     style={{
                       padding: "8px 12px",
                       border: "1.5px solid var(--border)",
@@ -5355,7 +3259,7 @@ export default function ArogyaAdminPage() {
                     type="text"
                     placeholder="Search orders..."
                     value={orderSearch}
-                    onChange={(e) => setOrderSearch(e.target.value)}
+                    onChange={(e: any) => setOrderSearch(e.target.value)}
                     style={{
                       padding: "8px 12px",
                       border: "1.5px solid var(--border)",
@@ -5650,7 +3554,7 @@ export default function ArogyaAdminPage() {
                                   }}
                                 >
                                   <button
-                                    onClick={(e) => {
+                                    onClick={(e: any) => {
                                       e.stopPropagation();
                                       viewOrder(id);
                                     }}
@@ -5669,7 +3573,7 @@ export default function ArogyaAdminPage() {
                                     View
                                   </button>
                                   <button
-                                    onClick={(e) => {
+                                    onClick={(e: any) => {
                                       e.stopPropagation();
                                       confirmDeleteOrder(id);
                                     }}
@@ -5720,7 +3624,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="Search users by name or email..."
                   value={userSearch}
-                  onChange={(e) => setUserSearch(e.target.value)}
+                  onChange={(e: any) => setUserSearch(e.target.value)}
                   style={{
                     padding: "8px 12px",
                     border: "1.5px solid var(--border)",
@@ -6027,7 +3931,7 @@ export default function ArogyaAdminPage() {
                                   }}
                                 >
                                   <button
-                                    onClick={(e) => {
+                                    onClick={(e: any) => {
                                       e.stopPropagation();
                                       viewUser(id);
                                     }}
@@ -6073,7 +3977,7 @@ export default function ArogyaAdminPage() {
             justifyContent: "center",
             padding: 20,
           }}
-          onClick={(e) => {
+          onClick={(e: any) => {
             if (e.target === e.currentTarget) closePkgDlg();
           }}
         >
@@ -6148,7 +4052,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="e.g. Essential Checkup"
                   value={pkgForm.name}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, name: e.target.value })
                   }
                   style={{
@@ -6179,7 +4083,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="Brief description"
                   value={pkgForm.tagline}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, tagline: e.target.value })
                   }
                   style={{
@@ -6211,7 +4115,7 @@ export default function ArogyaAdminPage() {
                   placeholder="299"
                   min={0}
                   value={pkgForm.price}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, price: e.target.value })
                   }
                   style={{
@@ -6241,7 +4145,7 @@ export default function ArogyaAdminPage() {
                 <input
                   type="text"
                   value={pkgForm.currency}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, currency: e.target.value })
                   }
                   style={{
@@ -6273,7 +4177,7 @@ export default function ArogyaAdminPage() {
                   placeholder="💊"
                   maxLength={4}
                   value={pkgForm.icon}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, icon: e.target.value })
                   }
                   style={{
@@ -6304,7 +4208,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="e.g. Basic, Premium, Family"
                   value={pkgForm.category}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, category: e.target.value })
                   }
                   style={{
@@ -6334,7 +4238,7 @@ export default function ArogyaAdminPage() {
                 <input
                   type="number"
                   value={pkgForm.order}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setPkgForm({ ...pkgForm, order: e.target.value })
                   }
                   style={{
@@ -6362,7 +4266,7 @@ export default function ArogyaAdminPage() {
                     type="checkbox"
                     id="pf-feat"
                     checked={pkgForm.featured}
-                    onChange={(e) =>
+                    onChange={(e: any) =>
                       setPkgForm({ ...pkgForm, featured: e.target.checked })
                     }
                     style={{
@@ -6440,11 +4344,11 @@ export default function ArogyaAdminPage() {
                             transition: "background 0.16s",
                           }}
                           onClick={() => toggleTest(t.name || "")}
-                          onMouseEnter={(e) => {
+                          onMouseEnter={(e: any) => {
                             e.currentTarget.style.background =
                               "var(--blue-light)";
                           }}
-                          onMouseLeave={(e) => {
+                          onMouseLeave={(e: any) => {
                             e.currentTarget.style.background = "transparent";
                           }}
                         >
@@ -6452,7 +4356,7 @@ export default function ArogyaAdminPage() {
                             type="checkbox"
                             checked={editPkgTests.includes(t.name || "")}
                             onChange={() => toggleTest(t.name || "")}
-                            onClick={(e) => e.stopPropagation()}
+                            onClick={(e: any) => e.stopPropagation()}
                             style={{
                               width: 16,
                               height: 16,
@@ -6562,8 +4466,8 @@ export default function ArogyaAdminPage() {
                     type="text"
                     placeholder="e.g. Complete Blood Count (CBC)"
                     value={customTestInput}
-                    onChange={(e) => setCustomTestInput(e.target.value)}
-                    onKeyDown={(e) => {
+                    onChange={(e: any) => setCustomTestInput(e.target.value)}
+                    onKeyDown={(e: any) => {
                       if (e.key === "Enter") {
                         e.preventDefault();
                         addCustomTest();
@@ -6714,7 +4618,7 @@ export default function ArogyaAdminPage() {
             justifyContent: "center",
             padding: 20,
           }}
-          onClick={(e) => {
+          onClick={(e: any) => {
             if (e.target === e.currentTarget) closeTestDlg();
           }}
         >
@@ -6795,7 +4699,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="e.g. Complete Blood Count (CBC)"
                   value={testForm.name}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setTestForm({ ...testForm, name: e.target.value })
                   }
                   style={{
@@ -6826,7 +4730,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="e.g. Blood, Urine, Imaging"
                   value={testForm.category}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setTestForm({ ...testForm, category: e.target.value })
                   }
                   style={{
@@ -6857,7 +4761,7 @@ export default function ArogyaAdminPage() {
                   type="text"
                   placeholder="e.g. CBC-001"
                   value={testForm.code}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setTestForm({ ...testForm, code: e.target.value })
                   }
                   style={{
@@ -6895,7 +4799,7 @@ export default function ArogyaAdminPage() {
                   rows={2}
                   placeholder="Brief description of the test..."
                   value={testForm.description}
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     setTestForm({ ...testForm, description: e.target.value })
                   }
                   style={{
@@ -6981,7 +4885,7 @@ export default function ArogyaAdminPage() {
                 justifyContent: "center",
                 padding: 20,
               }}
-              onClick={(e) => {
+              onClick={(e: any) => {
                 if (e.target === e.currentTarget) closeOrderDlg();
               }}
             >
@@ -7372,7 +5276,7 @@ export default function ArogyaAdminPage() {
                   </label>
                   <select
                     value={orderDlgStatus}
-                    onChange={(e) => setOrderDlgStatus(e.target.value)}
+                    onChange={(e: any) => setOrderDlgStatus(e.target.value)}
                     style={{
                       padding: "8px 12px",
                       border: "1.5px solid var(--border)",
@@ -7446,7 +5350,7 @@ export default function ArogyaAdminPage() {
           const initials = getInitials(
             u.name || u.displayName || u.email || "U",
           );
-          const userOrders = Object.entries(allOrders)
+          const userOrders = (Object.entries(allOrders) as [string, Order][])
             .filter(([oid, o]) => o.userId === userDlgId)
             .sort((a, b) => (b[1].createdAt || 0) - (a[1].createdAt || 0));
           const totalSpent = userOrders
@@ -7464,7 +5368,7 @@ export default function ArogyaAdminPage() {
                 justifyContent: "center",
                 padding: 20,
               }}
-              onClick={(e) => {
+              onClick={(e: any) => {
                 if (e.target === e.currentTarget) closeUserDlg();
               }}
             >
@@ -7893,7 +5797,7 @@ export default function ArogyaAdminPage() {
             justifyContent: "center",
             padding: 20,
           }}
-          onClick={(e) => {
+          onClick={(e: any) => {
             if (e.target === e.currentTarget) closeConfirm();
           }}
         >

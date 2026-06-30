@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import logo from "../assets/carehub_logo.png";
 
 /* ─── FIREBASE (dynamic import so it only runs client-side) ─── */
@@ -9,20 +10,22 @@ let fbReady = false;
 
 async function initFirebase() {
   if (fbReady) return db;
-  const { initializeApp } =
-    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js");
-  const { getDatabase } =
-    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+  // Import from the local npm package instead of a URL
+  const { initializeApp } = await import("firebase/app");
+  const { getDatabase } = await import("firebase/database");
+
   const firebaseConfig = {
-    apiKey: "AIzaSyDoBtdP-nXZg-FTXw3OVLJYeZcPH_4aoyc",
-    authDomain: "fdgdhdhhhrh.firebaseapp.com",
-    databaseURL: "https://fdgdhdhhhrh-default-rtdb.firebaseio.com",
-    projectId: "fdgdhdhhhrh",
-    storageBucket: "fdgdhdhhhrh.firebasestorage.app",
-    messagingSenderId: "737216413042",
-    appId: "1:737216413042:web:8a96446c18cd03a3cbb1eb",
-    measurementId: "G-HL2J3JLV63",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
   };
+
   const app = initializeApp(firebaseConfig);
   db = getDatabase(app);
   fbReady = true;
@@ -31,8 +34,7 @@ async function initFirebase() {
 
 async function fbPush(path: string, data: any) {
   const db = await initFirebase();
-  const { ref, push, set } =
-    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+  const { ref, push, set } = await import("firebase/database");
   const newRef = push(ref(db, path));
   await set(newRef, data);
   return newRef;
@@ -44,8 +46,7 @@ function useFirebaseValue<T>(path: string): T | null {
     let unsub: any;
     (async () => {
       const db = await initFirebase();
-      const { ref, onValue } =
-        await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+      const { ref, onValue } = await import("firebase/database");
       const r = ref(db, path);
       unsub = onValue(r, (snap) => setVal(snap.val()));
     })();
@@ -604,12 +605,12 @@ export default function HomePage() {
                 className="brand-icon"
                 style={{ background: "transparent", padding: 0 }}
               >
-                <img
+                <Image
                   src={logo}
                   alt="CareHub Logo"
+                  width={44}
+                  height={44}
                   style={{
-                    width: 44,
-                    height: 44,
                     objectFit: "contain",
                     borderRadius: 12,
                   }}
@@ -1449,12 +1450,12 @@ export default function HomePage() {
               className="footer-brand-icon"
               style={{ background: "transparent", padding: 0 }}
             >
-              <img
+              <Image
                 src={logo}
                 alt="CareHub Logo"
+                width={36}
+                height={36}
                 style={{
-                  width: 36,
-                  height: 36,
                   objectFit: "contain",
                   borderRadius: 9,
                 }}
