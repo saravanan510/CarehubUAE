@@ -27,7 +27,9 @@ const ContactUs = () => {
     service: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
@@ -35,9 +37,15 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     emailjs
-      .send("service_rfhez58", "template_yvq22yp", form, {
-        publicKey: "9oAfAPIpODABx48KN",
-      })
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_yzucl05",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_dnyf6kf",
+        form,
+        {
+          publicKey:
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "p2r2WDDUQTKXgYPZD",
+        },
+      )
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
@@ -46,7 +54,7 @@ const ContactUs = () => {
         (err) => {
           console.log("FAILED...", err);
           alert("Failed to send message. Please try again.");
-        }
+        },
       );
   };
 
@@ -127,7 +135,11 @@ const ContactUs = () => {
               >
                 <option value="">Select category</option>
                 {servicesList.map((ele, i) => {
-                  return <option key={i} value={ele}>{ele}</option>;
+                  return (
+                    <option key={i} value={ele}>
+                      {ele}
+                    </option>
+                  );
                 })}
               </select>
               <br />

@@ -1,4 +1,4 @@
-import ArogyaPlusPackage from "@/views/package";
+import ArogyaPlusPackage from "@/views/admin";
 
 export const metadata = {
   title: "arogyaPlusAdmin - Carehub UAE",
