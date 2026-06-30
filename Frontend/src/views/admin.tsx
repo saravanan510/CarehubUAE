@@ -3310,13 +3310,13 @@ export default function ArogyaAdminPage() {
                   <table style={{ width: "100%", borderCollapse: "collapse" }}>
                     <thead>
                       <tr>
-                        <th style={thStyle}>Package</th>
-                        <th style={thStyle}>Category</th>
-                        <th style={thStyle}>Price</th>
-                        <th style={thStyle}>Tests</th>
-                        <th style={thStyle}>Order</th>
-                        <th style={thStyle}>Status</th>
-                        <th style={thStyle}>Actions</th>
+                        <th>Package</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Tests</th>
+                        <th>Order</th>
+                        <th>Status</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
