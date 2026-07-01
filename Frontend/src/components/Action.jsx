@@ -8,6 +8,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
 
 const Action = () => {
+  const phone = "971559339234";
+  const telNumber = "+971559339234";
   return (
     <div className="fixed-actionbg ">
       <Container>
@@ -30,7 +32,11 @@ const Action = () => {
           </Col>
           <Col className="text-center">
             <div className="action-item">
-              <a href="https://wa.me/+971 55 933 9234">
+              <a
+                href={`https://wa.me/${phone}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IoLogoWhatsapp style={{ color: "white" }} className="fs-2" />
                 <p>Whatsapp</p>
               </a>

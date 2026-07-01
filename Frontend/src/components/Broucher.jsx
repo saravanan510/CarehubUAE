@@ -19,7 +19,10 @@ const Broucher = () => {
                   services designed to cater to the unique needs of our clients.
                 </p>
                 <a href="/assets/Broucher.pdf" download="Broucher.pdf">
-                  <button type="button" class="custom-button border border-0">
+                  <button
+                    type="button"
+                    className="custom-button border border-0"
+                  >
                     Download
                   </button>
                 </a>
@@ -27,7 +30,11 @@ const Broucher = () => {
             </AnimatedOnScroll>
           </Col>
           <Col md={12} lg={6} className="broucher_img">
-            <Image src={FAQ} alt="F A Q" style={{ width: "100%", height: "auto" }} />
+            <Image
+              src={FAQ}
+              alt="F A Q"
+              style={{ width: "100%", height: "auto" }}
+            />
           </Col>
         </Row>
       </Container>

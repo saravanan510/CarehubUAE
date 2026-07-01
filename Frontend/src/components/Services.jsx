@@ -154,10 +154,15 @@ const Services = () => {
               //   </Card>
               // </Col>
 
-              <Col xs={12} md={6} lg={4} xl={3}>
+              <Col key={service.title} xs={12} md={6} lg={4} xl={3}>
                 <AnimatedOnScroll animationIn="animate__slideInUp">
                   <div className="service2_card animate__animated animate__slideInUp">
-                    <Image src={service.image} alt="" className="service_img" style={{ width: "100%", height: "auto" }} />
+                    <Image
+                      src={service.image}
+                      alt=""
+                      className="service_img"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                     <div className="service2_card-body">
                       <TbNurse className="service2_icon" />
                       <h5>{service.title}</h5>

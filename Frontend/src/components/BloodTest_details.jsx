@@ -11,54 +11,119 @@ import ServiceFAQ from "./ServiceFAQ";
 import Link from "next/link";
 const TableData = [
   {
-    title: "Feature",
+    title: "",
     value1: "Carehub Home Collection",
-    value2: "Hospital/Clinic Laboratory",
+    value2: "Hospital / Clinic Lab",
   },
   {
     title: "Wait Time",
-    value1: "Zero. Appointment at your preferred time.",
-    value2: "30 to 90 minutes in a waiting room.",
+    value1: "Zero — you choose the appointment time",
+    value2: "30 to 90 minutes typical",
   },
   {
-    title: "Infection Risk",
-    value1: "None. No exposure to other sick patients.",
-    value2: "High. Crowded areas increase viral exposure.",
+    title: "Travel required",
+    value1: "None",
+    value2: "Yes — including parking and commuting",
   },
   {
-    title: "Comfort",
-    value1: "Relax on your own sofa or bed.",
-    value2: "Clinical, often anxiety-inducing chairs.",
+    title: "Infection exposure",
+    value1: "None — private, controlled environment",
+    value2: "Elevated risk in crowded waiting rooms",
   },
   {
     title: "Fasting Tests",
-    value1: "Ideal. No need to travel while hungry.",
-    value2: "Requires traveling on an empty stomach.",
+    value1: "Ideal — nurse arrives before you've eaten",
+    value2: "You must travel on an empty stomach",
   },
   {
-    title: "Result Delivery",
-    value1: "Securely sent via Email/WhatsApp.",
-    value2: "Often requires physical pickup or login portals.",
+    title: "Comfort",
+    value1: "Your own sofa, bed, or desk",
+    value2: "Clinical chairs in an unfamiliar setting",
+  },
+  {
+    title: "Suitability for children",
+    value1: "High — pediatric specialists available",
+    value2: "Often stressful for young patients",
+  },
+  {
+    title: "Result delivery",
+    value1: "Secure WhatsApp or email delivery",
+    value2: "Often requires in-person pickup or portal login",
+  },
+  {
+    title: "Availability",
+    value1: "24/7, including weekends and holidays",
+    value2: "Typically limited to business hours",
+  },
+  {
+    title: "Privacy",
+    value1: "Complete discretion",
+    value2: "Shared clinical environment",
   },
 ];
 const FAQData = [
   {
     key: "0",
-    question: "Q: Can I book a blood test at home for my child?",
+    question: "Q: Do I need a doctor's referral to book a home blood test?",
     answer:
-      "A: Yes. We have pediatric specialists trained to work with children, using butterfly needles and gentle techniques to make the process as trauma-free as possible.",
+      "A: Not for most tests. Many of our wellness panels — including CBC, vitamin profiles, thyroid tests, lipid panels, and HbA1c — can be booked directly without a referral. If you have a doctor's prescription, we'll follow it precisely. If you're self-referring, our team can help you identify the most relevant tests based on your health goals.",
   },
   {
     key: "1",
-    question: "Q: Do I need a doctor's referral for a home blood test?",
+    question: "Q: Can I get a blood test at home for my child in Dubai?",
     answer:
-      "A: While a referral is helpful, you can book many of our wellness panels directly for personal health monitoring.",
+      "A: Yes. We have phlebotomists with specialist pediatric training. They use butterfly needles, work slowly and gently, and are experienced at helping children feel relaxed before and during the draw. If your child has had a difficult experience with blood tests in clinics, our home environment — familiar, calm, and private — often makes a real difference.",
   },
   {
     key: "2",
-    question: "Q: Is the home collection service available on weekends?",
+    question: "Q: How should I prepare for a home blood test?",
     answer:
-      "A: Absolutely. Carehub operates 7 days a week, including early morning slots for fasting blood tests.",
+      "A: Preparation depends on the specific tests you've booked. For fasting tests (blood glucose, lipid profile, HbA1c), avoid eating or drinking anything except water for 8 to 12 hours before your appointment. For non-fasting tests, no special preparation is typically needed. We'll confirm any specific instructions when you book.",
+  },
+  {
+    key: "3",
+    question: "Q: How long does the home collection appointment take?",
+    answer:
+      "A: Most appointments are completed in 10 to 20 minutes from arrival. The blood draw itself takes only a few minutes — the rest of the time involves setup, documentation, and safe packaging of your sample.",
+  },
+  {
+    key: "4",
+    question:
+      "Q: Are your blood test results accepted by Dubai hospitals and clinics?",
+    answer:
+      "A: Yes. Our partner laboratories are DHA-licensed and accredited. Their reports are issued in standard medical formats and are accepted by healthcare providers across the UAE.",
+  },
+  {
+    key: "5",
+    question:
+      "Q: What if I need multiple tests? Can they all be done in one visit?",
+    answer:
+      "A: Absolutely. In most cases, all your required tests can be completed from a single blood draw. Our phlebotomist brings the appropriate tubes and equipment to collect what's needed in one sitting — you don't need multiple appointments.",
+  },
+  {
+    key: "6",
+    question: "Q: Is home blood testing available in all Dubai areas?",
+    answer:
+      "A: We cover all major residential and commercial areas across Dubai. This includes Downtown, Marina, Business Bay, Jumeirah, Al Barsha, Deira, Mirdif, Palm Jumeirah, Dubai Hills, and many more. Hotels and offices are also included. Contact us to confirm coverage for your specific location.",
+  },
+  {
+    key: "7",
+    question: "Q: Do you offer same-day results?",
+    answer:
+      "A: For many standard tests, yes. Turnaround time depends on the test type and the laboratory's processing schedule. Most reports are delivered within 12 to 24 hours; some standard panels are processed faster. If you require urgent results, let us know when booking and we'll do our best to prioritize..",
+  },
+  {
+    key: "8",
+    question:
+      "Q: Is the blood test service available on weekends and public holidays?",
+    answer:
+      "A: Yes. Carehub operates 24 hours a day, 7 days a week — including Saturdays, Sundays, and UAE public holidays. We offer early morning slots specifically for patients who need fasting blood tests before work.",
+  },
+  {
+    key: "9",
+    question: "Q: How are my results delivered and are they confidential?",
+    answer:
+      "A: Your results are sent directly to you via WhatsApp or email — and only to you, unless you specify otherwise. We do not share patient data with third parties. All reports are issued in your name and can be saved digitally or printed as needed.",
   },
 ];
 
@@ -89,7 +154,7 @@ const BloodTest_details = () => {
             }}
             className="splash-button"
           >
-            Book Blood Test
+            Book Your Home Blood Test
           </Link>
         </div>
 
@@ -105,173 +170,842 @@ const BloodTest_details = () => {
                 Your Doorstep
               </h3>
               <h1 className="fs-6 fw-semibold">
-                Professional Blood Test at Home in Dubai: Fast, Accurate, and
-                Stress-Free Diagnostics
+                Blood Test at Home in Dubai — Professional, Fast & Convenient
               </h1>
+              <h5 class="fs-6 fw-bold">
+                Carehub sends DHA-licensed phlebotomists to your door — home,
+                office, or hotel — anywhere in Dubai. Get lab-accurate results
+                in as little as 12 hours, without stepping outside.
+              </h5>
 
               <p>
-                In today’s fast-paced world, your health diagnostics should fit
-                your schedule, not the other way around. Carehub Healthcare
-                eliminates the need for hospital queues, traffic, and waiting
-                rooms by bringing DHA-licensed phlebotomists directly to your
-                home, office, or hotel in Dubai. Whether you require a routine
-                wellness check, chronic disease monitoring, or specialized
-                diagnostic panels, our home blood collection service ensures
-                that your samples are handled with the highest clinical
-                standards and processed in accredited laboratories for 100%
-                accuracy.
+                Nobody's health journey should be complicated by traffic,
+                queues, or a half-day wasted in a waiting room. Whether you're a
+                busy professional managing your annual checkup, a parent getting
+                routine tests done for your child, or someone monitoring a
+                chronic condition from the comfort of home — Carehub makes blood
+                testing in Dubai genuinely simple.
+              </p>
+              <p>
+                Our blood test at home service in Dubai brings the diagnostic
+                lab to your door. A certified, DHA-licensed phlebotomist arrives
+                at your home, office, or hotel at your chosen time, collects
+                your sample with care and precision, and your results are
+                delivered digitally — usually within 12 to 24 hours.
               </p>
               <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                Why Choose Carehub for Your Home Blood Test?
+                No crowded clinics. No unnecessary exposure. No disruption to
+                your day.
               </h4>
+
+              <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                Why Dubai Residents Are Switching To Home Blood Tests
+              </h4>
+              <h2 className="fs-5">
+                Why More Dubai Residents Choose a Blood Test at Home
+              </h2>
+
               <p>
-                We provide a seamless link between your home and the laboratory,
-                prioritizing patient comfort and data integrity.
+                Dubai moves fast. Between work commitments, school runs, and the
+                everyday pace of city life, finding time to visit a clinic for a
+                blood test often gets pushed to "later." The problem is, later
+                sometimes becomes never — and routine blood work is one of the
+                most effective tools we have for catching health issues early.
               </p>
+              <p>
+                Home blood testing removes that friction entirely. You pick a
+                time that works for you, our nurse arrives equipped with
+                everything needed for a safe and sterile collection, and your
+                samples go straight to an accredited laboratory. It's the same
+                clinical accuracy you'd expect from a hospital lab, just without
+                the journey or the wait.
+              </p>
+              <h5 class="fs-6 fw-bold" style="color:#012a4a">
+                This convenience matters especially for:
+              </h5>
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Elderly patients:</span> who
+                    find clinic trips physically exhausting or difficult to
+                    arrange
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Young children:</span>
+                    who are anxious in clinical settings — our pediatric-trained
+                    phlebotomists are skilled at gentle, low-stress draws
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      DHA-Licensed Phlebotomists:
-                    </span>{" "}
-                    Our team consists of highly trained professionals
-                    specializing in "difficult draws" and pediatric samples,
-                    ensuring a painless and efficient experience.
+                      People with chronic conditions:
+                    </span>
+                    like diabetes, hypertension, or thyroid disorders who need
+                    regular monitoring without repeated hospital visits
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
-                    <span className="fw-semibold">Rapid Turnaround Times:</span>
-                    We understand that waiting for results can be stressful.
-                    Most reports are delivered digitally within 12 to 24 hours.
+                    <span className="fw-semibold">Busy professionals:</span>
+                    who can fit an early-morning fasting test into their
+                    schedule without missing a beat at work
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
-                    <span className="fw-semibold">Gold-Standard Hygiene:</span>
-                    Every collection follows strict international protocols for
-                    sterilization and sample preservation.
+                    <span className="fw-semibold">
+                      Postpartum mothers and individuals recovering from
+                      surgery:
+                    </span>
+                    who can't or shouldn't be travelling unnecessarily
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
-                    <span className="fw-semibold">Total Privacy:</span>
-                    Get tested in the confidentiality of your own home, away
-                    from the public eye of a clinic.
+                    <span className="fw-semibold">
+                      Residents who value privacy:
+                    </span>
+                    and prefer that their health monitoring stays discreet
                   </p>
                 </li>
               </ul>
 
               <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                Our Comprehensive Range of Home Blood Tests
+                What Makes Carehub Different
               </h4>
+              <h2 className="fs-5">
+                What Makes Carehub the Right Choice for Your Home Blood Test in
+                Dubai
+              </h2>
               <p>
-                We offer over 1,000 different laboratory investigations. Our
-                most requested home panels include:
+                Dubai has several providers offering home blood collection — so
+                what sets Carehub apart? It comes down to the details that
+                matter most when your health is involved.
               </p>
-
-              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                A. General Wellness & Vitality Panels
-              </h5>
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Full Blood Count (FBC/CBC):
+                      DHA-Licensed Professionals, Every Time:
                     </span>{" "}
-                    To check for anemia, infection, and general immune health.
+                    Every phlebotomist on our team is licensed by the Dubai
+                    Health Authority. This isn't a formality — it means they are
+                    trained, evaluated, and accountable under UAE healthcare
+                    regulations. Whether you're getting a routine CBC or a
+                    specialized hormonal panel, your sample is collected by
+                    someone who knows what they're doing.
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Vitamin & Mineral Profile:
+                      Strict Hygiene and Sample Integrity:
                     </span>
-                    Assessing levels of Vitamin D, B12, Iron, and Calcium.
+                    We follow international-standard protocols for every
+                    collection. Single-use, sterile equipment. Proper cold-chain
+                    transport for samples that require temperature control.
+                    Bio-hazard containers that meet DHA transport
+                    specifications. From your arm to the laboratory, your sample
+                    is handled as if the result depends on it — because it does.
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Kidney & Liver Function (KFT/LFT):
+                      Fast, Reliable Turnaround:
                     </span>
-                    Essential for monitoring organ health and metabolic balance.
+                    Waiting days for blood test results creates unnecessary
+                    anxiety. Most of our reports are delivered digitally within
+                    12 to 24 hours of sample collection. For urgent
+                    investigations, we offer expedited processing — ask our team
+                    when you book.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Complete Transparency on Pricing:
+                    </span>
+                    We don't believe in hidden charges. The price you're quoted
+                    when you book is the price you pay. No surprise add-ons, no
+                    collection surcharge sprung on you at the door.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      24/7 Availability Across Dubai:
+                    </span>
+                    We operate around the clock, including weekends and public
+                    holidays. Early-morning fasting blood tests, late-evening
+                    collections after work — we fit around your life, not the
+                    other way around.
                   </p>
                 </li>
               </ul>
 
-              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                B. Chronic Disease & Hormonal Monitoring
-              </h5>
+              <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                Blood Tests Available At Home In Dubai
+              </h4>
+              <h2 className="fs-5">
+                Blood Tests Available Through Our Dubai Home Collection Service
+              </h2>
+              <p>
+                We support over 1,000 different laboratory investigations
+                through accredited partner labs. Below are the most commonly
+                requested categories and specific tests.
+              </p>
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Routine & Preventive Health Tests
+              </h3>
+              <p>
+                These are the tests most doctors recommend as part of a regular
+                annual health check. They give a broad picture of your overall
+                health and flag abnormalities before they become problems.
+              </p>
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Diabetes Management (HbA1c):
+                      Complete Blood Count (CBC/FBC):
                     </span>{" "}
-                    Critical for tracking long-term blood sugar control.
+                    Checks red blood cells, white blood cells, haemoglobin, and
+                    platelets. Used to detect anaemia, infection, immune
+                    disorders, and certain blood conditions. This is the single
+                    most requested blood test in our home service in Dubai.
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Thyroid Profile (T3, T4, TSH):
+                      Fasting Blood Glucose & HbA1c:
                     </span>
-                    To diagnose and manage hyper- or hypothyroidism.
+                    Essential for diabetes screening and long-term blood sugar
+                    control. Fasting tests are ideal for home collection — our
+                    phlebotomist can arrive first thing in the morning before
+                    breakfast, sparing you a hungry commute.
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Lipid Profile:</span>
-                    Detailed analysis of cholesterol and triglycerides for heart
-                    health.
+                    Measures total cholesterol, LDL, HDL, and triglycerides.
+                    Critical for assessing cardiovascular risk, particularly in
+                    residents who follow higher-fat diets or have a family
+                    history of heart disease.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Liver Function Tests (LFT):
+                    </span>
+                    Evaluate the health of the liver and help detect fatty liver
+                    disease, hepatitis, or the effects of medications.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Kidney Function Tests (KFT / Renal Panel):
+                    </span>
+                    Creatinine, urea, and electrolyte levels to assess how well
+                    your kidneys are filtering waste. Important for patients on
+                    long-term medications or those with high blood pressure.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Uric Acid Test:</span>
+                    Particularly relevant in Dubai, where dietary patterns can
+                    raise uric acid levels. Useful for gout monitoring and
+                    kidney stone risk assessment.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      ESR & CRP (Inflammatory Markers):
+                    </span>
+                    Used to detect underlying inflammation, which can signal
+                    autoimmune conditions, infections, or other systemic issues.
                   </p>
                 </li>
               </ul>
 
-              <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                C. Specialized Diagnostics
-              </h5>
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Vitamin & Nutritional Deficiency Tests at Home
+              </h3>
+              <p>
+                Micronutrient deficiencies are surprisingly common in the UAE,
+                driven by limited natural sun exposure, dietary habits, and
+                indoor lifestyles. These home blood tests identify deficiencies
+                before they become symptomatic.
+              </p>
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Vitamin D Test at Home in Dubai:
+                    </span>{" "}
+                    One of our most frequently requested tests. Low Vitamin D is
+                    widespread in Dubai despite the sunshine — because most
+                    residents spend time indoors or protected from the sun.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Vitamin B12 Test:</span>
+                    B12 deficiency can cause fatigue, numbness, and neurological
+                    issues. Particularly relevant for vegetarians, vegans, and
+                    older adults.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Iron Studies (Ferritin, Serum Iron, TIBC):
+                    </span>
+                    Identifies iron-deficiency anaemia, which is especially
+                    common in women and young children.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Calcium & Magnesium Levels:
+                    </span>
+                    Important for bone health, muscle function, and
+                    cardiovascular regulation.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Full Micronutrient Panel:
+                    </span>
+                    A comprehensive screen covering multiple vitamins and
+                    minerals in a single appointment.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Hormone Tests at Home in Dubai
+              </h3>
+              <p>
+                Hormonal imbalances affect energy, mood, weight, fertility, and
+                a host of other functions. These tests are increasingly in
+                demand for both men's and women's health.
+              </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Thyroid Profile (TSH, T3, T4):
+                    </span>{" "}
+                    Used to diagnose and monitor hypothyroidism and
+                    hyperthyroidism. Thyroid disorders are among the most
+                    underdiagnosed conditions in the UAE.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Female Hormone Panel (FSH, LH, Oestradiol, Progesterone,
+                      Prolactin):
+                    </span>
+                    Helps evaluate fertility, menstrual irregularities,
+                    menopause, and PCOS.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Testosterone Test:</span>
+                    For men experiencing fatigue, reduced libido, or unexplained
+                    weight changes.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Cortisol Test:</span>
+                    Measures stress hormone levels to investigate adrenal
+                    function.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Insulin & HOMA-IR:</span>
+                    Useful for assessing insulin resistance, especially in those
+                    with pre-diabetes or PCOS.
+                  </p>
+                </li>
+              </ul>
+
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Chronic Disease Monitoring at Home
+              </h3>
+              <p>
+                For patients managing ongoing health conditions, regular blood
+                tests are not optional — they're essential. Our home service
+                makes routine monitoring far less burdensome.{" "}
+              </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      HbA1c (Glycated Haemoglobin):
+                    </span>{" "}
+                    The gold-standard marker for long-term diabetes control. We
+                    recommend this every 3 to 6 months for diabetic patients.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      eGFR & Creatinine for CKD Monitoring:
+                    </span>
+                    For patients on blood thinners like warfarin.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Full Cardiac Biomarker Panel:
+                    </span>
+                    Including NT-proBNP for patients with heart conditions.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Rheumatoid Factor & ANA for Autoimmune Screening:
+                    </span>
+                  </p>
+                </li>
+              </ul>
+
+              <h3 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                Specialized & Wellness Diagnostics
+              </h3>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Food Intolerance & Allergy Testing:
                     </span>{" "}
-                    Identifying triggers for digestive or skin issues.
+                    Identify specific food triggers causing digestive
+                    discomfort, skin conditions, or headaches.
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
-                  <p className="service_feature m-0 fw-normal">
-                    <span className="fw-semibold">Hormonal Panels:</span>
-                    Including Testosterone, Estrogen, and Progesterone for men’s
-                    and women’s health.
-                  </p>
-                </li>
-                <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
-                      Infectious Disease Screening:
+                      STI / Infectious Disease Screening:
                     </span>
-                    Rapid and discreet testing for various viral and bacterial
-                    infections.
+                    For patients on blood thinners like warfarin. Discreet,
+                    confidential testing conducted in the privacy of your home.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Full Body Blood Test at Home in Dubai:
+                    </span>
+                    Our comprehensive wellness panel covering 60+ biomarkers —
+                    an ideal annual health investment.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Pre-employment and Medical Fitness Tests:
+                    </span>
+                    Many Dubai employers require specific blood panels; we can
+                    collect and process these at your convenience.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">Pediatric Blood Tests:</span>
+                    Specially trained phlebotomists using butterfly needles for
+                    children's comfort.
+                  </p>
+                </li>
+              </ul>
+
+              <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
+                HOW IT WORKS
+              </h4>
+              <h2 className="fs-5">
+                How Our Home Blood Test Service in Dubai Works
+              </h2>
+              <p>
+                Getting a blood test at home with Carehub is straightforward.
+                Here's exactly what to expect from booking to receiving your
+                results.{" "}
+              </p>
+
+              <ul className="service_page_features_list">
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Step 1 — Book Online or on WhatsApp:
+                    </span>{" "}
+                    Contact us through our website booking form or WhatsApp.
+                    Tell us which tests you need (or ask our team for guidance
+                    if you're unsure), select your preferred date and time, and
+                    confirm your location anywhere in Dubai.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Step 2 — Your Phlebotomist Arrives:
+                    </span>
+                    At your appointment time, a DHA-licensed phlebotomist
+                    arrives at your door with a fully equipped,
+                    temperature-controlled medical kit. They carry sterile,
+                    single-use equipment and will go through a brief
+                    pre-collection checklist with you.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Step 3 — Safe, Comfortable Sample Collection
+                    </span>
+                    The blood draw itself typically takes just a few minutes.
+                    Our team is trained to make the experience as quick and
+                    painless as possible. If you're nervous, let them know —
+                    they work at your pace.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Step 4 — Secure Transport to an Accredited Lab:
+                    </span>
+                    Your sample is carefully labelled, sealed in appropriate
+                    containers, and transported to one of our DHA-approved
+                    partner laboratories. Temperature-sensitive samples are
+                    carried in refrigerated kits to maintain integrity.
+                  </p>
+                </li>
+                <li>
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="service_feature m-0 fw-normal">
+                    <span className="fw-semibold">
+                      Step 5 — Results Delivered to You Digitally:
+                    </span>
+                    Your lab report arrives via WhatsApp or email — usually
+                    within 12 to 24 hours. Reports are clearly formatted and
+                    include reference ranges so you can understand your results.
+                    If you'd like a doctor to walk you through the findings, we
+                    can arrange that too.
                   </p>
                 </li>
               </ul>
@@ -286,7 +1020,13 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Seamless Booking:</span>{" "}
                     Contact us via WhatsApp or our website to book your
@@ -294,7 +1034,13 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Professional Collection:
@@ -304,7 +1050,13 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Secure Transportation:</span>
                     Samples are transported in specialized bio-hazard containers
@@ -312,7 +1064,13 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">
                       Accredited Lab Analysis:
@@ -321,7 +1079,13 @@ const BloodTest_details = () => {
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-normal">
                     <span className="fw-semibold">Digital Reports:</span>
                     Receive your results directly on your phone with an optional
@@ -346,25 +1110,49 @@ const BloodTest_details = () => {
 
               <ul className="service_page_features_list">
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-semibold">
                     24x7 Diagnostic Test at Home in Dubai
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-semibold">
                     Trusted, certified labs for accurate results
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-semibold">
                     Quick, painless sample collection
                   </p>
                 </li>
                 <li>
-                  <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                  <Image
+                    src={FeatureIcon}
+                    alt="Feature icon"
+                    className="me-2"
+                    width={16}
+                    height={16}
+                  />
                   <p className="service_feature m-0 fw-semibold">
                     Transparent pricing and timely reports
                   </p>
@@ -379,7 +1167,7 @@ const BloodTest_details = () => {
         </Row>
         <div>
           <h2 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-            Comparison: Carehub Home Collection vs. Traditional Labs
+            Home Blood Test vs. Clinic Visit — Which Is Right for You?
           </h2>
           <Table data={TableData} />
           <ServiceFAQ data={FAQData} />

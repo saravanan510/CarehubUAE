@@ -7,23 +7,26 @@ import Banner_3 from "../assets/Banner_3.webp";
 import Mobile_Banner_1 from "../assets/Mobile_Banner_1.webp";
 import Mobile_Banner_2 from "../assets/Mobile_Banner_2.webp";
 import Mobile_Banner_3 from "../assets/Mobile_Banner_3.webp";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "@/utils/router-compat";
 
 function UncontrolledExample() {
-  const isMobile = useMediaQuery({ maxWidth: 475 });
-  const controls = !isMobile;
   return (
-    <Carousel controls={controls}>
+    <Carousel controls fade={false}>
       <Carousel.Item className="banner">
-        {isMobile ? (
-          <Image src={Mobile_Banner_1} alt="First slide" />
-        ) : (
-          <Image src={Banner_1} alt="First slide" />
-        )}
-
+        <Image
+          src={Banner_1}
+          alt="First slide"
+          className="d-none d-sm-block"
+          priority
+        />
+        <Image
+          src={Mobile_Banner_1}
+          alt="First slide"
+          className="d-block d-sm-none"
+          priority
+        />
         <Carousel.Caption className="banner_caption">
-          <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
+          <h1 className="fw-bold">
             Championing Your Recovery, Elevating Your Future: Expert Home
             Nursing in Dubai
           </h1>
@@ -34,18 +37,24 @@ function UncontrolledExample() {
             your partner in healing.
           </p>
           <Link to={"/contact"}>
-            <button className="banner_btn fw-semibold">Book Appointment</button>{" "}
+            <button className="banner_btn fw-semibold">Book Appointment</button>
           </Link>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item className="banner">
-        {isMobile ? (
-          <Image src={Mobile_Banner_2} alt="First slide" />
-        ) : (
-          <Image src={Banner_2} alt="First slide" />
-        )}
+        <Image
+          src={Banner_2}
+          alt="Second slide"
+          className="d-none d-sm-block"
+        />
+        <Image
+          src={Mobile_Banner_2}
+          alt="Second slide"
+          className="d-block d-sm-none"
+        />
         <Carousel.Caption className="banner_caption">
-          <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
+          <h1 className="fw-bold">
             Your Health, Our Priority. Expert Nursing at Home.
           </h1>
           <p>
@@ -54,28 +63,27 @@ function UncontrolledExample() {
             you—safely and professionally.
           </p>
           <Link to={"/contact"}>
-            <button className="banner_btn fw-semibold">Book Appointment</button>{" "}
+            <button className="banner_btn fw-semibold">Book Appointment</button>
           </Link>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item className="banner">
-        {isMobile ? (
-          <Image src={Mobile_Banner_3} alt="First slide" />
-        ) : (
-          <Image src={Banner_3} alt="First slide" />
-        )}
+        <Image src={Banner_3} alt="Third slide" className="d-none d-sm-block" />
+        <Image
+          src={Mobile_Banner_3}
+          alt="Third slide"
+          className="d-block d-sm-none"
+        />
         <Carousel.Caption className="banner_caption">
-          <h1 className={isMobile ? "fw-bold" : "fw-bold"}>
-            Recover Faster. Heal Better. Stay Home.
-          </h1>
+          <h1 className="fw-bold">Recover Faster. Heal Better. Stay Home.</h1>
           <p>
             Premium home nursing and physician visits tailored to your recovery.
             Experience one-on-one medical care designed for your comfort and
             independence in Dubai.
           </p>
-
           <Link to={"/contact"}>
-            <button className="banner_btn fw-semibold">Book Appointment</button>{" "}
+            <button className="banner_btn fw-semibold">Book Appointment</button>
           </Link>
         </Carousel.Caption>
       </Carousel.Item>
