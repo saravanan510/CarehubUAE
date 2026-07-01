@@ -220,7 +220,7 @@ const BloodTest_details = () => {
                 clinical accuracy you'd expect from a hospital lab, just without
                 the journey or the wait.
               </p>
-              <h5 class="fs-6 fw-bold" style="color:#012a4a">
+              <h5 class="fs-6 fw-bold" style={{ color: "#012a4a" }}>
                 This convenience matters especially for:
               </h5>
 
