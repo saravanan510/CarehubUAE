@@ -29,7 +29,7 @@ const BookBloodTest = () => {
       selectedTestData.push(
         testData.find((test) => {
           return test.id === testID;
-        })
+        }),
       );
     });
     handleDetails({ ...bookingDetails, tests: selectedTestData });
@@ -57,7 +57,11 @@ const BookBloodTest = () => {
           <Row className="">
             <Col lg={5}>
               <div className="bookbloodtest_img">
-                <Image src={BloodTestBanner} alt="Blood Test Banner" className="img-fluid" />
+                <Image
+                  src={BloodTestBanner}
+                  alt="Blood Test Banner"
+                  className="img-fluid"
+                />
               </div>
             </Col>
             <Col lg={1}></Col>
@@ -68,7 +72,12 @@ const BookBloodTest = () => {
                   <br /> Blood test at home in dubai.
                 </h2>
                 <p>
-                  Experience reliable results delivered with convenience through our trusted home testing services. With easy-to-use kits and accurate reporting, you can take control of your health from the comfort of your home. No more waiting in long queues or dealing with delays—our home testing ensures fast, secure, and dependable outcomes, giving you the peace of mind you deserve.
+                  Experience reliable results delivered with convenience through
+                  our trusted home testing services. With easy-to-use kits and
+                  accurate reporting, you can take control of your health from
+                  the comfort of your home. No more waiting in long queues or
+                  dealing with delays—our home testing ensures fast, secure, and
+                  dependable outcomes, giving you the peace of mind you deserve.
                 </p>
               </div>
               <div className="bookbloodtest_tag p-3">
@@ -105,7 +114,7 @@ const BookBloodTest = () => {
                           Free at-home sample collection
                         </p>
                         <p className="m-0" style={{ color: "white" }}>
-                          Above AED 300
+                          Above AED 250
                         </p>
                       </div>
                     </div>
@@ -121,10 +130,19 @@ const BookBloodTest = () => {
           <Row>
             <Col className="header">
               <h2 className="fs-2 fw-bold">
-               Select our flexible lab at home services price plan that saves your money
+                Select our flexible lab at home services price plan that saves
+                your money
               </h2>
               <p>
-                Discover a wide range of advanced features designed to make your blood testing process easier, faster, and more accurate. Our innovative home testing solutions ensure reliable results while saving you time and effort. With user-friendly kits and professional accuracy, you can monitor your health from the comfort of home. We focus on delivering convenience and dependable outcomes you can trust. Best of all, our blood testing services are offered at a price that fits your budget without compromising on quality.
+                Discover a wide range of advanced features designed to make your
+                blood testing process easier, faster, and more accurate. Our
+                innovative home testing solutions ensure reliable results while
+                saving you time and effort. With user-friendly kits and
+                professional accuracy, you can monitor your health from the
+                comfort of home. We focus on delivering convenience and
+                dependable outcomes you can trust. Best of all, our blood
+                testing services are offered at a price that fits your budget
+                without compromising on quality.
               </p>
             </Col>
           </Row>

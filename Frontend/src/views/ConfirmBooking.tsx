@@ -32,7 +32,9 @@ const ConfirmBooking = () => {
 
   const totalPrice = (tests: any[]) => {
     if (!tests) return "0.00";
-    return tests.reduce((total, test) => total + (test.price || 0), 0).toFixed(2);
+    return tests
+      .reduce((total, test) => total + (test.price || 0), 0)
+      .toFixed(2);
   };
 
   const handleBloodTestBooking = async () => {
@@ -60,12 +62,14 @@ const ConfirmBooking = () => {
       building: bookingDetails.userInfo?.buildingName || "",
       landmark: bookingDetails.userInfo?.landMark || "",
       city: bookingDetails.userInfo?.city || "",
-      date: bookingDetails.date ? new Date(bookingDetails.date).toISOString().split("T")[0] : "",
+      date: bookingDetails.date
+        ? new Date(bookingDetails.date).toISOString().split("T")[0]
+        : "",
       time: bookingDetails.time || "",
       tests: bookingDetails.tests,
     };
 
-    if (parseFloat(amount) >= 300) {
+    if (parseFloat(amount) >= 250) {
       setError("");
       setLoader(true);
       try {
@@ -74,7 +78,7 @@ const ConfirmBooking = () => {
           reqBody,
           {
             headers: { "Content-Type": "application/json" },
-          }
+          },
         );
         if (paymentInitiateResponse?.data?.success) {
           const { ccaUrl, merchantId, accessCode, encRequest } =
@@ -82,7 +86,7 @@ const ConfirmBooking = () => {
 
           if (!ccaUrl || !merchantId || !accessCode || !encRequest) {
             throw new Error(
-              "Backend did not provide all required CCAvenue parameters."
+              "Backend did not provide all required CCAvenue parameters.",
             );
           }
 
@@ -116,7 +120,7 @@ const ConfirmBooking = () => {
       }
     } else {
       setError(
-        "Minimum booking amount is 300. Please add more items to proceed."
+        "Minimum booking amount is 250. Please add more items to proceed.",
       );
       setLoader(false);
     }
@@ -210,7 +214,9 @@ const ConfirmBooking = () => {
               borderRadius: "4px",
             }}
           >
-            <p style={{ margin: "0px", fontWeight: "500", color: "#721c24" }}>{error}</p>
+            <p style={{ margin: "0px", fontWeight: "500", color: "#721c24" }}>
+              {error}
+            </p>
           </div>
         )}
 
