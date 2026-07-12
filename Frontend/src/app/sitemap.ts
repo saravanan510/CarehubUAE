@@ -1,50 +1,109 @@
 import { MetadataRoute } from "next";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.carehubuae.com";
-
-  // Static pages
-  const staticPages = [
-    "",
-    "aboutus",
-    "contact",
-    "book-blood-test",
-    "refund-policy",
-    "home-nursing-services-dubai",
-    "post-operative-care-dubai",
-    "ventilator-care",
-    "palliative-care-dubai",
-    "elderly-care-services-dubai",
-    "pediatric-palliative",
-    "paralytic-care",
-    "parkinson-care",
-    "physiotherapy-services",
-    "doctor-home-visit-dubai",
-    "medical-tourism",
-    "injection-services-at-home-dubai",
-    "blood-test-at-home-dubai",
-    "hydrafacial-services",
-    "post-stroke-recovery",
-  ].map((slug) => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: slug === "" ? 1 : 0.8,
-  }));
-
-  // Dynamic pages (only if you actually have a CMS/DB driving slugs — e.g. blog posts)
-  // Uncomment and adapt this block if you have dynamic routes:
-  //
-  // const posts = await getAllPosts()
-  // const dynamicPages = posts.map((post) => ({
-  //   url: `${baseUrl}/blog/${post.slug}`,
-  //   lastModified: post.updatedAt,
-  //   changeFrequency: 'weekly' as const,
-  //   priority: 0.6,
-  // }))
+  const lastModified = new Date("2026-07-02T11:08:43+00:00");
 
   return [
-    ...staticPages,
-    // ...dynamicPages,
+    {
+      url: `${baseUrl}/`,
+      lastModified,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/aboutus`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/book-blood-test`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/home-nursing-services-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/post-operative-care-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ventilator-care`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/palliative-care-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/elderly-care-services-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pediatric-palliative`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/paralytic-care`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/parkinson-care`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/physiotherapy-services`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/doctor-home-visit-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/medical-tourism`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/injection-services-at-home-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blood-test-at-home-dubai`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hydrafacial-services`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/post-stroke-recovery`,
+      lastModified,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/refund-policy`,
+      lastModified,
+      priority: 0.8,
+    },
   ];
 }
