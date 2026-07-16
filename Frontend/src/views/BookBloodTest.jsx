@@ -67,10 +67,9 @@ const BookBloodTest = () => {
             <Col lg={1}></Col>
             <Col className="align-self-center">
               <div>
-                <h2 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Bringing quality healthcare.
-                  <br /> Blood test at home in dubai.
-                </h2>
+                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
+                  Blood Test at Home in Dubai - Fast, Certified & Convenient.
+                </h1>
                 <p>
                   Experience reliable results delivered with convenience through
                   our trusted home testing services. With easy-to-use kits and
