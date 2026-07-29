@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "Insurance@carehubuae.com", // Sender's email
-    pass: "beec hqme sgwy wzvf", // Sender's email password
+    pass: "altv vvhs popb alkt", // Sender's email password
   },
 });
 
@@ -20,7 +20,7 @@ serviceCtrl.create = async (req, res) => {
     from: email, // Sender's email
     to: "Insurance@carehubuae.com", // Admin email
     subject: `New Service Booking: ${fullName} - ${new Date(
-      date
+      date,
     ).toLocaleDateString()}`,
     text: `A new booking has been made by ${fullName} (${email}, ${phoneNumber}).\n\nBooking Details:\n- Service: ${service}\n- Date: ${date}\n\nPlease review the booking and take the necessary action.\n\nBest regards,\nYour Booking System`,
   };
@@ -88,7 +88,7 @@ serviceCtrl.update = async (req, res) => {
     const service = await Services.findOneAndUpdate(
       { orderId: orderId },
       body,
-      { new: true }
+      { new: true },
     );
     res.json(service);
   } catch (error) {
@@ -116,7 +116,7 @@ serviceCtrl.uploadFile = async (req, res) => {
     const updateService = await Services.findOneAndUpdate(
       { orderId: service.orderId },
       update,
-      { new: true }
+      { new: true },
     );
 
     res.status(200).json(updateService);

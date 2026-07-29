@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "Insurance@carehubuae.com", // Sender's email
-    pass: "beec hqme sgwy wzvf", // Sender's email password
+    pass: "altv vvhs popb alkt", // Sender's email password
   },
 });
 
@@ -66,7 +66,7 @@ paymentCtrl.paymentResponse = async (req, res) => {
   if (!encResponse) {
     console.error("Missing encResp in payment response.");
     return res.redirect(
-      `${FRONTEND_URL}/paymentStatus?status=error&message=NoResponse`
+      `${FRONTEND_URL}/paymentStatus?status=error&message=NoResponse`,
     );
   }
 
@@ -74,7 +74,7 @@ paymentCtrl.paymentResponse = async (req, res) => {
   if (!decryptedResponse) {
     console.error("Failed to decrypt CCAvenue response.");
     return res.redirect(
-      `${FRONTEND_URL}/paymentStatus?status=error&message=DecryptionFailed`
+      `${FRONTEND_URL}/paymentStatus?status=error&message=DecryptionFailed`,
     );
   }
 
@@ -100,7 +100,7 @@ paymentCtrl.paymentResponse = async (req, res) => {
     from: testsData.email,
     to: "Insurance@carehubuae.com",
     subject: `New BloodTest Booking: ${testsData.username} - ${new Date(
-      testsData.date
+      testsData.date,
     ).toLocaleDateString()}`,
     text:
       `A new booking has been made by ${testsData.username} (${testsData.email}, ${testsData.phoneNumber}).\n\n` +
@@ -144,7 +144,7 @@ paymentCtrl.paymentResponse = async (req, res) => {
     return res.redirect(
       `${FRONTEND_URL}/paymentStatus?status=db_error&orderId=${
         order_id || "N/A"
-      }`
+      }`,
     );
   }
 
