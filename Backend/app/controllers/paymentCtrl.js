@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "Insurance@carehubuae.com", // Sender's email
-    pass: "altv vvhs popb alkt", // Sender's email password
+    pass: "half yrgp aded tktv", // Sender's email password
   },
 });
 
