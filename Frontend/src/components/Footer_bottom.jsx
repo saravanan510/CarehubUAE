@@ -8,6 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoYoutube } from "react-icons/io";
 import Link from "next/link";
+
 const Footer_bottom = () => {
   return (
     <section className="footer">
@@ -15,8 +16,7 @@ const Footer_bottom = () => {
         <Row>
           <Col lg={4}>
             <p>
-              At CareHub rehabilitation experts create specialized treatment
-              plans to meet each patient’s individual needs.
+              Carehub Healthcare provides home blood tests, home nursing, elderly care and doctor home visits across Dubai.
             </p>
           </Col>
 
@@ -43,6 +43,11 @@ const Footer_bottom = () => {
             <div>
               <h6 style={{ color: "white" }}>Services</h6>
               <ul className="custom-ul">
+                <li>
+                  <Link href={"/book-blood-test"}>
+                    Blood Test at Home
+                  </Link>
+                </li>
                 <li>
                   <Link href={"/home-nursing-services-dubai"}>
                     Home Nursing Services{" "}
@@ -110,7 +115,7 @@ const Footer_bottom = () => {
         <hr />
         <Row>
           <Col className="text-center">
-            <small>© 2024 Carehub • All Rights Reserved</small>
+            <small>© 2026 Carehub Healthcare • All Rights Reserved</small>
           </Col>
         </Row>
       </Container>

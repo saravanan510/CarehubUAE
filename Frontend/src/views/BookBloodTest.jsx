@@ -52,281 +52,8 @@ const BookBloodTest = () => {
     const updatedId = selectedTest.filter((testid) => testid !== id);
     setSelectedTest(updatedId);
   };
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalBusiness",
-        "@id": "https://www.carehubuae.com/#business",
-        name: "Carehub Healthcare",
-        url: "https://www.carehubuae.com/",
-        telephone: "+971559339234",
-        email: "info@carehubuae.com",
-        image:
-          "https://www.carehubuae.com/_next/static/media/bloodtestbanner.0-89c77vhhn-9.jpg",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "First Floor, M-4, Gold Building, Near Bus Stand, Al Karama",
-          addressLocality: "Dubai",
-          addressCountry: "AE",
-        },
-        areaServed: [
-          {
-            "@type": "City",
-            name: "Dubai",
-          },
-          {
-            "@type": "Place",
-            name: "Al Karama",
-          },
-          {
-            "@type": "Place",
-            name: "Deira",
-          },
-          {
-            "@type": "Place",
-            name: "Bur Dubai",
-          },
-          {
-            "@type": "Place",
-            name: "Jumeirah",
-          },
-          {
-            "@type": "Place",
-            name: "Business Bay",
-          },
-          {
-            "@type": "Place",
-            name: "Downtown Dubai",
-          },
-          {
-            "@type": "Place",
-            name: "Dubai Marina",
-          },
-          {
-            "@type": "Country",
-            name: "United Arab Emirates",
-          },
-        ],
-        priceRange: "AED 24 - AED 1500",
-      },
-
-      {
-        "@type": "Service",
-        "@id": "https://www.carehubuae.com/book-blood-test#service",
-        name: "Home Blood Test Collection in Dubai",
-        serviceType: "At-home blood sample collection and laboratory testing",
-        url: "https://www.carehubuae.com/book-blood-test",
-        provider: {
-          "@id": "https://www.carehubuae.com/#business",
-        },
-        areaServed: [
-          {
-            "@type": "City",
-            name: "Dubai",
-          },
-          {
-            "@type": "Country",
-            name: "United Arab Emirates",
-          },
-        ],
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "AED",
-          lowPrice: "250",
-          highPrice: "260",
-          offerCount: "7",
-          offers: [
-            {
-              "@type": "Offer",
-              price: "253",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "PCOD Profile",
-                description:
-                  "Testosterone, Insulin Fasting, Estradiol, LH, Liver Profile, Prolactin, FSH, TSH, CBC, Lipid Profile, Kidney Function, Iron Profile, Diabetes Screen",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "258",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Pregnancy Profile",
-                description:
-                  "Vitamin D, Vitamin B12, Folate, Ferritin, Hepatitis B & C, HIV, T3, T4, TSH, CBC, Diabetes Screen, Liver Profile, Kidney Function, Iron Profile, Lipid Profile",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "250",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Basic Diabetes Package",
-                description:
-                  "TSH, Serum Electrolytes, Iron Profile, CBC, Liver Profile, Diabetes Screen, Kidney Function, Lipid Profile",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "250",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Standard Wellness Package",
-                description:
-                  "FT4, FT3, TSH, CBC, Liver Profile, Kidney Function, Lipid Profile, Diabetes Screen, Iron Profile, Vitamin D, Vitamin B12, Testosterone",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "255",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Infection Profile",
-                description:
-                  "HIV, Hepatitis B & C, TSH, Diabetes Screen, Kidney Function, CBC, Lipid Profile, Liver Profile, Iron Profile",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "250",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Obesity Profile",
-                description:
-                  "Vitamin D, Vitamin B12, Insulin Fasting, TSH, Diabetes Screen, Kidney Function, Liver Profile, Lipid Profile, Iron Profile, Testosterone, CBC",
-              },
-            },
-            {
-              "@type": "Offer",
-              price: "260",
-              priceCurrency: "AED",
-              itemOffered: {
-                "@type": "Service",
-                name: "Infertility Profile",
-                description:
-                  "Vitamin D, Vitamin B12, TSH, CBC, LH, Prolactin, FSH, Liver Profile, Lipid Profile, Iron Profile, Diabetes Screen, Folate, Testosterone, Kidney Function",
-              },
-            },
-          ],
-        },
-      },
-
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.carehubuae.com/book-blood-test#faq",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "How much does a home blood test cost in Dubai?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Individual tests and packages with Carehub start from AED 250, covering free at-home sample collection. Pricing varies depending on the specific test or package selected.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How long does it take to get results?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Most reports are delivered within 24 hours of sample collection, though some specialised tests may take longer.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Is home blood sample collection safe and hygienic?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. All samples are collected by trained phlebotomists using sterile, single-use equipment and are transported to certified labs under proper storage conditions.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Which areas in Dubai do you cover for home blood tests?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Carehub covers Dubai and surrounding areas across the UAE, including Al Karama, Deira, Bur Dubai, Business Bay, Downtown Dubai, and Dubai Marina.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do I need to fast before a home blood test?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "It depends on the test. Fasting tests such as glucose or lipid profile typically require 8 to 12 hours of fasting, which will be confirmed when you book.",
-            },
-          },
-        ],
-      },
-
-      {
-        "@type": "HowTo",
-        "@id": "https://www.carehubuae.com/book-blood-test#howto",
-        name: "How to Book a Home Blood Test in Dubai with Carehub",
-        step: [
-          {
-            "@type": "HowToStep",
-            position: 1,
-            name: "Choose your test or package",
-            text: "Pick individual tests like a Complete Blood Count or Vitamin D check, or select a bundled package such as the PCOD Profile, Diabetes Screen, or Wellness Package.",
-          },
-          {
-            "@type": "HowToStep",
-            position: 2,
-            name: "Book your slot online or by phone",
-            text: "Select a convenient time; same-day appointments are usually available.",
-          },
-          {
-            "@type": "HowToStep",
-            position: 3,
-            name: "Sample collection at your doorstep",
-            text: "A certified phlebotomist arrives with all the equipment needed, collects the sample, and follows standard hygiene precautions.",
-          },
-          {
-            "@type": "HowToStep",
-            position: 4,
-            name: "Receive your report",
-            text: "Results are shared digitally, typically within 24 hours, and can be reviewed with a doctor if needed.",
-          },
-        ],
-      },
-
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.carehubuae.com/book-blood-test#breadcrumb",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.carehubuae.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blood Test at Home in Dubai",
-            item: "https://www.carehubuae.com/book-blood-test",
-          },
-        ],
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
       <section className="bookbloodtest_banner">
         <Container>
           <Row className="">
@@ -405,21 +132,8 @@ const BookBloodTest = () => {
         <Container>
           <Row>
             <Col className="header">
-              <h2 className="fs-2 fw-bold">
-                Select our flexible lab at home services price plan that saves
-                your money
-              </h2>
-              <p>
-                Discover a wide range of advanced features designed to make your
-                blood testing process easier, faster, and more accurate. Our
-                innovative home testing solutions ensure reliable results while
-                saving you time and effort. With user-friendly kits and
-                professional accuracy, you can monitor your health from the
-                comfort of home. We focus on delivering convenience and
-                dependable outcomes you can trust. Best of all, our blood
-                testing services are offered at a price that fits your budget
-                without compromising on quality.
-              </p>
+              <h2 className="fs-2 fw-bold">Home Blood Test Packages in Dubai</h2>
+              <p>Choose a ready-made health package or build your own list of tests below. Each package includes a home visit from a trained phlebotomist, and results are sent digitally, usually within 24 hours.</p>
             </Col>
           </Row>
 
@@ -430,20 +144,10 @@ const BookBloodTest = () => {
                   <div className={"price_card"}>
                     <div>
                       <div className="border-bottom mb-3">
-                        <h6 className="">{testPackage.name}</h6>
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "baseline",
-                            gap: "6px",
-                          }}
-                        >
-                          <h5 className="fw-semibold mb-1">
-                            {testPackage.price} AED
-                          </h5>
-                          <p className=" text-decoration-line-through">
-                            {testPackage.excisting_price} AED
-                          </p>
+                        <h3 className="fs-6 fw-bold mb-2">{testPackage.name}</h3>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px" }}>
+                          <span className="fw-semibold fs-5 mb-1 text-dark">{testPackage.price} AED</span>
+                          <span className="text-decoration-line-through text-muted small">(was AED {testPackage.excisting_price})</span>
                         </div>
                       </div>
                       <div>
@@ -489,12 +193,11 @@ const BookBloodTest = () => {
               <p>
                 Dubai's pace of life doesn't leave much room for a two-hour trip
                 to a lab, especially when it involves parking, queuing, and
-                waiting for a token number. A home blood test in Dubai solves
-                that problem directly — a certified nurse comes to you at a time
+                waiting for a token number. A <Link href="/book-blood-test" style={{ color: "#009b45", textDecoration: "underline" }}>blood test at home in Dubai</Link> solves that problem directly — a certified nurse comes to you at a time
                 that suits your schedule, whether that's early morning before
                 work, during your lunch break, or late evening after the kids
                 are asleep. This service isn't just about convenience, either.
-                For elderly patients, people with mobility issues, new parents,
+                For <Link href="/elderly-care-services-dubai" style={{ color: "#009b45", textDecoration: "underline" }}>elderly patients</Link>, people with mobility issues, new parents,
                 or anyone who simply feels anxious in a clinical setting, having
                 the test done at home makes the entire experience calmer and
                 easier. The sample is still handled with the same clinical
@@ -684,11 +387,7 @@ const BookBloodTest = () => {
           <Row>
             <AnimatedOnScroll animationIn="animate__slideInUp">
               <Col className="header animate__animated animate__fadeInDown">
-                <h2 className="fs-3 fw-bold">Frequently Asked Questions</h2>
-                <p>
-                  At Carehub Healthcare, we offer a wide range of comprehensive
-                  services designed to cater to the unique needs of our clients.
-                </p>
+                <h2 className="fs-3 fw-bold">Frequently Asked Questions About Home Blood Tests in Dubai</h2>
               </Col>
             </AnimatedOnScroll>
           </Row>
@@ -700,9 +399,7 @@ const BookBloodTest = () => {
                     How much does a home blood test cost in Dubai?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Individual tests and packages with Carehub start from AED
-                    250, covering free at-home sample collection. Pricing varies
-                    depending on the specific test or package selected.
+                    Packages start from AED 250. Individual tests start from around AED 60 for common tests such as CBC or lipid profile, and the price of each test is shown on this page. Home sample collection is free on orders above AED 250.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -710,8 +407,7 @@ const BookBloodTest = () => {
                     How long does it take to get results?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Most reports are delivered within 24 hours of sample
-                    collection, though some specialised tests may take longer.
+                    Most reports are delivered digitally within 24 hours of sample collection. Some specialised tests, such as genetic or PCR panels, take longer, and we will tell you when you book.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -719,9 +415,7 @@ const BookBloodTest = () => {
                     Is home blood sample collection safe and hygienic?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Yes. All samples are collected by trained phlebotomists
-                    using sterile, single-use equipment and are transported to
-                    certified labs under proper storage conditions.
+                    Yes. Samples are collected by trained phlebotomists using sterile, single-use equipment and are transported to certified labs under proper storage conditions.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
@@ -729,9 +423,7 @@ const BookBloodTest = () => {
                     Which areas in Dubai do you cover for home blood tests?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Carehub covers Dubai and surrounding areas across the UAE,
-                    including Al Karama, Deira, Bur Dubai, Business Bay,
-                    Downtown Dubai, and Dubai Marina.
+                    Carehub covers Dubai, including Al Karama, Deira, Bur Dubai, Jumeirah, Business Bay, Downtown Dubai and Dubai Marina. Call or WhatsApp to confirm your area.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
@@ -739,12 +431,40 @@ const BookBloodTest = () => {
                     Do I need to fast before a home blood test?
                   </Accordion.Header>
                   <Accordion.Body>
-                    It depends on the test. Fasting tests such as glucose or
-                    lipid profile typically require 8–12 hours of fasting — this
-                    will be confirmed when you book.
+                    It depends on the test. Glucose and lipid profile tests typically need 8–12 hours of fasting. We confirm the preparation for your tests when you book.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+            <section className="py-5" style={{ backgroundColor: "#f9f9f9" }}>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg={8}>
+              <h2 className="fs-2 fw-bold" style={{ color: "#012a4a" }}>
+                Book Your Blood Test at Home in Dubai
+              </h2>
+              <p className="mt-3 fs-5">
+                Ready to book? Choose your test above, call{" "}
+                <a
+                  href="tel:+971559339234"
+                  style={{ color: "#009b45", fontWeight: "600" }}
+                >
+                  +971 55 933 9234
+                </a>{" "}
+                or message us on{" "}
+                <a
+                  href="https://wa.me/971559339234"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#009b45", fontWeight: "600" }}
+                >
+                  WhatsApp
+                </a>{" "}
+                for a same-day slot.
+              </p>
             </Col>
           </Row>
         </Container>
