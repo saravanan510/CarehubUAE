@@ -105,7 +105,7 @@ const services = [
     image: service_13,
     title: "BLOOD TEST AT HOME",
     para: "If you are looking for an emergency Lab test at home, Carehub is with you...",
-    link: "/blood-test-at-home-dubai",
+    link: "/book-blood-test",
   },
   {
     image: service_14,
@@ -154,15 +154,10 @@ const Services = () => {
               //   </Card>
               // </Col>
 
-              <Col key={service.title} xs={12} md={6} lg={4} xl={3}>
+              <Col xs={12} md={6} lg={4} xl={3}>
                 <AnimatedOnScroll animationIn="animate__slideInUp">
                   <div className="service2_card animate__animated animate__slideInUp">
-                    <Image
-                      src={service.image}
-                      alt=""
-                      className="service_img"
-                      style={{ width: "100%", height: "auto" }}
-                    />
+                    <Image src={service.image} alt="" className="service_img" style={{ width: "100%", height: "auto" }} />
                     <div className="service2_card-body">
                       <TbNurse className="service2_icon" />
                       <h5>{service.title}</h5>

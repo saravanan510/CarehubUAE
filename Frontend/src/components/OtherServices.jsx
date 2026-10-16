@@ -54,7 +54,7 @@ const services = [
   },
   {
     name: "Blood Test",
-    link: "/blood-test-at-home-dubai",
+    link: "/book-blood-test",
   },
   {
     name: "Hydrafacial Services",
