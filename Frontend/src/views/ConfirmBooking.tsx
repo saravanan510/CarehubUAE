@@ -69,7 +69,7 @@ const ConfirmBooking = () => {
       tests: bookingDetails.tests,
     };
 
-    if (parseFloat(amount) >= 250) {
+    if (parseFloat(amount) >= 300) {
       setError("");
       setLoader(true);
       try {
@@ -120,7 +120,7 @@ const ConfirmBooking = () => {
       }
     } else {
       setError(
-        "Minimum booking amount is 250. Please add more items to proceed.",
+        "Minimum booking amount is 300. Please add more items to proceed.",
       );
       setLoader(false);
     }

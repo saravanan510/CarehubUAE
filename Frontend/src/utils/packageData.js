@@ -2,7 +2,7 @@ const packageTests = [
   {
     id: 1,
     name: "PCOD PROFILE",
-    price: 253,
+    price: 300,
     excisting_price: 340,
     benefits: [
       "Testosterone",
@@ -24,7 +24,7 @@ const packageTests = [
   {
     id: 2,
     name: "PREGNANCY PROFILE",
-    price: 258,
+    price: 300,
     excisting_price: 400,
     benefits: [
       "Vitamin D (Total)",
@@ -49,7 +49,7 @@ const packageTests = [
   {
     id: 3,
     name: "BASIC DIABETES PACKAGE",
-    price: 250,
+    price: 300,
     excisting_price: 300,
     benefits: [
       "Thyroid-Stimulating Hormone (TSH)",
@@ -66,7 +66,7 @@ const packageTests = [
   {
     id: 4,
     name: "STANDARD WELLNESS PACKAGE",
-    price: 250,
+    price: 300,
     excisting_price: 320,
     benefits: [
       "Free Thyroxine (FT4)",
@@ -87,7 +87,7 @@ const packageTests = [
   {
     id: 5,
     name: "INFECTION PROFILE",
-    price: 255,
+    price: 300,
     excisting_price: 380,
     benefits: [
       "HIV P24 Ag / Ab",
@@ -106,7 +106,7 @@ const packageTests = [
   {
     id: 6,
     name: "OBESITY PROFILE",
-    price: 250,
+    price: 300,
     excisting_price: 300,
     benefits: [
       "Vitamin D (Total)",
@@ -126,7 +126,7 @@ const packageTests = [
   {
     id: 7,
     name: "INFERTILITY PROFILE",
-    price: 260,
+    price: 300,
     excisting_price: 320,
     benefits: [
       "Vitamin D (Total)",
