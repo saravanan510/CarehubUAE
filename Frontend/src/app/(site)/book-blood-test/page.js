@@ -84,7 +84,7 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Packages start from AED 250. Individual tests start from around AED 60 for common tests such as CBC or lipid profile, and the price of each test is shown on this page. Home sample collection is free on orders above AED 250.",
+              "Packages start from AED 250. Individual tests start from around AED 60 for common tests such as CBC or lipid profile, and the price of each test is shown on this page. Home sample collection is free on orders above AED 300.",
           },
         },
         {

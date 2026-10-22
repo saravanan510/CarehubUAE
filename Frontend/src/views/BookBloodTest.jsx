@@ -117,7 +117,7 @@ const BookBloodTest = () => {
                           Free at-home sample collection
                         </p>
                         <p className="m-0" style={{ color: "white" }}>
-                          Above AED 250
+                          Above AED 300
                         </p>
                       </div>
                     </div>
@@ -132,15 +132,8 @@ const BookBloodTest = () => {
         <Container>
           <Row>
             <Col className="header">
-              <h2 className="fs-2 fw-bold">
-                Home Blood Test Packages in Dubai
-              </h2>
-              <p>
-                Choose a ready-made health package or build your own list of
-                tests below. Each package includes a home visit from a trained
-                phlebotomist, and results are sent digitally, usually within 24
-                hours.
-              </p>
+              <h2 className="fs-2 fw-bold">Home Blood Test Packages in Dubai</h2>
+              <p>Choose a ready-made health package or build your own list of tests below. Each package includes a home visit from a trained phlebotomist, and results are sent digitally, usually within 24 hours.</p>
             </Col>
           </Row>
 
@@ -151,22 +144,10 @@ const BookBloodTest = () => {
                   <div className={"price_card"}>
                     <div>
                       <div className="border-bottom mb-3">
-                        <h3 className="fs-6 fw-bold mb-2">
-                          {testPackage.name}
-                        </h3>
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "baseline",
-                            gap: "6px",
-                          }}
-                        >
-                          <span className="fw-semibold fs-5 mb-1 text-dark">
-                            {testPackage.price} AED
-                          </span>
-                          <span className="text-decoration-line-through text-muted small">
-                            (was AED {testPackage.excisting_price})
-                          </span>
+                        <h3 className="fs-6 fw-bold mb-2">{testPackage.name}</h3>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px" }}>
+                          <span className="fw-semibold fs-5 mb-1 text-dark">{testPackage.price} AED</span>
+                          <span className="text-decoration-line-through text-muted small">(was AED {testPackage.excisting_price})</span>
                         </div>
                       </div>
                       <div>
@@ -212,30 +193,16 @@ const BookBloodTest = () => {
               <p>
                 Dubai's pace of life doesn't leave much room for a two-hour trip
                 to a lab, especially when it involves parking, queuing, and
-                waiting for a token number. A{" "}
-                <Link
-                  href="/book-blood-test"
-                  style={{ color: "#009b45", textDecoration: "underline" }}
-                >
-                  blood test at home in Dubai
-                </Link>{" "}
-                solves that problem directly — a certified nurse comes to you at
-                a time that suits your schedule, whether that's early morning
-                before work, during your lunch break, or late evening after the
-                kids are asleep. This service isn't just about convenience,
-                either. For{" "}
-                <Link
-                  href="/elderly-care-services-dubai"
-                  style={{ color: "#009b45", textDecoration: "underline" }}
-                >
-                  elderly patients
-                </Link>
-                , people with mobility issues, new parents, or anyone who simply
-                feels anxious in a clinical setting, having the test done at
-                home makes the entire experience calmer and easier. The sample
-                is still handled with the same clinical standards as an in-lab
-                draw — sterile equipment, proper storage, and same-day transport
-                to the laboratory for processing.
+                waiting for a token number. A <Link href="/book-blood-test" style={{ color: "#009b45", textDecoration: "underline" }}>blood test at home in Dubai</Link> solves that problem directly — a certified nurse comes to you at a time
+                that suits your schedule, whether that's early morning before
+                work, during your lunch break, or late evening after the kids
+                are asleep. This service isn't just about convenience, either.
+                For <Link href="/elderly-care-services-dubai" style={{ color: "#009b45", textDecoration: "underline" }}>elderly patients</Link>, people with mobility issues, new parents,
+                or anyone who simply feels anxious in a clinical setting, having
+                the test done at home makes the entire experience calmer and
+                easier. The sample is still handled with the same clinical
+                standards as an in-lab draw — sterile equipment, proper storage,
+                and same-day transport to the laboratory for processing.
               </p>
             </Col>
           </Row>
@@ -420,9 +387,7 @@ const BookBloodTest = () => {
           <Row>
             <AnimatedOnScroll animationIn="animate__slideInUp">
               <Col className="header animate__animated animate__fadeInDown">
-                <h2 className="fs-3 fw-bold">
-                  Frequently Asked Questions About Home Blood Tests in Dubai
-                </h2>
+                <h2 className="fs-3 fw-bold">Frequently Asked Questions About Home Blood Tests in Dubai</h2>
               </Col>
             </AnimatedOnScroll>
           </Row>
@@ -434,10 +399,7 @@ const BookBloodTest = () => {
                     How much does a home blood test cost in Dubai?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Packages start from AED 250. Individual tests start from
-                    around AED 60 for common tests such as CBC or lipid profile,
-                    and the price of each test is shown on this page. Home
-                    sample collection is free on orders above AED 250.
+                    Packages start from AED 250. Individual tests start from around AED 60 for common tests such as CBC or lipid profile, and the price of each test is shown on this page. Home sample collection is free on orders above AED 300.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -445,10 +407,7 @@ const BookBloodTest = () => {
                     How long does it take to get results?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Most reports are delivered digitally within 24 hours of
-                    sample collection. Some specialised tests, such as genetic
-                    or PCR panels, take longer, and we will tell you when you
-                    book.
+                    Most reports are delivered digitally within 24 hours of sample collection. Some specialised tests, such as genetic or PCR panels, take longer, and we will tell you when you book.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -456,9 +415,7 @@ const BookBloodTest = () => {
                     Is home blood sample collection safe and hygienic?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Yes. Samples are collected by trained phlebotomists using
-                    sterile, single-use equipment and are transported to
-                    certified labs under proper storage conditions.
+                    Yes. Samples are collected by trained phlebotomists using sterile, single-use equipment and are transported to certified labs under proper storage conditions.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
@@ -466,9 +423,7 @@ const BookBloodTest = () => {
                     Which areas in Dubai do you cover for home blood tests?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Carehub covers Dubai, including Al Karama, Deira, Bur Dubai,
-                    Jumeirah, Business Bay, Downtown Dubai and Dubai Marina.
-                    Call or WhatsApp to confirm your area.
+                    Carehub covers Dubai, including Al Karama, Deira, Bur Dubai, Jumeirah, Business Bay, Downtown Dubai and Dubai Marina. Call or WhatsApp to confirm your area.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
@@ -476,9 +431,7 @@ const BookBloodTest = () => {
                     Do I need to fast before a home blood test?
                   </Accordion.Header>
                   <Accordion.Body>
-                    It depends on the test. Glucose and lipid profile tests
-                    typically need 8–12 hours of fasting. We confirm the
-                    preparation for your tests when you book.
+                    It depends on the test. Glucose and lipid profile tests typically need 8–12 hours of fasting. We confirm the preparation for your tests when you book.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -486,7 +439,7 @@ const BookBloodTest = () => {
           </Row>
         </Container>
       </section>
-      <section className="py-5" style={{ backgroundColor: "#f9f9f9" }}>
+            <section className="py-5" style={{ backgroundColor: "#f9f9f9" }}>
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={8}>

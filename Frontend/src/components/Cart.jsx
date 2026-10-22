@@ -32,7 +32,7 @@ const Cart = ({ selectedTest }) => {
     <div className="fixed-bottom">
       <div className="cart_top">
         <p style={{ fontSize: "16px" }}>
-          Add <span className="fw-semibold">AED 250</span> more to get free
+          Add <span className="fw-semibold">AED 300</span> more to get free
           collection
         </p>
       </div>
