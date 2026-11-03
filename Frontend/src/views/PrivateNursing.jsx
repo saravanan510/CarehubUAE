@@ -6,12 +6,10 @@ import Link from "next/link";
 const PrivateNursing = () => {
   return (
     <>
-      <div
-        className="servicepage_banner"
-        style={{ minHeight: "100px", height: "auto", padding: "30px 0" }}
-      >
+      <div className="servicepage_banner">
         <Container>
-          <ul className="breadcrumb m-0 p-0">
+          <p className="fs-2 fw-bold text-white mb-2">Home Nursing Services</p>
+          <ul className="breadcrumb">
             <li>
               <Link href="/">Home</Link>
             </li>
