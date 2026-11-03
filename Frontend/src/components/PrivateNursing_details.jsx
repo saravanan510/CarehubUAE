@@ -90,79 +90,116 @@ const PrivateNursing_details = () => {
               </div>
 
               <div className="text-start pe-5" lg={8}>
-                <h1 className="fs-3 fw-bold" style={{ color: "#012a4a" }}>
-                  Home Nursing Services in Dubai: The Ultimate Guide to
-                  Professional In-Home Care
+                <h1 className="fs-2 fw-bold" style={{ color: "#012a4a" }}>
+                  Home Nursing Services in Dubai
                 </h1>
-                <h3 className="fs-6 fw-semibold">
-                  Professional Home Nursing Services in Dubai: Championing Your
-                  Recovery at Home
-                </h3>
 
                 <p>
-                  In an era where medical technology allows for hospital-grade
-                  care to be delivered in the home, Carehub Healthcare stands as
-                  a beacon of clinical excellence in the UAE. Our DHA-licensed
-                  home nursing services are designed for those who prioritize
-                  comfort without compromising on medical safety. Whether you
-                  are navigating the challenges of post-surgical recovery,
-                  managing a chronic illness, or seeking specialized pediatric
-                  support, our internationally trained nurses provide the
-                  expertise you need to heal in a familiar, stress-free
-                  environment.
+                  Carehub provides DHA-licensed home nursing across Dubai for
+                  patients recovering from surgery, living with chronic illness,
+                  or needing long-term care. A nurse matched to your condition
+                  comes to your home, follows your doctor's discharge plan and
+                  keeps your family informed. Call{" "}
+                  <a
+                    href="tel:+971559339234"
+                    style={{ color: "#009b45", fontWeight: "600" }}
+                  >
+                    +971 55 933 9234
+                  </a>{" "}
+                  or message us on{" "}
+                  <a
+                    href="https://wa.me/971559339234"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#009b45", fontWeight: "600" }}
+                  >
+                    WhatsApp
+                  </a>{" "}
+                  for a free consultation.
                 </p>
 
-                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Why Home Nursing is the Superior Choice
-                </h4>
+                <h2 className="fs-4 fw-bold" style={{ color: "#012a4a" }}>
+                  Why Choose Home Nursing?
+                </h2>
 
                 <p>
-                  With Home Nursing Services Dubai, your loved ones avoid the
-                  stress of moving to a facility. Our team of professional,
-                  caring nurses is available day and night to assist with:
+                  Recovering at home means your loved one stays in familiar
+                  surroundings with family close by, and receives one-to-one
+                  attention from a nurse. Our nurses are available day and night
+                  to help with:
                 </p>
-
-                <h5 className="fs-6 fw-bold" style={{ color: "#012a4a" }}>
-                  The Carehub Process: How We Start Your Journey
-                </h5>
 
                 <ul className="service_page_features_list">
                   <li>
-                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">
-                        Clinical Consultation:
-                      </span>{" "}
-                      We begin with a detailed discussion of the patient’s
-                      medical history, current prescriptions, and recovery
-                      goals.
+                      Monitoring vital signs and reporting changes to the doctor
                     </p>
                   </li>
                   <li>
-                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">On-Site Safety Audit:</span>{" "}
-                      A senior nursing supervisor conducts a home visit to
-                      assess the environment for safety and identify any
-                      necessary medical equipment.
+                      Giving prescribed medication on time
                     </p>
                   </li>
                   <li>
-                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Bespoke Care Mapping:</span>{" "}
-                      Our medical director creates a personalized care plan that
-                      aligns with your primary physician's hospital discharge
-                      instructions.
+                      Wound care and dressing changes
                     </p>
                   </li>
                   <li>
-                    <Image src={FeatureIcon} alt="Feature icon" className="me-2" width={16} height={16} />
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
                     <p className="service_feature m-0 fw-normal">
-                      <span className="fw-semibold">Nurse Matching:</span> We
-                      assign a nurse whose specific clinical background (e.g.,
-                      ICU, Cardiac, or Pediatric) matches the patient’s
-                      diagnosis.
+                      IV fluids and injections as prescribed
+                    </p>
+                  </li>
+                  <li>
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
+                    <p className="service_feature m-0 fw-normal">
+                      Feeding tube, tracheostomy and ventilator care
+                    </p>
+                  </li>
+                  <li>
+                    <Image
+                      src={FeatureIcon}
+                      alt="Feature icon"
+                      className="me-2"
+                      width={16}
+                      height={16}
+                    />
+                    <p className="service_feature m-0 fw-normal">
+                      Help with mobility, hygiene and daily living
                     </p>
                   </li>
                 </ul>
@@ -330,22 +367,40 @@ const PrivateNursing_details = () => {
                     </p>
                   </li>
                 </ul>
-                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Why Families Trust Us
-                </h4>
+                <h2 className="fs-4 fw-bold" style={{ color: "#012a4a" }}>
+                  Why Families Choose Carehub
+                </h2>
                 <p>
-                  With Home Nursing Services Dubai, your loved ones stay safe,
-                  healthy, and happy at home. We prioritize clear communication,
-                  regular updates, and affordable solutions.
+                  Families choose Carehub for three reasons: a nurse matched to
+                  the patient's condition, a care plan that follows the doctor's
+                  instructions, and regular updates to the family. Before care
+                  starts, a senior nurse visits your home to check it is safe and
+                  to advise on any equipment needed. If the care plan or the
+                  nurse is not right, tell us and we will adjust it.
                 </p>
-                <h4 className="fs-5 fw-bold" style={{ color: "#012a4a" }}>
-                  Contact Us Today
-                </h4>
+                <h2 className="fs-4 fw-bold" style={{ color: "#012a4a" }}>
+                  Book a free consultation
+                </h2>
                 <p>
-                  Discover how Carehub’s Home Care Nursing in Dubai can ease
-                  your family’s journey. Call or message us to book a
-                  consultation and learn about our compassionate, expert
-                  services.
+                  Tell us about the patient's condition and when care should
+                  start. We will explain the options, the cost and how quickly a
+                  nurse can begin. Call{" "}
+                  <a
+                    href="tel:+971559339234"
+                    style={{ color: "#009b45", fontWeight: "600" }}
+                  >
+                    +971 55 933 9234
+                  </a>
+                  , message us on{" "}
+                  <a
+                    href="https://wa.me/971559339234"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#009b45", fontWeight: "600" }}
+                  >
+                    WhatsApp
+                  </a>
+                  , or use the form below.
                 </p>
               </div>
             </Col>
